@@ -21,5 +21,6 @@ services:
       - gitea.env
     volumes:
       - ./db.d/:/var/lib/postgresql/data
+      - ./gitea.sql:/docker-entrypoint-initdb.d/gitea.sql
     ports:
       - "5432:5432"
