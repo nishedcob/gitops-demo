@@ -15,9 +15,7 @@ spec:
     port: 2222
     targetPort: 22
   selector:
-    io.kompose.service: gitea
-status:
-  loadBalancer: {}
+    service: gitea
 
 ---
 
@@ -32,9 +30,8 @@ spec:
     type: Recreate
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        io.kompose.service: gitea
+        service: gitea
     spec:
       containers:
       - env:
@@ -103,7 +100,6 @@ spec:
         ports:
         - containerPort: 3000
         - containerPort: 22
-        resources: {}
         volumeMounts:
         - mountPath: /data
           name: gitea-data
@@ -113,4 +109,3 @@ spec:
         hostPath:
           path: /gitea-data
           type: Directory
-status: {}

@@ -12,7 +12,7 @@ spec:
     port: 5432
     targetPort: 5432
   selector:
-    io.kompose.service: giteadb
+    service: giteadb
 
 ---
 
@@ -26,6 +26,9 @@ spec:
   strategy:
     type: Recreate
   template:
+    metadata:
+      labels:
+        service: giteadb
     spec:
       containers:
       - env:

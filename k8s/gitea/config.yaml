@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
   gitea_APP_NAME: '"Gitea: Git with a cup of tea"'
-  gitea_DB_HOST: '"giteadb:5432"'
+  gitea_DB_HOST: '"giteadb.gitea.svc.cluster.local:5432"'
   gitea_DB_TYPE: '"postgres"'
   gitea_DISABLE_REGISTRATION: '"false"'
   gitea_DOMAIN: '"0.0.0.0"'
