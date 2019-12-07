@@ -34,11 +34,16 @@ jq:
 minikube_delete: minikube
 	./minikube delete
 
-k8s/gitea/secrets.ini: k8s/gitea/secrets.json jq
+k8s/gitea/%.ini: k8s/gitea/%.json jq
 	./jq -r "to_entries|map(\"\(.key)=\(.value|tostring)\")|.[]" $< > $@
 
 k8s/gitea/secret.yaml: k8s/gitea/secrets.ini kubectl jq
 	./kubectl create secret generic gitea --from-env-file $< \
+		--dry-run=true --output=yaml > $@
+	rm -v $<
+
+k8s/gitea/config.yaml: k8s/gitea/config.ini kubectl jq
+	./kubectl create configmap gitea --from-env-file $< \
 		--dry-run=true --output=yaml > $@
 	rm -v $<
 

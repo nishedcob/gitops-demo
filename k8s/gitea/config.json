@@ -1,0 +1,10 @@
+{
+  "gitea_APP_NAME": "\"Gitea: Git with a cup of tea\"",
+  "gitea_RUN_MODE": "\"prod\"",
+  "gitea_DOMAIN": "\"0.0.0.0\"",
+  "gitea_SSH_DOMAIN": "\"0.0.0.0\"",
+  "gitea_DB_TYPE": "\"postgres\"",
+  "gitea_DB_HOST": "\"giteadb:5432\"",
+  "gitea_DISABLE_REGISTRATION": "\"false\"",
+  "gitea_REQUIRE_SIGNIN_VIEW": "\"false\""
+}
