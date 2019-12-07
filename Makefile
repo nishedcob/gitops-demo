@@ -1,12 +1,20 @@
 
 help:
-	@echo "%.d             - ensure directory with name %.d exists"
-	@echo "minikube        - download minikube cli tool"
-	@echo "minikube_delete - delete current minikube instance"
-	@echo "up_dependencies - dependencies required before any up commands"
-	@echo "up              - ensure services are running"
-	@echo "up_giteadb_d    - ensure Gitea's database is running"
-	@echo "gitea.sql       - dump Gitea's database"
+	@echo "%.d                         - ensure directory with name %.d exists"
+	@echo "minikube                    - download minikube cli tool"
+	@echo "kubectl                     - download kubectl cli tool"
+	@echo "jq                          - download jq cli tool"
+	@echo "minikube_start              - ensure that minikube is running in the desired configuration"
+	@echo "minikube_create_dirs        - ensure that desired directories and paths exist within minikube"
+	@echo "minikube_provision_gitea    - ensure that Gitea is provisioned in Minikube"
+	@echo "minikube_port_forward_gitea - expose Gitea to localhost"
+	@echo "minikube_delete             - delete current minikube instance"
+	@echo "k8s/gitea/%.ini             - convert k8s/gitea/src/%.json into k8s/gitea/%.ini for further conversion later"
+	@echo "k8s/gitea/namespace.yaml    - create YAML definition for Kubernetes gitea namespace"
+	@echo "k8s/gitea/secret.yaml       - create YAML definition for Kubernetes gitea namespace secrets (from k8s/gitea/secrets.ini)"
+	@echo "k8s/gitea/config.yaml       - create YAML definition for Kubernetes gitea namespace configMap (from k8s/gitea/config.ini)"
+	@echo "k8s/gitea/gitea.sql.yaml    - create YAML definition for Kubernetes gitea namespace configMap for gitea.sql file (from k8s/gitea/gitea.sql)"
+	@echo "k8s/gitea/gitea.sql         - dump Gitea's database as k8s/gitea/gitea.sql"
 
 %.d:
 	mkdir -pv $@
