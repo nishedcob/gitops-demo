@@ -1,6 +1,7 @@
 
 help:
 	@echo "%.d             - ensure directory with name %.d exists"
+	@echo "minikube        - download minikube cli tool"
 	@echo "up_dependencies - dependencies required before any up commands"
 	@echo "up              - ensure services are running"
 	@echo "up_giteadb_d    - ensure Gitea's database is running"
@@ -8,6 +9,12 @@ help:
 
 %.d:
 	mkdir -pv $@
+
+minikube:
+	curl \
+		https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+		-o $@
+	chmod -v +x $@
 
 up_dependencies: db.d data.d giteadb_dumps.d
 

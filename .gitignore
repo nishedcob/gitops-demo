@@ -133,4 +133,5 @@ ignore/
 data.d/
 db.d/
 giteadb_dumps.d/
+minikube
 ########
