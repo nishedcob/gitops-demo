@@ -7,3 +7,4 @@ help:
 	mkdir -pv $@
 
 up: db.d data.d
+	docker-compose up
