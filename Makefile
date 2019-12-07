@@ -57,7 +57,7 @@ minikube_create_dirs: minikube_start
 minikube_delete: minikube
 	./minikube delete
 
-k8s/gitea/%.ini: k8s/gitea/%.json jq
+k8s/gitea/%.ini: k8s/gitea/src/%.json jq
 	./jq -r "to_entries|map(\"\(.key)=\(.value|tostring)\")|.[]" $< > $@
 
 k8s/gitea/namespace.yaml: kubectl
