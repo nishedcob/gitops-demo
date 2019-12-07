@@ -73,6 +73,10 @@ k8s/gitea/config.yaml: k8s/gitea/config.ini kubectl jq
 		--dry-run=true --output=yaml --namespace gitea > $@
 	rm -v $<
 
+k8s/gitea/gitea.sql.yaml: k8s/gitea/gitea.sql kubectl
+	./kubectl create configmap gitea.sql --from-file $< --dry-run=true \
+		--output=yaml --namespace gitea > $@
+
 up_dependencies: db.d data.d giteadb_dumps.d
 
 up: up_dependencies
