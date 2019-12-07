@@ -133,4 +133,8 @@ ignore/
 data.d/
 db.d/
 giteadb_dumps.d/
+minikube
+kubectl
+jq
+k8s/gitea/secrets.ini
 ########

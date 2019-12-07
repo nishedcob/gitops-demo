@@ -1,0 +1,114 @@
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: gitea
+  name: gitea
+spec:
+  ports:
+  - name: "3000"
+    port: 3000
+    targetPort: 3000
+  - name: "2222"
+    port: 2222
+    targetPort: 22
+  selector:
+    service: gitea
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: gitea
+  name: gitea
+spec:
+  selector:
+    matchLabels:
+      service: gitea
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        service: gitea
+    spec:
+      containers:
+      - env:
+        - name: APP_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_APP_NAME
+        - name: DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_DB_HOST
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: gitea
+              key: db_DB_NAME
+        - name: DB_PASSWD
+          valueFrom:
+            secretKeyRef:
+              name: gitea
+              key: db_DB_PASSWD
+        - name: DB_TYPE
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_DB_TYPE
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: gitea
+              key: db_DB_USER
+        - name: DISABLE_REGISTRATION
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_DISABLE_REGISTRATION
+        - name: DOMAIN
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_DOMAIN
+        - name: REQUIRE_SIGNIN_VIEW
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_REQUIRE_SIGNIN_VIEW
+        - name: RUN_MODE
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_RUN_MODE
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: gitea
+              key: gitea_SECRET_KEY
+        - name: SSH_DOMAIN
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_SSH_DOMAIN
+        image: gitea/gitea:1.9.5
+        name: gitea
+        ports:
+        - containerPort: 3000
+        - containerPort: 22
+        volumeMounts:
+        - mountPath: /data
+          name: gitea-data
+      restartPolicy: Always
+      volumes:
+      - name: gitea-data
+        hostPath:
+          path: /gitea-data
+          type: Directory

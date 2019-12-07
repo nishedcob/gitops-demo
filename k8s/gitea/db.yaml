@@ -1,0 +1,77 @@
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: gitea
+  name: giteadb
+spec:
+  ports:
+  - name: "5432"
+    port: 5432
+    targetPort: 5432
+  selector:
+    service: giteadb
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: gitea
+  name: giteadb
+spec:
+  selector:
+    matchLabels:
+      service: giteadb
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        service: giteadb
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_DB
+          valueFrom:
+            secretKeyRef:
+              name: gitea
+              key: db_POSTGRES_DB
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: gitea
+              key: db_POSTGRES_PASSWORD
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: gitea
+              key: db_POSTGRES_USER
+        image: postgres:12
+        name: giteadb
+        ports:
+        - containerPort: 5432
+        resources: {}
+        volumeMounts:
+        - mountPath: /tmp/dumps
+          name: giteadb-dumps
+        - mountPath: /var/lib/postgresql/data
+          name: giteadb-data
+        - mountPath: /docker-entrypoint-initdb.d
+          name: giteadb-restore-dump
+      restartPolicy: Always
+      volumes:
+      - name: giteadb-dumps
+        hostPath:
+          path: /giteadb/dumps
+          type: Directory
+      - name: giteadb-data
+        hostPath:
+          path: /giteadb/data
+          type: Directory
+      - name: giteadb-restore-dump
+        configMap:
+          name: gitea.sql

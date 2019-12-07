@@ -5,7 +5,7 @@ Operations Repository for Demoing GitOps
 
 ### Gitea Git Server
 ```bash
-make up
+make minikube_port_forward_gitea
 ```
 Visit http://localhost:3000
 
