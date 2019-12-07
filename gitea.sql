@@ -5,8 +5,6 @@
 -- Dumped from database version 12.0 (Debian 12.0-2.pgdg100+1)
 -- Dumped by pg_dump version 12.0 (Debian 12.0-2.pgdg100+1)
 
--- Started on 2019-12-07 16:41:51 UTC
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
@@ -23,7 +21,6 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 217 (class 1259 OID 16507)
 -- Name: access; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -38,7 +35,6 @@ CREATE TABLE public.access (
 ALTER TABLE public.access OWNER TO gitea;
 
 --
--- TOC entry 216 (class 1259 OID 16505)
 -- Name: access_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -53,8 +49,6 @@ CREATE SEQUENCE public.access_id_seq
 ALTER TABLE public.access_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3797 (class 0 OID 0)
--- Dependencies: 216
 -- Name: access_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -62,7 +56,6 @@ ALTER SEQUENCE public.access_id_seq OWNED BY public.access.id;
 
 
 --
--- TOC entry 209 (class 1259 OID 16437)
 -- Name: access_token; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -81,7 +74,6 @@ CREATE TABLE public.access_token (
 ALTER TABLE public.access_token OWNER TO gitea;
 
 --
--- TOC entry 208 (class 1259 OID 16435)
 -- Name: access_token_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -96,8 +88,6 @@ CREATE SEQUENCE public.access_token_id_seq
 ALTER TABLE public.access_token_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3798 (class 0 OID 0)
--- Dependencies: 208
 -- Name: access_token_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -105,7 +95,6 @@ ALTER SEQUENCE public.access_token_id_seq OWNED BY public.access_token.id;
 
 
 --
--- TOC entry 227 (class 1259 OID 16552)
 -- Name: action; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -127,7 +116,6 @@ CREATE TABLE public.action (
 ALTER TABLE public.action OWNER TO gitea;
 
 --
--- TOC entry 226 (class 1259 OID 16550)
 -- Name: action_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -142,8 +130,6 @@ CREATE SEQUENCE public.action_id_seq
 ALTER TABLE public.action_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3799 (class 0 OID 0)
--- Dependencies: 226
 -- Name: action_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -151,7 +137,6 @@ ALTER SEQUENCE public.action_id_seq OWNED BY public.action.id;
 
 
 --
--- TOC entry 235 (class 1259 OID 16626)
 -- Name: attachment; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -172,7 +157,6 @@ CREATE TABLE public.attachment (
 ALTER TABLE public.attachment OWNER TO gitea;
 
 --
--- TOC entry 234 (class 1259 OID 16624)
 -- Name: attachment_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -187,8 +171,6 @@ CREATE SEQUENCE public.attachment_id_seq
 ALTER TABLE public.attachment_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3800 (class 0 OID 0)
--- Dependencies: 234
 -- Name: attachment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -196,7 +178,6 @@ ALTER SEQUENCE public.attachment_id_seq OWNED BY public.attachment.id;
 
 
 --
--- TOC entry 215 (class 1259 OID 16495)
 -- Name: collaboration; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -211,7 +192,6 @@ CREATE TABLE public.collaboration (
 ALTER TABLE public.collaboration OWNER TO gitea;
 
 --
--- TOC entry 214 (class 1259 OID 16493)
 -- Name: collaboration_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -226,8 +206,6 @@ CREATE SEQUENCE public.collaboration_id_seq
 ALTER TABLE public.collaboration_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3801 (class 0 OID 0)
--- Dependencies: 214
 -- Name: collaboration_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -235,7 +213,6 @@ ALTER SEQUENCE public.collaboration_id_seq OWNED BY public.collaboration.id;
 
 
 --
--- TOC entry 233 (class 1259 OID 16611)
 -- Name: comment; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -268,7 +245,6 @@ CREATE TABLE public.comment (
 ALTER TABLE public.comment OWNER TO gitea;
 
 --
--- TOC entry 232 (class 1259 OID 16609)
 -- Name: comment_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -283,8 +259,6 @@ CREATE SEQUENCE public.comment_id_seq
 ALTER TABLE public.comment_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3802 (class 0 OID 0)
--- Dependencies: 232
 -- Name: comment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -292,7 +266,6 @@ ALTER SEQUENCE public.comment_id_seq OWNED BY public.comment.id;
 
 
 --
--- TOC entry 287 (class 1259 OID 16953)
 -- Name: commit_status; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -315,7 +288,6 @@ CREATE TABLE public.commit_status (
 ALTER TABLE public.commit_status OWNER TO gitea;
 
 --
--- TOC entry 286 (class 1259 OID 16951)
 -- Name: commit_status_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -330,8 +302,6 @@ CREATE SEQUENCE public.commit_status_id_seq
 ALTER TABLE public.commit_status_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3803 (class 0 OID 0)
--- Dependencies: 286
 -- Name: commit_status_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -339,7 +309,6 @@ ALTER SEQUENCE public.commit_status_id_seq OWNED BY public.commit_status.id;
 
 
 --
--- TOC entry 293 (class 1259 OID 16991)
 -- Name: deleted_branch; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -356,7 +325,6 @@ CREATE TABLE public.deleted_branch (
 ALTER TABLE public.deleted_branch OWNER TO gitea;
 
 --
--- TOC entry 292 (class 1259 OID 16989)
 -- Name: deleted_branch_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -371,8 +339,6 @@ CREATE SEQUENCE public.deleted_branch_id_seq
 ALTER TABLE public.deleted_branch_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3804 (class 0 OID 0)
--- Dependencies: 292
 -- Name: deleted_branch_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -380,7 +346,6 @@ ALTER SEQUENCE public.deleted_branch_id_seq OWNED BY public.deleted_branch.id;
 
 
 --
--- TOC entry 213 (class 1259 OID 16480)
 -- Name: deploy_key; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -399,7 +364,6 @@ CREATE TABLE public.deploy_key (
 ALTER TABLE public.deploy_key OWNER TO gitea;
 
 --
--- TOC entry 212 (class 1259 OID 16478)
 -- Name: deploy_key_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -414,8 +378,6 @@ CREATE SEQUENCE public.deploy_key_id_seq
 ALTER TABLE public.deploy_key_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3805 (class 0 OID 0)
--- Dependencies: 212
 -- Name: deploy_key_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -423,7 +385,6 @@ ALTER SEQUENCE public.deploy_key_id_seq OWNED BY public.deploy_key.id;
 
 
 --
--- TOC entry 263 (class 1259 OID 16807)
 -- Name: email_address; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -438,7 +399,6 @@ CREATE TABLE public.email_address (
 ALTER TABLE public.email_address OWNER TO gitea;
 
 --
--- TOC entry 262 (class 1259 OID 16805)
 -- Name: email_address_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -453,8 +413,6 @@ CREATE SEQUENCE public.email_address_id_seq
 ALTER TABLE public.email_address_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3806 (class 0 OID 0)
--- Dependencies: 262
 -- Name: email_address_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -462,7 +420,6 @@ ALTER SEQUENCE public.email_address_id_seq OWNED BY public.email_address.id;
 
 
 --
--- TOC entry 279 (class 1259 OID 16910)
 -- Name: external_login_user; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -476,7 +433,6 @@ CREATE TABLE public.external_login_user (
 ALTER TABLE public.external_login_user OWNER TO gitea;
 
 --
--- TOC entry 225 (class 1259 OID 16543)
 -- Name: follow; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -490,7 +446,6 @@ CREATE TABLE public.follow (
 ALTER TABLE public.follow OWNER TO gitea;
 
 --
--- TOC entry 224 (class 1259 OID 16541)
 -- Name: follow_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -505,8 +460,6 @@ CREATE SEQUENCE public.follow_id_seq
 ALTER TABLE public.follow_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3807 (class 0 OID 0)
--- Dependencies: 224
 -- Name: follow_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -514,7 +467,6 @@ ALTER SEQUENCE public.follow_id_seq OWNED BY public.follow.id;
 
 
 --
--- TOC entry 273 (class 1259 OID 16868)
 -- Name: gpg_key; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -538,7 +490,6 @@ CREATE TABLE public.gpg_key (
 ALTER TABLE public.gpg_key OWNER TO gitea;
 
 --
--- TOC entry 272 (class 1259 OID 16866)
 -- Name: gpg_key_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -553,8 +504,6 @@ CREATE SEQUENCE public.gpg_key_id_seq
 ALTER TABLE public.gpg_key_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3808 (class 0 OID 0)
--- Dependencies: 272
 -- Name: gpg_key_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -562,7 +511,6 @@ ALTER SEQUENCE public.gpg_key_id_seq OWNED BY public.gpg_key.id;
 
 
 --
--- TOC entry 274 (class 1259 OID 16879)
 -- Name: gpg_key_import; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -575,7 +523,6 @@ CREATE TABLE public.gpg_key_import (
 ALTER TABLE public.gpg_key_import OWNER TO gitea;
 
 --
--- TOC entry 251 (class 1259 OID 16739)
 -- Name: hook_task; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -603,7 +550,6 @@ CREATE TABLE public.hook_task (
 ALTER TABLE public.hook_task OWNER TO gitea;
 
 --
--- TOC entry 250 (class 1259 OID 16737)
 -- Name: hook_task_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -618,8 +564,6 @@ CREATE SEQUENCE public.hook_task_id_seq
 ALTER TABLE public.hook_task_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3809 (class 0 OID 0)
--- Dependencies: 250
 -- Name: hook_task_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -627,7 +571,6 @@ ALTER SEQUENCE public.hook_task_id_seq OWNED BY public.hook_task.id;
 
 
 --
--- TOC entry 229 (class 1259 OID 16572)
 -- Name: issue; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -655,7 +598,6 @@ CREATE TABLE public.issue (
 ALTER TABLE public.issue OWNER TO gitea;
 
 --
--- TOC entry 303 (class 1259 OID 17051)
 -- Name: issue_assignees; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -669,7 +611,6 @@ CREATE TABLE public.issue_assignees (
 ALTER TABLE public.issue_assignees OWNER TO gitea;
 
 --
--- TOC entry 302 (class 1259 OID 17049)
 -- Name: issue_assignees_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -684,8 +625,6 @@ CREATE SEQUENCE public.issue_assignees_id_seq
 ALTER TABLE public.issue_assignees_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3810 (class 0 OID 0)
--- Dependencies: 302
 -- Name: issue_assignees_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -693,7 +632,6 @@ ALTER SEQUENCE public.issue_assignees_id_seq OWNED BY public.issue_assignees.id;
 
 
 --
--- TOC entry 297 (class 1259 OID 17015)
 -- Name: issue_dependency; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -710,7 +648,6 @@ CREATE TABLE public.issue_dependency (
 ALTER TABLE public.issue_dependency OWNER TO gitea;
 
 --
--- TOC entry 296 (class 1259 OID 17013)
 -- Name: issue_dependency_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -725,8 +662,6 @@ CREATE SEQUENCE public.issue_dependency_id_seq
 ALTER TABLE public.issue_dependency_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3811 (class 0 OID 0)
--- Dependencies: 296
 -- Name: issue_dependency_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -734,7 +669,6 @@ ALTER SEQUENCE public.issue_dependency_id_seq OWNED BY public.issue_dependency.i
 
 
 --
--- TOC entry 228 (class 1259 OID 16570)
 -- Name: issue_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -749,8 +683,6 @@ CREATE SEQUENCE public.issue_id_seq
 ALTER TABLE public.issue_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3812 (class 0 OID 0)
--- Dependencies: 228
 -- Name: issue_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -758,7 +690,6 @@ ALTER SEQUENCE public.issue_id_seq OWNED BY public.issue.id;
 
 
 --
--- TOC entry 239 (class 1259 OID 16653)
 -- Name: issue_label; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -772,7 +703,6 @@ CREATE TABLE public.issue_label (
 ALTER TABLE public.issue_label OWNER TO gitea;
 
 --
--- TOC entry 238 (class 1259 OID 16651)
 -- Name: issue_label_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -787,8 +717,6 @@ CREATE SEQUENCE public.issue_label_id_seq
 ALTER TABLE public.issue_label_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3813 (class 0 OID 0)
--- Dependencies: 238
 -- Name: issue_label_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -796,7 +724,6 @@ ALTER SEQUENCE public.issue_label_id_seq OWNED BY public.issue_label.id;
 
 
 --
--- TOC entry 267 (class 1259 OID 16834)
 -- Name: issue_user; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -812,7 +739,6 @@ CREATE TABLE public.issue_user (
 ALTER TABLE public.issue_user OWNER TO gitea;
 
 --
--- TOC entry 266 (class 1259 OID 16832)
 -- Name: issue_user_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -827,8 +753,6 @@ CREATE SEQUENCE public.issue_user_id_seq
 ALTER TABLE public.issue_user_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3814 (class 0 OID 0)
--- Dependencies: 266
 -- Name: issue_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -836,7 +760,6 @@ ALTER SEQUENCE public.issue_user_id_seq OWNED BY public.issue_user.id;
 
 
 --
--- TOC entry 285 (class 1259 OID 16944)
 -- Name: issue_watch; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -853,7 +776,6 @@ CREATE TABLE public.issue_watch (
 ALTER TABLE public.issue_watch OWNER TO gitea;
 
 --
--- TOC entry 284 (class 1259 OID 16942)
 -- Name: issue_watch_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -868,8 +790,6 @@ CREATE SEQUENCE public.issue_watch_id_seq
 ALTER TABLE public.issue_watch_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3815 (class 0 OID 0)
--- Dependencies: 284
 -- Name: issue_watch_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -877,7 +797,6 @@ ALTER SEQUENCE public.issue_watch_id_seq OWNED BY public.issue_watch.id;
 
 
 --
--- TOC entry 237 (class 1259 OID 16641)
 -- Name: label; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -897,7 +816,6 @@ CREATE TABLE public.label (
 ALTER TABLE public.label OWNER TO gitea;
 
 --
--- TOC entry 236 (class 1259 OID 16639)
 -- Name: label_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -912,8 +830,6 @@ CREATE SEQUENCE public.label_id_seq
 ALTER TABLE public.label_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3816 (class 0 OID 0)
--- Dependencies: 236
 -- Name: label_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -921,7 +837,6 @@ ALTER SEQUENCE public.label_id_seq OWNED BY public.label.id;
 
 
 --
--- TOC entry 299 (class 1259 OID 17024)
 -- Name: lfs_lock; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -937,7 +852,6 @@ CREATE TABLE public.lfs_lock (
 ALTER TABLE public.lfs_lock OWNER TO gitea;
 
 --
--- TOC entry 298 (class 1259 OID 17022)
 -- Name: lfs_lock_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -952,8 +866,6 @@ CREATE SEQUENCE public.lfs_lock_id_seq
 ALTER TABLE public.lfs_lock_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3817 (class 0 OID 0)
--- Dependencies: 298
 -- Name: lfs_lock_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -961,7 +873,6 @@ ALTER SEQUENCE public.lfs_lock_id_seq OWNED BY public.lfs_lock.id;
 
 
 --
--- TOC entry 269 (class 1259 OID 16843)
 -- Name: lfs_meta_object; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -977,7 +888,6 @@ CREATE TABLE public.lfs_meta_object (
 ALTER TABLE public.lfs_meta_object OWNER TO gitea;
 
 --
--- TOC entry 268 (class 1259 OID 16841)
 -- Name: lfs_meta_object_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -992,8 +902,6 @@ CREATE SEQUENCE public.lfs_meta_object_id_seq
 ALTER TABLE public.lfs_meta_object_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3818 (class 0 OID 0)
--- Dependencies: 268
 -- Name: lfs_meta_object_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1001,7 +909,6 @@ ALTER SEQUENCE public.lfs_meta_object_id_seq OWNED BY public.lfs_meta_object.id;
 
 
 --
--- TOC entry 247 (class 1259 OID 16705)
 -- Name: login_source; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1020,7 +927,6 @@ CREATE TABLE public.login_source (
 ALTER TABLE public.login_source OWNER TO gitea;
 
 --
--- TOC entry 246 (class 1259 OID 16703)
 -- Name: login_source_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1035,8 +941,6 @@ CREATE SEQUENCE public.login_source_id_seq
 ALTER TABLE public.login_source_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3819 (class 0 OID 0)
--- Dependencies: 246
 -- Name: login_source_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1044,7 +948,6 @@ ALTER SEQUENCE public.login_source_id_seq OWNED BY public.login_source.id;
 
 
 --
--- TOC entry 241 (class 1259 OID 16662)
 -- Name: milestone; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1065,7 +968,6 @@ CREATE TABLE public.milestone (
 ALTER TABLE public.milestone OWNER TO gitea;
 
 --
--- TOC entry 240 (class 1259 OID 16660)
 -- Name: milestone_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1080,8 +982,6 @@ CREATE SEQUENCE public.milestone_id_seq
 ALTER TABLE public.milestone_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3820 (class 0 OID 0)
--- Dependencies: 240
 -- Name: milestone_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1089,7 +989,6 @@ ALTER SEQUENCE public.milestone_id_seq OWNED BY public.milestone.id;
 
 
 --
--- TOC entry 243 (class 1259 OID 16674)
 -- Name: mirror; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1106,7 +1005,6 @@ CREATE TABLE public.mirror (
 ALTER TABLE public.mirror OWNER TO gitea;
 
 --
--- TOC entry 242 (class 1259 OID 16672)
 -- Name: mirror_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1121,8 +1019,6 @@ CREATE SEQUENCE public.mirror_id_seq
 ALTER TABLE public.mirror_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3821 (class 0 OID 0)
--- Dependencies: 242
 -- Name: mirror_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1130,7 +1026,6 @@ ALTER SEQUENCE public.mirror_id_seq OWNED BY public.mirror.id;
 
 
 --
--- TOC entry 261 (class 1259 OID 16795)
 -- Name: notice; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1145,7 +1040,6 @@ CREATE TABLE public.notice (
 ALTER TABLE public.notice OWNER TO gitea;
 
 --
--- TOC entry 260 (class 1259 OID 16793)
 -- Name: notice_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1160,8 +1054,6 @@ CREATE SEQUENCE public.notice_id_seq
 ALTER TABLE public.notice_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3822 (class 0 OID 0)
--- Dependencies: 260
 -- Name: notice_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1169,7 +1061,6 @@ ALTER SEQUENCE public.notice_id_seq OWNED BY public.notice.id;
 
 
 --
--- TOC entry 265 (class 1259 OID 16817)
 -- Name: notification; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1190,7 +1081,6 @@ CREATE TABLE public.notification (
 ALTER TABLE public.notification OWNER TO gitea;
 
 --
--- TOC entry 264 (class 1259 OID 16815)
 -- Name: notification_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1205,8 +1095,6 @@ CREATE SEQUENCE public.notification_id_seq
 ALTER TABLE public.notification_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3823 (class 0 OID 0)
--- Dependencies: 264
 -- Name: notification_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1214,7 +1102,6 @@ ALTER SEQUENCE public.notification_id_seq OWNED BY public.notification.id;
 
 
 --
--- TOC entry 311 (class 1259 OID 17097)
 -- Name: oauth2_application; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1233,7 +1120,6 @@ CREATE TABLE public.oauth2_application (
 ALTER TABLE public.oauth2_application OWNER TO gitea;
 
 --
--- TOC entry 310 (class 1259 OID 17095)
 -- Name: oauth2_application_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1248,8 +1134,6 @@ CREATE SEQUENCE public.oauth2_application_id_seq
 ALTER TABLE public.oauth2_application_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3824 (class 0 OID 0)
--- Dependencies: 310
 -- Name: oauth2_application_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1257,7 +1141,6 @@ ALTER SEQUENCE public.oauth2_application_id_seq OWNED BY public.oauth2_applicati
 
 
 --
--- TOC entry 313 (class 1259 OID 17112)
 -- Name: oauth2_authorization_code; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1275,7 +1158,6 @@ CREATE TABLE public.oauth2_authorization_code (
 ALTER TABLE public.oauth2_authorization_code OWNER TO gitea;
 
 --
--- TOC entry 312 (class 1259 OID 17110)
 -- Name: oauth2_authorization_code_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1290,8 +1172,6 @@ CREATE SEQUENCE public.oauth2_authorization_code_id_seq
 ALTER TABLE public.oauth2_authorization_code_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3825 (class 0 OID 0)
--- Dependencies: 312
 -- Name: oauth2_authorization_code_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1299,7 +1179,6 @@ ALTER SEQUENCE public.oauth2_authorization_code_id_seq OWNED BY public.oauth2_au
 
 
 --
--- TOC entry 315 (class 1259 OID 17125)
 -- Name: oauth2_grant; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1316,7 +1195,6 @@ CREATE TABLE public.oauth2_grant (
 ALTER TABLE public.oauth2_grant OWNER TO gitea;
 
 --
--- TOC entry 314 (class 1259 OID 17123)
 -- Name: oauth2_grant_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1331,8 +1209,6 @@ CREATE SEQUENCE public.oauth2_grant_id_seq
 ALTER TABLE public.oauth2_grant_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3826 (class 0 OID 0)
--- Dependencies: 314
 -- Name: oauth2_grant_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1340,7 +1216,6 @@ ALTER SEQUENCE public.oauth2_grant_id_seq OWNED BY public.oauth2_grant.id;
 
 
 --
--- TOC entry 319 (class 1259 OID 17150)
 -- Name: oauth2_session; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1356,7 +1231,6 @@ CREATE TABLE public.oauth2_session (
 ALTER TABLE public.oauth2_session OWNER TO gitea;
 
 --
--- TOC entry 255 (class 1259 OID 16763)
 -- Name: org_user; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1371,7 +1245,6 @@ CREATE TABLE public.org_user (
 ALTER TABLE public.org_user OWNER TO gitea;
 
 --
--- TOC entry 254 (class 1259 OID 16761)
 -- Name: org_user_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1386,8 +1259,6 @@ CREATE SEQUENCE public.org_user_id_seq
 ALTER TABLE public.org_user_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3827 (class 0 OID 0)
--- Dependencies: 254
 -- Name: org_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1395,7 +1266,6 @@ ALTER SEQUENCE public.org_user_id_seq OWNED BY public.org_user.id;
 
 
 --
--- TOC entry 281 (class 1259 OID 16918)
 -- Name: protected_branch; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1421,7 +1291,6 @@ CREATE TABLE public.protected_branch (
 ALTER TABLE public.protected_branch OWNER TO gitea;
 
 --
--- TOC entry 280 (class 1259 OID 16916)
 -- Name: protected_branch_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1436,8 +1305,6 @@ CREATE SEQUENCE public.protected_branch_id_seq
 ALTER TABLE public.protected_branch_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3828 (class 0 OID 0)
--- Dependencies: 280
 -- Name: protected_branch_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1445,7 +1312,6 @@ ALTER SEQUENCE public.protected_branch_id_seq OWNED BY public.protected_branch.i
 
 
 --
--- TOC entry 207 (class 1259 OID 16421)
 -- Name: public_key; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1466,7 +1332,6 @@ CREATE TABLE public.public_key (
 ALTER TABLE public.public_key OWNER TO gitea;
 
 --
--- TOC entry 206 (class 1259 OID 16419)
 -- Name: public_key_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1481,8 +1346,6 @@ CREATE SEQUENCE public.public_key_id_seq
 ALTER TABLE public.public_key_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3829 (class 0 OID 0)
--- Dependencies: 206
 -- Name: public_key_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1490,7 +1353,6 @@ ALTER SEQUENCE public.public_key_id_seq OWNED BY public.public_key.id;
 
 
 --
--- TOC entry 231 (class 1259 OID 16594)
 -- Name: pull_request; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1517,7 +1379,6 @@ CREATE TABLE public.pull_request (
 ALTER TABLE public.pull_request OWNER TO gitea;
 
 --
--- TOC entry 230 (class 1259 OID 16592)
 -- Name: pull_request_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1532,8 +1393,6 @@ CREATE SEQUENCE public.pull_request_id_seq
 ALTER TABLE public.pull_request_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3830 (class 0 OID 0)
--- Dependencies: 230
 -- Name: pull_request_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1541,7 +1400,6 @@ ALTER SEQUENCE public.pull_request_id_seq OWNED BY public.pull_request.id;
 
 
 --
--- TOC entry 301 (class 1259 OID 17037)
 -- Name: reaction; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1558,7 +1416,6 @@ CREATE TABLE public.reaction (
 ALTER TABLE public.reaction OWNER TO gitea;
 
 --
--- TOC entry 300 (class 1259 OID 17035)
 -- Name: reaction_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1573,8 +1430,6 @@ CREATE SEQUENCE public.reaction_id_seq
 ALTER TABLE public.reaction_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3831 (class 0 OID 0)
--- Dependencies: 300
 -- Name: reaction_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1582,7 +1437,6 @@ ALTER SEQUENCE public.reaction_id_seq OWNED BY public.reaction.id;
 
 
 --
--- TOC entry 245 (class 1259 OID 16686)
 -- Name: release; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1607,7 +1461,6 @@ CREATE TABLE public.release (
 ALTER TABLE public.release OWNER TO gitea;
 
 --
--- TOC entry 244 (class 1259 OID 16684)
 -- Name: release_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1622,8 +1475,6 @@ CREATE SEQUENCE public.release_id_seq
 ALTER TABLE public.release_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3832 (class 0 OID 0)
--- Dependencies: 244
 -- Name: release_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1631,7 +1482,6 @@ ALTER SEQUENCE public.release_id_seq OWNED BY public.release.id;
 
 
 --
--- TOC entry 295 (class 1259 OID 17006)
 -- Name: repo_indexer_status; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1645,7 +1495,6 @@ CREATE TABLE public.repo_indexer_status (
 ALTER TABLE public.repo_indexer_status OWNER TO gitea;
 
 --
--- TOC entry 294 (class 1259 OID 17004)
 -- Name: repo_indexer_status_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1660,8 +1509,6 @@ CREATE SEQUENCE public.repo_indexer_status_id_seq
 ALTER TABLE public.repo_indexer_status_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3833 (class 0 OID 0)
--- Dependencies: 294
 -- Name: repo_indexer_status_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1669,7 +1516,6 @@ ALTER SEQUENCE public.repo_indexer_status_id_seq OWNED BY public.repo_indexer_st
 
 
 --
--- TOC entry 278 (class 1259 OID 16902)
 -- Name: repo_redirect; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1684,7 +1530,6 @@ CREATE TABLE public.repo_redirect (
 ALTER TABLE public.repo_redirect OWNER TO gitea;
 
 --
--- TOC entry 277 (class 1259 OID 16900)
 -- Name: repo_redirect_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1699,8 +1544,6 @@ CREATE SEQUENCE public.repo_redirect_id_seq
 ALTER TABLE public.repo_redirect_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3834 (class 0 OID 0)
--- Dependencies: 277
 -- Name: repo_redirect_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1708,7 +1551,6 @@ ALTER SEQUENCE public.repo_redirect_id_seq OWNED BY public.repo_redirect.id;
 
 
 --
--- TOC entry 318 (class 1259 OID 17146)
 -- Name: repo_topic; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1721,7 +1563,6 @@ CREATE TABLE public.repo_topic (
 ALTER TABLE public.repo_topic OWNER TO gitea;
 
 --
--- TOC entry 276 (class 1259 OID 16889)
 -- Name: repo_unit; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1737,7 +1578,6 @@ CREATE TABLE public.repo_unit (
 ALTER TABLE public.repo_unit OWNER TO gitea;
 
 --
--- TOC entry 275 (class 1259 OID 16887)
 -- Name: repo_unit_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1752,8 +1592,6 @@ CREATE SEQUENCE public.repo_unit_id_seq
 ALTER TABLE public.repo_unit_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3835 (class 0 OID 0)
--- Dependencies: 275
 -- Name: repo_unit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1761,7 +1599,6 @@ ALTER SEQUENCE public.repo_unit_id_seq OWNED BY public.repo_unit.id;
 
 
 --
--- TOC entry 211 (class 1259 OID 16452)
 -- Name: repository; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1801,7 +1638,6 @@ CREATE TABLE public.repository (
 ALTER TABLE public.repository OWNER TO gitea;
 
 --
--- TOC entry 210 (class 1259 OID 16450)
 -- Name: repository_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1816,8 +1652,6 @@ CREATE SEQUENCE public.repository_id_seq
 ALTER TABLE public.repository_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3836 (class 0 OID 0)
--- Dependencies: 210
 -- Name: repository_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1825,7 +1659,6 @@ ALTER SEQUENCE public.repository_id_seq OWNED BY public.repository.id;
 
 
 --
--- TOC entry 309 (class 1259 OID 17085)
 -- Name: review; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1843,7 +1676,6 @@ CREATE TABLE public.review (
 ALTER TABLE public.review OWNER TO gitea;
 
 --
--- TOC entry 308 (class 1259 OID 17083)
 -- Name: review_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1858,8 +1690,6 @@ CREATE SEQUENCE public.review_id_seq
 ALTER TABLE public.review_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3837 (class 0 OID 0)
--- Dependencies: 308
 -- Name: review_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1867,7 +1697,6 @@ ALTER SEQUENCE public.review_id_seq OWNED BY public.review.id;
 
 
 --
--- TOC entry 223 (class 1259 OID 16534)
 -- Name: star; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1881,7 +1710,6 @@ CREATE TABLE public.star (
 ALTER TABLE public.star OWNER TO gitea;
 
 --
--- TOC entry 222 (class 1259 OID 16532)
 -- Name: star_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1896,8 +1724,6 @@ CREATE SEQUENCE public.star_id_seq
 ALTER TABLE public.star_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3838 (class 0 OID 0)
--- Dependencies: 222
 -- Name: star_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1905,7 +1731,6 @@ ALTER SEQUENCE public.star_id_seq OWNED BY public.star.id;
 
 
 --
--- TOC entry 289 (class 1259 OID 16971)
 -- Name: stopwatch; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1920,7 +1745,6 @@ CREATE TABLE public.stopwatch (
 ALTER TABLE public.stopwatch OWNER TO gitea;
 
 --
--- TOC entry 288 (class 1259 OID 16969)
 -- Name: stopwatch_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1935,8 +1759,6 @@ CREATE SEQUENCE public.stopwatch_id_seq
 ALTER TABLE public.stopwatch_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3839 (class 0 OID 0)
--- Dependencies: 288
 -- Name: stopwatch_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1944,7 +1766,6 @@ ALTER SEQUENCE public.stopwatch_id_seq OWNED BY public.stopwatch.id;
 
 
 --
--- TOC entry 253 (class 1259 OID 16751)
 -- Name: team; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -1963,7 +1784,6 @@ CREATE TABLE public.team (
 ALTER TABLE public.team OWNER TO gitea;
 
 --
--- TOC entry 252 (class 1259 OID 16749)
 -- Name: team_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -1978,8 +1798,6 @@ CREATE SEQUENCE public.team_id_seq
 ALTER TABLE public.team_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3840 (class 0 OID 0)
--- Dependencies: 252
 -- Name: team_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -1987,7 +1805,6 @@ ALTER SEQUENCE public.team_id_seq OWNED BY public.team.id;
 
 
 --
--- TOC entry 259 (class 1259 OID 16785)
 -- Name: team_repo; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2002,7 +1819,6 @@ CREATE TABLE public.team_repo (
 ALTER TABLE public.team_repo OWNER TO gitea;
 
 --
--- TOC entry 258 (class 1259 OID 16783)
 -- Name: team_repo_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2017,8 +1833,6 @@ CREATE SEQUENCE public.team_repo_id_seq
 ALTER TABLE public.team_repo_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3841 (class 0 OID 0)
--- Dependencies: 258
 -- Name: team_repo_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2026,7 +1840,6 @@ ALTER SEQUENCE public.team_repo_id_seq OWNED BY public.team_repo.id;
 
 
 --
--- TOC entry 307 (class 1259 OID 17075)
 -- Name: team_unit; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2041,7 +1854,6 @@ CREATE TABLE public.team_unit (
 ALTER TABLE public.team_unit OWNER TO gitea;
 
 --
--- TOC entry 306 (class 1259 OID 17073)
 -- Name: team_unit_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2056,8 +1868,6 @@ CREATE SEQUENCE public.team_unit_id_seq
 ALTER TABLE public.team_unit_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3842 (class 0 OID 0)
--- Dependencies: 306
 -- Name: team_unit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2065,7 +1875,6 @@ ALTER SEQUENCE public.team_unit_id_seq OWNED BY public.team_unit.id;
 
 
 --
--- TOC entry 257 (class 1259 OID 16775)
 -- Name: team_user; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2080,7 +1889,6 @@ CREATE TABLE public.team_user (
 ALTER TABLE public.team_user OWNER TO gitea;
 
 --
--- TOC entry 256 (class 1259 OID 16773)
 -- Name: team_user_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2095,8 +1903,6 @@ CREATE SEQUENCE public.team_user_id_seq
 ALTER TABLE public.team_user_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3843 (class 0 OID 0)
--- Dependencies: 256
 -- Name: team_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2104,7 +1910,6 @@ ALTER SEQUENCE public.team_user_id_seq OWNED BY public.team_user.id;
 
 
 --
--- TOC entry 317 (class 1259 OID 17137)
 -- Name: topic; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2120,7 +1925,6 @@ CREATE TABLE public.topic (
 ALTER TABLE public.topic OWNER TO gitea;
 
 --
--- TOC entry 316 (class 1259 OID 17135)
 -- Name: topic_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2135,8 +1939,6 @@ CREATE SEQUENCE public.topic_id_seq
 ALTER TABLE public.topic_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3844 (class 0 OID 0)
--- Dependencies: 316
 -- Name: topic_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2144,7 +1946,6 @@ ALTER SEQUENCE public.topic_id_seq OWNED BY public.topic.id;
 
 
 --
--- TOC entry 291 (class 1259 OID 16981)
 -- Name: tracked_time; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2160,7 +1961,6 @@ CREATE TABLE public.tracked_time (
 ALTER TABLE public.tracked_time OWNER TO gitea;
 
 --
--- TOC entry 290 (class 1259 OID 16979)
 -- Name: tracked_time_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2175,8 +1975,6 @@ CREATE SEQUENCE public.tracked_time_id_seq
 ALTER TABLE public.tracked_time_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3845 (class 0 OID 0)
--- Dependencies: 290
 -- Name: tracked_time_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2184,7 +1982,6 @@ ALTER SEQUENCE public.tracked_time_id_seq OWNED BY public.tracked_time.id;
 
 
 --
--- TOC entry 271 (class 1259 OID 16854)
 -- Name: two_factor; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2203,7 +2000,6 @@ CREATE TABLE public.two_factor (
 ALTER TABLE public.two_factor OWNER TO gitea;
 
 --
--- TOC entry 270 (class 1259 OID 16852)
 -- Name: two_factor_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2218,8 +2014,6 @@ CREATE SEQUENCE public.two_factor_id_seq
 ALTER TABLE public.two_factor_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3846 (class 0 OID 0)
--- Dependencies: 270
 -- Name: two_factor_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2227,7 +2021,6 @@ ALTER SEQUENCE public.two_factor_id_seq OWNED BY public.two_factor.id;
 
 
 --
--- TOC entry 305 (class 1259 OID 17061)
 -- Name: u2f_registration; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2245,7 +2038,6 @@ CREATE TABLE public.u2f_registration (
 ALTER TABLE public.u2f_registration OWNER TO gitea;
 
 --
--- TOC entry 304 (class 1259 OID 17059)
 -- Name: u2f_registration_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2260,8 +2052,6 @@ CREATE SEQUENCE public.u2f_registration_id_seq
 ALTER TABLE public.u2f_registration_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3847 (class 0 OID 0)
--- Dependencies: 304
 -- Name: u2f_registration_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2269,7 +2059,6 @@ ALTER SEQUENCE public.u2f_registration_id_seq OWNED BY public.u2f_registration.i
 
 
 --
--- TOC entry 219 (class 1259 OID 16516)
 -- Name: upload; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2283,7 +2072,6 @@ CREATE TABLE public.upload (
 ALTER TABLE public.upload OWNER TO gitea;
 
 --
--- TOC entry 218 (class 1259 OID 16514)
 -- Name: upload_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2298,8 +2086,6 @@ CREATE SEQUENCE public.upload_id_seq
 ALTER TABLE public.upload_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3848 (class 0 OID 0)
--- Dependencies: 218
 -- Name: upload_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2307,7 +2093,6 @@ ALTER SEQUENCE public.upload_id_seq OWNED BY public.upload.id;
 
 
 --
--- TOC entry 205 (class 1259 OID 16395)
 -- Name: user; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2359,7 +2144,6 @@ CREATE TABLE public."user" (
 ALTER TABLE public."user" OWNER TO gitea;
 
 --
--- TOC entry 204 (class 1259 OID 16393)
 -- Name: user_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2374,8 +2158,6 @@ CREATE SEQUENCE public.user_id_seq
 ALTER TABLE public.user_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3849 (class 0 OID 0)
--- Dependencies: 204
 -- Name: user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2383,7 +2165,6 @@ ALTER SEQUENCE public.user_id_seq OWNED BY public."user".id;
 
 
 --
--- TOC entry 283 (class 1259 OID 16933)
 -- Name: user_open_id; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2398,7 +2179,6 @@ CREATE TABLE public.user_open_id (
 ALTER TABLE public.user_open_id OWNER TO gitea;
 
 --
--- TOC entry 282 (class 1259 OID 16931)
 -- Name: user_open_id_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2413,8 +2193,6 @@ CREATE SEQUENCE public.user_open_id_id_seq
 ALTER TABLE public.user_open_id_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3850 (class 0 OID 0)
--- Dependencies: 282
 -- Name: user_open_id_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2422,7 +2200,6 @@ ALTER SEQUENCE public.user_open_id_id_seq OWNED BY public.user_open_id.id;
 
 
 --
--- TOC entry 203 (class 1259 OID 16387)
 -- Name: version; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2435,7 +2212,6 @@ CREATE TABLE public.version (
 ALTER TABLE public.version OWNER TO gitea;
 
 --
--- TOC entry 202 (class 1259 OID 16385)
 -- Name: version_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2450,8 +2226,6 @@ CREATE SEQUENCE public.version_id_seq
 ALTER TABLE public.version_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3851 (class 0 OID 0)
--- Dependencies: 202
 -- Name: version_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2459,7 +2233,6 @@ ALTER SEQUENCE public.version_id_seq OWNED BY public.version.id;
 
 
 --
--- TOC entry 221 (class 1259 OID 16525)
 -- Name: watch; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2473,7 +2246,6 @@ CREATE TABLE public.watch (
 ALTER TABLE public.watch OWNER TO gitea;
 
 --
--- TOC entry 220 (class 1259 OID 16523)
 -- Name: watch_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2488,8 +2260,6 @@ CREATE SEQUENCE public.watch_id_seq
 ALTER TABLE public.watch_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3852 (class 0 OID 0)
--- Dependencies: 220
 -- Name: watch_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2497,7 +2267,6 @@ ALTER SEQUENCE public.watch_id_seq OWNED BY public.watch.id;
 
 
 --
--- TOC entry 249 (class 1259 OID 16723)
 -- Name: webhook; Type: TABLE; Schema: public; Owner: gitea
 --
 
@@ -2524,7 +2293,6 @@ CREATE TABLE public.webhook (
 ALTER TABLE public.webhook OWNER TO gitea;
 
 --
--- TOC entry 248 (class 1259 OID 16721)
 -- Name: webhook_id_seq; Type: SEQUENCE; Schema: public; Owner: gitea
 --
 
@@ -2539,8 +2307,6 @@ CREATE SEQUENCE public.webhook_id_seq
 ALTER TABLE public.webhook_id_seq OWNER TO gitea;
 
 --
--- TOC entry 3853 (class 0 OID 0)
--- Dependencies: 248
 -- Name: webhook_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: gitea
 --
 
@@ -2548,7 +2314,6 @@ ALTER SEQUENCE public.webhook_id_seq OWNED BY public.webhook.id;
 
 
 --
--- TOC entry 3185 (class 2604 OID 16510)
 -- Name: access id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2556,7 +2321,6 @@ ALTER TABLE ONLY public.access ALTER COLUMN id SET DEFAULT nextval('public.acces
 
 
 --
--- TOC entry 3173 (class 2604 OID 16440)
 -- Name: access_token id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2564,7 +2328,6 @@ ALTER TABLE ONLY public.access_token ALTER COLUMN id SET DEFAULT nextval('public
 
 
 --
--- TOC entry 3190 (class 2604 OID 16555)
 -- Name: action id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2572,7 +2335,6 @@ ALTER TABLE ONLY public.action ALTER COLUMN id SET DEFAULT nextval('public.actio
 
 
 --
--- TOC entry 3197 (class 2604 OID 16629)
 -- Name: attachment id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2580,7 +2342,6 @@ ALTER TABLE ONLY public.attachment ALTER COLUMN id SET DEFAULT nextval('public.a
 
 
 --
--- TOC entry 3183 (class 2604 OID 16498)
 -- Name: collaboration id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2588,7 +2349,6 @@ ALTER TABLE ONLY public.collaboration ALTER COLUMN id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 3196 (class 2604 OID 16614)
 -- Name: comment id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2596,7 +2356,6 @@ ALTER TABLE ONLY public.comment ALTER COLUMN id SET DEFAULT nextval('public.comm
 
 
 --
--- TOC entry 3235 (class 2604 OID 16956)
 -- Name: commit_status id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2604,7 +2363,6 @@ ALTER TABLE ONLY public.commit_status ALTER COLUMN id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 3238 (class 2604 OID 16994)
 -- Name: deleted_branch id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2612,7 +2370,6 @@ ALTER TABLE ONLY public.deleted_branch ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 3181 (class 2604 OID 16483)
 -- Name: deploy_key id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2620,7 +2377,6 @@ ALTER TABLE ONLY public.deploy_key ALTER COLUMN id SET DEFAULT nextval('public.d
 
 
 --
--- TOC entry 3220 (class 2604 OID 16810)
 -- Name: email_address id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2628,7 +2384,6 @@ ALTER TABLE ONLY public.email_address ALTER COLUMN id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 3189 (class 2604 OID 16546)
 -- Name: follow id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2636,7 +2391,6 @@ ALTER TABLE ONLY public.follow ALTER COLUMN id SET DEFAULT nextval('public.follo
 
 
 --
--- TOC entry 3225 (class 2604 OID 16871)
 -- Name: gpg_key id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2644,7 +2398,6 @@ ALTER TABLE ONLY public.gpg_key ALTER COLUMN id SET DEFAULT nextval('public.gpg_
 
 
 --
--- TOC entry 3214 (class 2604 OID 16742)
 -- Name: hook_task id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2652,7 +2405,6 @@ ALTER TABLE ONLY public.hook_task ALTER COLUMN id SET DEFAULT nextval('public.ho
 
 
 --
--- TOC entry 3193 (class 2604 OID 16575)
 -- Name: issue id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2660,7 +2412,6 @@ ALTER TABLE ONLY public.issue ALTER COLUMN id SET DEFAULT nextval('public.issue_
 
 
 --
--- TOC entry 3243 (class 2604 OID 17054)
 -- Name: issue_assignees id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2668,7 +2419,6 @@ ALTER TABLE ONLY public.issue_assignees ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 3240 (class 2604 OID 17018)
 -- Name: issue_dependency id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2676,7 +2426,6 @@ ALTER TABLE ONLY public.issue_dependency ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 3202 (class 2604 OID 16656)
 -- Name: issue_label id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2684,7 +2433,6 @@ ALTER TABLE ONLY public.issue_label ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 3222 (class 2604 OID 16837)
 -- Name: issue_user id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2692,7 +2440,6 @@ ALTER TABLE ONLY public.issue_user ALTER COLUMN id SET DEFAULT nextval('public.i
 
 
 --
--- TOC entry 3234 (class 2604 OID 16947)
 -- Name: issue_watch id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2700,7 +2447,6 @@ ALTER TABLE ONLY public.issue_watch ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 3201 (class 2604 OID 16644)
 -- Name: label id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2708,7 +2454,6 @@ ALTER TABLE ONLY public.label ALTER COLUMN id SET DEFAULT nextval('public.label_
 
 
 --
--- TOC entry 3241 (class 2604 OID 17027)
 -- Name: lfs_lock id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2716,7 +2461,6 @@ ALTER TABLE ONLY public.lfs_lock ALTER COLUMN id SET DEFAULT nextval('public.lfs
 
 
 --
--- TOC entry 3223 (class 2604 OID 16846)
 -- Name: lfs_meta_object id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2724,7 +2468,6 @@ ALTER TABLE ONLY public.lfs_meta_object ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 3210 (class 2604 OID 16708)
 -- Name: login_source id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2732,7 +2475,6 @@ ALTER TABLE ONLY public.login_source ALTER COLUMN id SET DEFAULT nextval('public
 
 
 --
--- TOC entry 3203 (class 2604 OID 16665)
 -- Name: milestone id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2740,7 +2482,6 @@ ALTER TABLE ONLY public.milestone ALTER COLUMN id SET DEFAULT nextval('public.mi
 
 
 --
--- TOC entry 3204 (class 2604 OID 16677)
 -- Name: mirror id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2748,7 +2489,6 @@ ALTER TABLE ONLY public.mirror ALTER COLUMN id SET DEFAULT nextval('public.mirro
 
 
 --
--- TOC entry 3219 (class 2604 OID 16798)
 -- Name: notice id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2756,7 +2496,6 @@ ALTER TABLE ONLY public.notice ALTER COLUMN id SET DEFAULT nextval('public.notic
 
 
 --
--- TOC entry 3221 (class 2604 OID 16820)
 -- Name: notification id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2764,7 +2503,6 @@ ALTER TABLE ONLY public.notification ALTER COLUMN id SET DEFAULT nextval('public
 
 
 --
--- TOC entry 3247 (class 2604 OID 17100)
 -- Name: oauth2_application id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2772,7 +2510,6 @@ ALTER TABLE ONLY public.oauth2_application ALTER COLUMN id SET DEFAULT nextval('
 
 
 --
--- TOC entry 3248 (class 2604 OID 17115)
 -- Name: oauth2_authorization_code id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2780,7 +2517,6 @@ ALTER TABLE ONLY public.oauth2_authorization_code ALTER COLUMN id SET DEFAULT ne
 
 
 --
--- TOC entry 3249 (class 2604 OID 17128)
 -- Name: oauth2_grant id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2788,7 +2524,6 @@ ALTER TABLE ONLY public.oauth2_grant ALTER COLUMN id SET DEFAULT nextval('public
 
 
 --
--- TOC entry 3216 (class 2604 OID 16766)
 -- Name: org_user id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2796,7 +2531,6 @@ ALTER TABLE ONLY public.org_user ALTER COLUMN id SET DEFAULT nextval('public.org
 
 
 --
--- TOC entry 3228 (class 2604 OID 16921)
 -- Name: protected_branch id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2804,7 +2538,6 @@ ALTER TABLE ONLY public.protected_branch ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 3169 (class 2604 OID 16424)
 -- Name: public_key id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2812,7 +2545,6 @@ ALTER TABLE ONLY public.public_key ALTER COLUMN id SET DEFAULT nextval('public.p
 
 
 --
--- TOC entry 3195 (class 2604 OID 16597)
 -- Name: pull_request id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2820,7 +2552,6 @@ ALTER TABLE ONLY public.pull_request ALTER COLUMN id SET DEFAULT nextval('public
 
 
 --
--- TOC entry 3242 (class 2604 OID 17040)
 -- Name: reaction id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2828,7 +2559,6 @@ ALTER TABLE ONLY public.reaction ALTER COLUMN id SET DEFAULT nextval('public.rea
 
 
 --
--- TOC entry 3206 (class 2604 OID 16689)
 -- Name: release id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2836,7 +2566,6 @@ ALTER TABLE ONLY public.release ALTER COLUMN id SET DEFAULT nextval('public.rele
 
 
 --
--- TOC entry 3239 (class 2604 OID 17009)
 -- Name: repo_indexer_status id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2844,7 +2573,6 @@ ALTER TABLE ONLY public.repo_indexer_status ALTER COLUMN id SET DEFAULT nextval(
 
 
 --
--- TOC entry 3227 (class 2604 OID 16905)
 -- Name: repo_redirect id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2852,7 +2580,6 @@ ALTER TABLE ONLY public.repo_redirect ALTER COLUMN id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 3226 (class 2604 OID 16892)
 -- Name: repo_unit id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2860,7 +2587,6 @@ ALTER TABLE ONLY public.repo_unit ALTER COLUMN id SET DEFAULT nextval('public.re
 
 
 --
--- TOC entry 3174 (class 2604 OID 16455)
 -- Name: repository id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2868,7 +2594,6 @@ ALTER TABLE ONLY public.repository ALTER COLUMN id SET DEFAULT nextval('public.r
 
 
 --
--- TOC entry 3246 (class 2604 OID 17088)
 -- Name: review id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2876,7 +2601,6 @@ ALTER TABLE ONLY public.review ALTER COLUMN id SET DEFAULT nextval('public.revie
 
 
 --
--- TOC entry 3188 (class 2604 OID 16537)
 -- Name: star id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2884,7 +2608,6 @@ ALTER TABLE ONLY public.star ALTER COLUMN id SET DEFAULT nextval('public.star_id
 
 
 --
--- TOC entry 3236 (class 2604 OID 16974)
 -- Name: stopwatch id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2892,7 +2615,6 @@ ALTER TABLE ONLY public.stopwatch ALTER COLUMN id SET DEFAULT nextval('public.st
 
 
 --
--- TOC entry 3215 (class 2604 OID 16754)
 -- Name: team id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2900,7 +2622,6 @@ ALTER TABLE ONLY public.team ALTER COLUMN id SET DEFAULT nextval('public.team_id
 
 
 --
--- TOC entry 3218 (class 2604 OID 16788)
 -- Name: team_repo id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2908,7 +2629,6 @@ ALTER TABLE ONLY public.team_repo ALTER COLUMN id SET DEFAULT nextval('public.te
 
 
 --
--- TOC entry 3245 (class 2604 OID 17078)
 -- Name: team_unit id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2916,7 +2636,6 @@ ALTER TABLE ONLY public.team_unit ALTER COLUMN id SET DEFAULT nextval('public.te
 
 
 --
--- TOC entry 3217 (class 2604 OID 16778)
 -- Name: team_user id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2924,7 +2643,6 @@ ALTER TABLE ONLY public.team_user ALTER COLUMN id SET DEFAULT nextval('public.te
 
 
 --
--- TOC entry 3251 (class 2604 OID 17140)
 -- Name: topic id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2932,7 +2650,6 @@ ALTER TABLE ONLY public.topic ALTER COLUMN id SET DEFAULT nextval('public.topic_
 
 
 --
--- TOC entry 3237 (class 2604 OID 16984)
 -- Name: tracked_time id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2940,7 +2657,6 @@ ALTER TABLE ONLY public.tracked_time ALTER COLUMN id SET DEFAULT nextval('public
 
 
 --
--- TOC entry 3224 (class 2604 OID 16857)
 -- Name: two_factor id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2948,7 +2664,6 @@ ALTER TABLE ONLY public.two_factor ALTER COLUMN id SET DEFAULT nextval('public.t
 
 
 --
--- TOC entry 3244 (class 2604 OID 17064)
 -- Name: u2f_registration id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2956,7 +2671,6 @@ ALTER TABLE ONLY public.u2f_registration ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 3186 (class 2604 OID 16519)
 -- Name: upload id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2964,7 +2678,6 @@ ALTER TABLE ONLY public.upload ALTER COLUMN id SET DEFAULT nextval('public.uploa
 
 
 --
--- TOC entry 3159 (class 2604 OID 16398)
 -- Name: user id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2972,7 +2685,6 @@ ALTER TABLE ONLY public."user" ALTER COLUMN id SET DEFAULT nextval('public.user_
 
 
 --
--- TOC entry 3232 (class 2604 OID 16936)
 -- Name: user_open_id id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2980,7 +2692,6 @@ ALTER TABLE ONLY public.user_open_id ALTER COLUMN id SET DEFAULT nextval('public
 
 
 --
--- TOC entry 3158 (class 2604 OID 16390)
 -- Name: version id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2988,7 +2699,6 @@ ALTER TABLE ONLY public.version ALTER COLUMN id SET DEFAULT nextval('public.vers
 
 
 --
--- TOC entry 3187 (class 2604 OID 16528)
 -- Name: watch id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -2996,7 +2706,6 @@ ALTER TABLE ONLY public.watch ALTER COLUMN id SET DEFAULT nextval('public.watch_
 
 
 --
--- TOC entry 3213 (class 2604 OID 16726)
 -- Name: webhook id; Type: DEFAULT; Schema: public; Owner: gitea
 --
 
@@ -3004,8 +2713,6 @@ ALTER TABLE ONLY public.webhook ALTER COLUMN id SET DEFAULT nextval('public.webh
 
 
 --
--- TOC entry 3689 (class 0 OID 16507)
--- Dependencies: 217
 -- Data for Name: access; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3014,8 +2721,6 @@ COPY public.access (id, user_id, repo_id, mode) FROM stdin;
 
 
 --
--- TOC entry 3681 (class 0 OID 16437)
--- Dependencies: 209
 -- Data for Name: access_token; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3024,8 +2729,6 @@ COPY public.access_token (id, uid, name, token_hash, token_salt, token_last_eigh
 
 
 --
--- TOC entry 3699 (class 0 OID 16552)
--- Dependencies: 227
 -- Data for Name: action; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3034,8 +2737,6 @@ COPY public.action (id, user_id, op_type, act_user_id, repo_id, comment_id, is_d
 
 
 --
--- TOC entry 3707 (class 0 OID 16626)
--- Dependencies: 235
 -- Data for Name: attachment; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3044,8 +2745,6 @@ COPY public.attachment (id, uuid, issue_id, release_id, uploader_id, comment_id,
 
 
 --
--- TOC entry 3687 (class 0 OID 16495)
--- Dependencies: 215
 -- Data for Name: collaboration; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3054,8 +2753,6 @@ COPY public.collaboration (id, repo_id, user_id, mode) FROM stdin;
 
 
 --
--- TOC entry 3705 (class 0 OID 16611)
--- Dependencies: 233
 -- Data for Name: comment; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3064,8 +2761,6 @@ COPY public.comment (id, type, poster_id, issue_id, label_id, old_milestone_id, 
 
 
 --
--- TOC entry 3759 (class 0 OID 16953)
--- Dependencies: 287
 -- Data for Name: commit_status; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3074,8 +2769,6 @@ COPY public.commit_status (id, index, repo_id, state, sha, target_url, descripti
 
 
 --
--- TOC entry 3765 (class 0 OID 16991)
--- Dependencies: 293
 -- Data for Name: deleted_branch; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3084,8 +2777,6 @@ COPY public.deleted_branch (id, repo_id, name, commit, deleted_by_id, deleted_un
 
 
 --
--- TOC entry 3685 (class 0 OID 16480)
--- Dependencies: 213
 -- Data for Name: deploy_key; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3094,8 +2785,6 @@ COPY public.deploy_key (id, key_id, repo_id, name, fingerprint, mode, created_un
 
 
 --
--- TOC entry 3735 (class 0 OID 16807)
--- Dependencies: 263
 -- Data for Name: email_address; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3104,8 +2793,6 @@ COPY public.email_address (id, uid, email, is_activated) FROM stdin;
 
 
 --
--- TOC entry 3751 (class 0 OID 16910)
--- Dependencies: 279
 -- Data for Name: external_login_user; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3114,8 +2801,6 @@ COPY public.external_login_user (external_id, user_id, login_source_id) FROM std
 
 
 --
--- TOC entry 3697 (class 0 OID 16543)
--- Dependencies: 225
 -- Data for Name: follow; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3124,8 +2809,6 @@ COPY public.follow (id, user_id, follow_id) FROM stdin;
 
 
 --
--- TOC entry 3745 (class 0 OID 16868)
--- Dependencies: 273
 -- Data for Name: gpg_key; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3134,8 +2817,6 @@ COPY public.gpg_key (id, owner_id, key_id, primary_key_id, content, created_unix
 
 
 --
--- TOC entry 3746 (class 0 OID 16879)
--- Dependencies: 274
 -- Data for Name: gpg_key_import; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3144,8 +2825,6 @@ COPY public.gpg_key_import (key_id, content) FROM stdin;
 
 
 --
--- TOC entry 3723 (class 0 OID 16739)
--- Dependencies: 251
 -- Data for Name: hook_task; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3154,8 +2833,6 @@ COPY public.hook_task (id, repo_id, hook_id, uuid, type, url, signature, payload
 
 
 --
--- TOC entry 3701 (class 0 OID 16572)
--- Dependencies: 229
 -- Data for Name: issue; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3164,8 +2841,6 @@ COPY public.issue (id, repo_id, index, poster_id, name, content, milestone_id, p
 
 
 --
--- TOC entry 3775 (class 0 OID 17051)
--- Dependencies: 303
 -- Data for Name: issue_assignees; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3174,8 +2849,6 @@ COPY public.issue_assignees (id, assignee_id, issue_id) FROM stdin;
 
 
 --
--- TOC entry 3769 (class 0 OID 17015)
--- Dependencies: 297
 -- Data for Name: issue_dependency; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3184,8 +2857,6 @@ COPY public.issue_dependency (id, user_id, issue_id, dependency_id, created_unix
 
 
 --
--- TOC entry 3711 (class 0 OID 16653)
--- Dependencies: 239
 -- Data for Name: issue_label; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3194,8 +2865,6 @@ COPY public.issue_label (id, issue_id, label_id) FROM stdin;
 
 
 --
--- TOC entry 3739 (class 0 OID 16834)
--- Dependencies: 267
 -- Data for Name: issue_user; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3204,8 +2873,6 @@ COPY public.issue_user (id, uid, issue_id, is_read, is_mentioned) FROM stdin;
 
 
 --
--- TOC entry 3757 (class 0 OID 16944)
--- Dependencies: 285
 -- Data for Name: issue_watch; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3214,8 +2881,6 @@ COPY public.issue_watch (id, user_id, issue_id, is_watching, created_unix, updat
 
 
 --
--- TOC entry 3709 (class 0 OID 16641)
--- Dependencies: 237
 -- Data for Name: label; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3224,8 +2889,6 @@ COPY public.label (id, repo_id, name, description, color, num_issues, num_closed
 
 
 --
--- TOC entry 3771 (class 0 OID 17024)
--- Dependencies: 299
 -- Data for Name: lfs_lock; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3234,8 +2897,6 @@ COPY public.lfs_lock (id, repo_id, owner_id, path, created) FROM stdin;
 
 
 --
--- TOC entry 3741 (class 0 OID 16843)
--- Dependencies: 269
 -- Data for Name: lfs_meta_object; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3244,8 +2905,6 @@ COPY public.lfs_meta_object (id, oid, size, repository_id, created_unix) FROM st
 
 
 --
--- TOC entry 3719 (class 0 OID 16705)
--- Dependencies: 247
 -- Data for Name: login_source; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3254,8 +2913,6 @@ COPY public.login_source (id, type, name, is_actived, is_sync_enabled, cfg, crea
 
 
 --
--- TOC entry 3713 (class 0 OID 16662)
--- Dependencies: 241
 -- Data for Name: milestone; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3264,8 +2921,6 @@ COPY public.milestone (id, repo_id, name, content, is_closed, num_issues, num_cl
 
 
 --
--- TOC entry 3715 (class 0 OID 16674)
--- Dependencies: 243
 -- Data for Name: mirror; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3274,8 +2929,6 @@ COPY public.mirror (id, repo_id, "interval", enable_prune, updated_unix, next_up
 
 
 --
--- TOC entry 3733 (class 0 OID 16795)
--- Dependencies: 261
 -- Data for Name: notice; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3284,8 +2937,6 @@ COPY public.notice (id, type, description, created_unix) FROM stdin;
 
 
 --
--- TOC entry 3737 (class 0 OID 16817)
--- Dependencies: 265
 -- Data for Name: notification; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3294,8 +2945,6 @@ COPY public.notification (id, user_id, repo_id, status, source, issue_id, commit
 
 
 --
--- TOC entry 3783 (class 0 OID 17097)
--- Dependencies: 311
 -- Data for Name: oauth2_application; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3304,8 +2953,6 @@ COPY public.oauth2_application (id, uid, name, client_id, client_secret, redirec
 
 
 --
--- TOC entry 3785 (class 0 OID 17112)
--- Dependencies: 313
 -- Data for Name: oauth2_authorization_code; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3314,8 +2961,6 @@ COPY public.oauth2_authorization_code (id, grant_id, code, code_challenge, code_
 
 
 --
--- TOC entry 3787 (class 0 OID 17125)
--- Dependencies: 315
 -- Data for Name: oauth2_grant; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3324,8 +2969,6 @@ COPY public.oauth2_grant (id, user_id, application_id, counter, created_unix, up
 
 
 --
--- TOC entry 3791 (class 0 OID 17150)
--- Dependencies: 319
 -- Data for Name: oauth2_session; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3334,8 +2977,6 @@ COPY public.oauth2_session (id, data, created_unix, updated_unix, expires_unix) 
 
 
 --
--- TOC entry 3727 (class 0 OID 16763)
--- Dependencies: 255
 -- Data for Name: org_user; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3344,8 +2985,6 @@ COPY public.org_user (id, uid, org_id, is_public) FROM stdin;
 
 
 --
--- TOC entry 3753 (class 0 OID 16918)
--- Dependencies: 281
 -- Data for Name: protected_branch; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3354,8 +2993,6 @@ COPY public.protected_branch (id, repo_id, branch_name, can_push, enable_whiteli
 
 
 --
--- TOC entry 3679 (class 0 OID 16421)
--- Dependencies: 207
 -- Data for Name: public_key; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3364,8 +3001,6 @@ COPY public.public_key (id, owner_id, name, fingerprint, content, mode, type, lo
 
 
 --
--- TOC entry 3703 (class 0 OID 16594)
--- Dependencies: 231
 -- Data for Name: pull_request; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3374,8 +3009,6 @@ COPY public.pull_request (id, type, status, conflicted_files, issue_id, index, h
 
 
 --
--- TOC entry 3773 (class 0 OID 17037)
--- Dependencies: 301
 -- Data for Name: reaction; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3384,8 +3017,6 @@ COPY public.reaction (id, type, issue_id, comment_id, user_id, created_unix) FRO
 
 
 --
--- TOC entry 3717 (class 0 OID 16686)
--- Dependencies: 245
 -- Data for Name: release; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3394,8 +3025,6 @@ COPY public.release (id, repo_id, publisher_id, tag_name, lower_tag_name, target
 
 
 --
--- TOC entry 3767 (class 0 OID 17006)
--- Dependencies: 295
 -- Data for Name: repo_indexer_status; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3404,8 +3033,6 @@ COPY public.repo_indexer_status (id, repo_id, commit_sha) FROM stdin;
 
 
 --
--- TOC entry 3750 (class 0 OID 16902)
--- Dependencies: 278
 -- Data for Name: repo_redirect; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3414,8 +3041,6 @@ COPY public.repo_redirect (id, owner_id, lower_name, redirect_repo_id) FROM stdi
 
 
 --
--- TOC entry 3790 (class 0 OID 17146)
--- Dependencies: 318
 -- Data for Name: repo_topic; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3424,8 +3049,6 @@ COPY public.repo_topic (repo_id, topic_id) FROM stdin;
 
 
 --
--- TOC entry 3748 (class 0 OID 16889)
--- Dependencies: 276
 -- Data for Name: repo_unit; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3434,8 +3057,6 @@ COPY public.repo_unit (id, repo_id, type, config, created_unix) FROM stdin;
 
 
 --
--- TOC entry 3683 (class 0 OID 16452)
--- Dependencies: 211
 -- Data for Name: repository; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3444,8 +3065,6 @@ COPY public.repository (id, owner_id, lower_name, name, description, website, de
 
 
 --
--- TOC entry 3781 (class 0 OID 17085)
--- Dependencies: 309
 -- Data for Name: review; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3454,8 +3073,6 @@ COPY public.review (id, type, reviewer_id, issue_id, content, created_unix, upda
 
 
 --
--- TOC entry 3695 (class 0 OID 16534)
--- Dependencies: 223
 -- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3464,8 +3081,6 @@ COPY public.star (id, uid, repo_id) FROM stdin;
 
 
 --
--- TOC entry 3761 (class 0 OID 16971)
--- Dependencies: 289
 -- Data for Name: stopwatch; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3474,8 +3089,6 @@ COPY public.stopwatch (id, issue_id, user_id, created_unix) FROM stdin;
 
 
 --
--- TOC entry 3725 (class 0 OID 16751)
--- Dependencies: 253
 -- Data for Name: team; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3484,8 +3097,6 @@ COPY public.team (id, org_id, lower_name, name, description, authorize, num_repo
 
 
 --
--- TOC entry 3731 (class 0 OID 16785)
--- Dependencies: 259
 -- Data for Name: team_repo; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3494,8 +3105,6 @@ COPY public.team_repo (id, org_id, team_id, repo_id) FROM stdin;
 
 
 --
--- TOC entry 3779 (class 0 OID 17075)
--- Dependencies: 307
 -- Data for Name: team_unit; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3504,8 +3113,6 @@ COPY public.team_unit (id, org_id, team_id, type) FROM stdin;
 
 
 --
--- TOC entry 3729 (class 0 OID 16775)
--- Dependencies: 257
 -- Data for Name: team_user; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3514,8 +3121,6 @@ COPY public.team_user (id, org_id, team_id, uid) FROM stdin;
 
 
 --
--- TOC entry 3789 (class 0 OID 17137)
--- Dependencies: 317
 -- Data for Name: topic; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3524,8 +3129,6 @@ COPY public.topic (id, name, repo_count, created_unix, updated_unix) FROM stdin;
 
 
 --
--- TOC entry 3763 (class 0 OID 16981)
--- Dependencies: 291
 -- Data for Name: tracked_time; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3534,8 +3137,6 @@ COPY public.tracked_time (id, issue_id, user_id, created_unix, "time") FROM stdi
 
 
 --
--- TOC entry 3743 (class 0 OID 16854)
--- Dependencies: 271
 -- Data for Name: two_factor; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3544,8 +3145,6 @@ COPY public.two_factor (id, uid, secret, scratch_salt, scratch_hash, last_used_p
 
 
 --
--- TOC entry 3777 (class 0 OID 17061)
--- Dependencies: 305
 -- Data for Name: u2f_registration; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3554,8 +3153,6 @@ COPY public.u2f_registration (id, name, user_id, raw, counter, created_unix, upd
 
 
 --
--- TOC entry 3691 (class 0 OID 16516)
--- Dependencies: 219
 -- Data for Name: upload; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3564,19 +3161,15 @@ COPY public.upload (id, uuid, name) FROM stdin;
 
 
 --
--- TOC entry 3677 (class 0 OID 16395)
--- Dependencies: 205
 -- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
 COPY public."user" (id, lower_name, name, full_name, email, keep_email_private, passwd, must_change_password, login_type, login_source, login_name, type, location, website, rands, salt, language, description, created_unix, updated_unix, last_login_unix, last_repo_visibility, max_repo_creation, is_active, is_admin, allow_git_hook, allow_import_local, allow_create_organization, prohibit_login, avatar, avatar_email, use_custom_avatar, num_followers, num_following, num_stars, num_repos, num_teams, num_members, visibility, diff_view_style, theme) FROM stdin;
-1	gitops	gitops		noreply@gitops.org	f	a8e1b08490f98906194ea6da4bc3920e7dae18109f01be7c56fd23438124c0e31a140be7888cf8d5f251672b77068c5e8c6f	f	0	0		0			cg547bPLOn	kJRyNk81EK	en-US		1575735715	1575735715	1575735715	f	-1	t	t	f	f	t	f	0d81cad56acc117fe814b186a646b8b6	noreply@gitops.org	f	0	0	0	0	0	0	0		gitea
+1	gitops	gitops		noreply@gitops.org	f	a8e1b08490f98906194ea6da4bc3920e7dae18109f01be7c56fd23438124c0e31a140be7888cf8d5f251672b77068c5e8c6f	f	0	0		0			cg547bPLOn	kJRyNk81EK	en-US		1575735715	1575739992	1575739992	f	-1	t	t	f	f	t	f	0d81cad56acc117fe814b186a646b8b6	noreply@gitops.org	f	0	0	0	0	0	0	0		gitea
 \.
 
 
 --
--- TOC entry 3755 (class 0 OID 16933)
--- Dependencies: 283
 -- Data for Name: user_open_id; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3585,8 +3178,6 @@ COPY public.user_open_id (id, uid, uri, show) FROM stdin;
 
 
 --
--- TOC entry 3675 (class 0 OID 16387)
--- Dependencies: 203
 -- Data for Name: version; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3596,8 +3187,6 @@ COPY public.version (id, version) FROM stdin;
 
 
 --
--- TOC entry 3693 (class 0 OID 16525)
--- Dependencies: 221
 -- Data for Name: watch; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3606,8 +3195,6 @@ COPY public.watch (id, user_id, repo_id) FROM stdin;
 
 
 --
--- TOC entry 3721 (class 0 OID 16723)
--- Dependencies: 249
 -- Data for Name: webhook; Type: TABLE DATA; Schema: public; Owner: gitea
 --
 
@@ -3616,8 +3203,6 @@ COPY public.webhook (id, repo_id, org_id, url, signature, http_method, content_t
 
 
 --
--- TOC entry 3854 (class 0 OID 0)
--- Dependencies: 216
 -- Name: access_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3625,8 +3210,6 @@ SELECT pg_catalog.setval('public.access_id_seq', 1, false);
 
 
 --
--- TOC entry 3855 (class 0 OID 0)
--- Dependencies: 208
 -- Name: access_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3634,8 +3217,6 @@ SELECT pg_catalog.setval('public.access_token_id_seq', 1, false);
 
 
 --
--- TOC entry 3856 (class 0 OID 0)
--- Dependencies: 226
 -- Name: action_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3643,8 +3224,6 @@ SELECT pg_catalog.setval('public.action_id_seq', 1, false);
 
 
 --
--- TOC entry 3857 (class 0 OID 0)
--- Dependencies: 234
 -- Name: attachment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3652,8 +3231,6 @@ SELECT pg_catalog.setval('public.attachment_id_seq', 1, false);
 
 
 --
--- TOC entry 3858 (class 0 OID 0)
--- Dependencies: 214
 -- Name: collaboration_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3661,8 +3238,6 @@ SELECT pg_catalog.setval('public.collaboration_id_seq', 1, false);
 
 
 --
--- TOC entry 3859 (class 0 OID 0)
--- Dependencies: 232
 -- Name: comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3670,8 +3245,6 @@ SELECT pg_catalog.setval('public.comment_id_seq', 1, false);
 
 
 --
--- TOC entry 3860 (class 0 OID 0)
--- Dependencies: 286
 -- Name: commit_status_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3679,8 +3252,6 @@ SELECT pg_catalog.setval('public.commit_status_id_seq', 1, false);
 
 
 --
--- TOC entry 3861 (class 0 OID 0)
--- Dependencies: 292
 -- Name: deleted_branch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3688,8 +3259,6 @@ SELECT pg_catalog.setval('public.deleted_branch_id_seq', 1, false);
 
 
 --
--- TOC entry 3862 (class 0 OID 0)
--- Dependencies: 212
 -- Name: deploy_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3697,8 +3266,6 @@ SELECT pg_catalog.setval('public.deploy_key_id_seq', 1, false);
 
 
 --
--- TOC entry 3863 (class 0 OID 0)
--- Dependencies: 262
 -- Name: email_address_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3706,8 +3273,6 @@ SELECT pg_catalog.setval('public.email_address_id_seq', 1, false);
 
 
 --
--- TOC entry 3864 (class 0 OID 0)
--- Dependencies: 224
 -- Name: follow_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3715,8 +3280,6 @@ SELECT pg_catalog.setval('public.follow_id_seq', 1, false);
 
 
 --
--- TOC entry 3865 (class 0 OID 0)
--- Dependencies: 272
 -- Name: gpg_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3724,8 +3287,6 @@ SELECT pg_catalog.setval('public.gpg_key_id_seq', 1, false);
 
 
 --
--- TOC entry 3866 (class 0 OID 0)
--- Dependencies: 250
 -- Name: hook_task_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3733,8 +3294,6 @@ SELECT pg_catalog.setval('public.hook_task_id_seq', 1, false);
 
 
 --
--- TOC entry 3867 (class 0 OID 0)
--- Dependencies: 302
 -- Name: issue_assignees_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3742,8 +3301,6 @@ SELECT pg_catalog.setval('public.issue_assignees_id_seq', 1, false);
 
 
 --
--- TOC entry 3868 (class 0 OID 0)
--- Dependencies: 296
 -- Name: issue_dependency_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3751,8 +3308,6 @@ SELECT pg_catalog.setval('public.issue_dependency_id_seq', 1, false);
 
 
 --
--- TOC entry 3869 (class 0 OID 0)
--- Dependencies: 228
 -- Name: issue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3760,8 +3315,6 @@ SELECT pg_catalog.setval('public.issue_id_seq', 1, false);
 
 
 --
--- TOC entry 3870 (class 0 OID 0)
--- Dependencies: 238
 -- Name: issue_label_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3769,8 +3322,6 @@ SELECT pg_catalog.setval('public.issue_label_id_seq', 1, false);
 
 
 --
--- TOC entry 3871 (class 0 OID 0)
--- Dependencies: 266
 -- Name: issue_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3778,8 +3329,6 @@ SELECT pg_catalog.setval('public.issue_user_id_seq', 1, false);
 
 
 --
--- TOC entry 3872 (class 0 OID 0)
--- Dependencies: 284
 -- Name: issue_watch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3787,8 +3336,6 @@ SELECT pg_catalog.setval('public.issue_watch_id_seq', 1, false);
 
 
 --
--- TOC entry 3873 (class 0 OID 0)
--- Dependencies: 236
 -- Name: label_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3796,8 +3343,6 @@ SELECT pg_catalog.setval('public.label_id_seq', 1, false);
 
 
 --
--- TOC entry 3874 (class 0 OID 0)
--- Dependencies: 298
 -- Name: lfs_lock_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3805,8 +3350,6 @@ SELECT pg_catalog.setval('public.lfs_lock_id_seq', 1, false);
 
 
 --
--- TOC entry 3875 (class 0 OID 0)
--- Dependencies: 268
 -- Name: lfs_meta_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3814,8 +3357,6 @@ SELECT pg_catalog.setval('public.lfs_meta_object_id_seq', 1, false);
 
 
 --
--- TOC entry 3876 (class 0 OID 0)
--- Dependencies: 246
 -- Name: login_source_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3823,8 +3364,6 @@ SELECT pg_catalog.setval('public.login_source_id_seq', 1, false);
 
 
 --
--- TOC entry 3877 (class 0 OID 0)
--- Dependencies: 240
 -- Name: milestone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3832,8 +3371,6 @@ SELECT pg_catalog.setval('public.milestone_id_seq', 1, false);
 
 
 --
--- TOC entry 3878 (class 0 OID 0)
--- Dependencies: 242
 -- Name: mirror_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3841,8 +3378,6 @@ SELECT pg_catalog.setval('public.mirror_id_seq', 1, false);
 
 
 --
--- TOC entry 3879 (class 0 OID 0)
--- Dependencies: 260
 -- Name: notice_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3850,8 +3385,6 @@ SELECT pg_catalog.setval('public.notice_id_seq', 1, false);
 
 
 --
--- TOC entry 3880 (class 0 OID 0)
--- Dependencies: 264
 -- Name: notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3859,8 +3392,6 @@ SELECT pg_catalog.setval('public.notification_id_seq', 1, false);
 
 
 --
--- TOC entry 3881 (class 0 OID 0)
--- Dependencies: 310
 -- Name: oauth2_application_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3868,8 +3399,6 @@ SELECT pg_catalog.setval('public.oauth2_application_id_seq', 1, false);
 
 
 --
--- TOC entry 3882 (class 0 OID 0)
--- Dependencies: 312
 -- Name: oauth2_authorization_code_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3877,8 +3406,6 @@ SELECT pg_catalog.setval('public.oauth2_authorization_code_id_seq', 1, false);
 
 
 --
--- TOC entry 3883 (class 0 OID 0)
--- Dependencies: 314
 -- Name: oauth2_grant_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3886,8 +3413,6 @@ SELECT pg_catalog.setval('public.oauth2_grant_id_seq', 1, false);
 
 
 --
--- TOC entry 3884 (class 0 OID 0)
--- Dependencies: 254
 -- Name: org_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3895,8 +3420,6 @@ SELECT pg_catalog.setval('public.org_user_id_seq', 1, false);
 
 
 --
--- TOC entry 3885 (class 0 OID 0)
--- Dependencies: 280
 -- Name: protected_branch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3904,8 +3427,6 @@ SELECT pg_catalog.setval('public.protected_branch_id_seq', 1, false);
 
 
 --
--- TOC entry 3886 (class 0 OID 0)
--- Dependencies: 206
 -- Name: public_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3913,8 +3434,6 @@ SELECT pg_catalog.setval('public.public_key_id_seq', 1, false);
 
 
 --
--- TOC entry 3887 (class 0 OID 0)
--- Dependencies: 230
 -- Name: pull_request_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3922,8 +3441,6 @@ SELECT pg_catalog.setval('public.pull_request_id_seq', 1, false);
 
 
 --
--- TOC entry 3888 (class 0 OID 0)
--- Dependencies: 300
 -- Name: reaction_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3931,8 +3448,6 @@ SELECT pg_catalog.setval('public.reaction_id_seq', 1, false);
 
 
 --
--- TOC entry 3889 (class 0 OID 0)
--- Dependencies: 244
 -- Name: release_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3940,8 +3455,6 @@ SELECT pg_catalog.setval('public.release_id_seq', 1, false);
 
 
 --
--- TOC entry 3890 (class 0 OID 0)
--- Dependencies: 294
 -- Name: repo_indexer_status_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3949,8 +3462,6 @@ SELECT pg_catalog.setval('public.repo_indexer_status_id_seq', 1, false);
 
 
 --
--- TOC entry 3891 (class 0 OID 0)
--- Dependencies: 277
 -- Name: repo_redirect_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3958,8 +3469,6 @@ SELECT pg_catalog.setval('public.repo_redirect_id_seq', 1, false);
 
 
 --
--- TOC entry 3892 (class 0 OID 0)
--- Dependencies: 275
 -- Name: repo_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3967,8 +3476,6 @@ SELECT pg_catalog.setval('public.repo_unit_id_seq', 1, false);
 
 
 --
--- TOC entry 3893 (class 0 OID 0)
--- Dependencies: 210
 -- Name: repository_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3976,8 +3483,6 @@ SELECT pg_catalog.setval('public.repository_id_seq', 1, false);
 
 
 --
--- TOC entry 3894 (class 0 OID 0)
--- Dependencies: 308
 -- Name: review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3985,8 +3490,6 @@ SELECT pg_catalog.setval('public.review_id_seq', 1, false);
 
 
 --
--- TOC entry 3895 (class 0 OID 0)
--- Dependencies: 222
 -- Name: star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -3994,8 +3497,6 @@ SELECT pg_catalog.setval('public.star_id_seq', 1, false);
 
 
 --
--- TOC entry 3896 (class 0 OID 0)
--- Dependencies: 288
 -- Name: stopwatch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4003,8 +3504,6 @@ SELECT pg_catalog.setval('public.stopwatch_id_seq', 1, false);
 
 
 --
--- TOC entry 3897 (class 0 OID 0)
--- Dependencies: 252
 -- Name: team_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4012,8 +3511,6 @@ SELECT pg_catalog.setval('public.team_id_seq', 1, false);
 
 
 --
--- TOC entry 3898 (class 0 OID 0)
--- Dependencies: 258
 -- Name: team_repo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4021,8 +3518,6 @@ SELECT pg_catalog.setval('public.team_repo_id_seq', 1, false);
 
 
 --
--- TOC entry 3899 (class 0 OID 0)
--- Dependencies: 306
 -- Name: team_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4030,8 +3525,6 @@ SELECT pg_catalog.setval('public.team_unit_id_seq', 1, false);
 
 
 --
--- TOC entry 3900 (class 0 OID 0)
--- Dependencies: 256
 -- Name: team_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4039,8 +3532,6 @@ SELECT pg_catalog.setval('public.team_user_id_seq', 1, false);
 
 
 --
--- TOC entry 3901 (class 0 OID 0)
--- Dependencies: 316
 -- Name: topic_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4048,8 +3539,6 @@ SELECT pg_catalog.setval('public.topic_id_seq', 1, false);
 
 
 --
--- TOC entry 3902 (class 0 OID 0)
--- Dependencies: 290
 -- Name: tracked_time_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4057,8 +3546,6 @@ SELECT pg_catalog.setval('public.tracked_time_id_seq', 1, false);
 
 
 --
--- TOC entry 3903 (class 0 OID 0)
--- Dependencies: 270
 -- Name: two_factor_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4066,8 +3553,6 @@ SELECT pg_catalog.setval('public.two_factor_id_seq', 1, false);
 
 
 --
--- TOC entry 3904 (class 0 OID 0)
--- Dependencies: 304
 -- Name: u2f_registration_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4075,8 +3560,6 @@ SELECT pg_catalog.setval('public.u2f_registration_id_seq', 1, false);
 
 
 --
--- TOC entry 3905 (class 0 OID 0)
--- Dependencies: 218
 -- Name: upload_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4084,8 +3567,6 @@ SELECT pg_catalog.setval('public.upload_id_seq', 1, false);
 
 
 --
--- TOC entry 3906 (class 0 OID 0)
--- Dependencies: 204
 -- Name: user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4093,8 +3574,6 @@ SELECT pg_catalog.setval('public.user_id_seq', 1, true);
 
 
 --
--- TOC entry 3907 (class 0 OID 0)
--- Dependencies: 282
 -- Name: user_open_id_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4102,8 +3581,6 @@ SELECT pg_catalog.setval('public.user_open_id_id_seq', 1, false);
 
 
 --
--- TOC entry 3908 (class 0 OID 0)
--- Dependencies: 202
 -- Name: version_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4111,8 +3588,6 @@ SELECT pg_catalog.setval('public.version_id_seq', 1, true);
 
 
 --
--- TOC entry 3909 (class 0 OID 0)
--- Dependencies: 220
 -- Name: watch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4120,8 +3595,6 @@ SELECT pg_catalog.setval('public.watch_id_seq', 1, false);
 
 
 --
--- TOC entry 3910 (class 0 OID 0)
--- Dependencies: 248
 -- Name: webhook_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
@@ -4129,7 +3602,6 @@ SELECT pg_catalog.setval('public.webhook_id_seq', 1, false);
 
 
 --
--- TOC entry 3297 (class 2606 OID 16512)
 -- Name: access access_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4138,7 +3610,6 @@ ALTER TABLE ONLY public.access
 
 
 --
--- TOC entry 3271 (class 2606 OID 16445)
 -- Name: access_token access_token_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4147,7 +3618,6 @@ ALTER TABLE ONLY public.access_token
 
 
 --
--- TOC entry 3318 (class 2606 OID 16562)
 -- Name: action action_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4156,7 +3626,6 @@ ALTER TABLE ONLY public.action
 
 
 --
--- TOC entry 3350 (class 2606 OID 16634)
 -- Name: attachment attachment_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4165,7 +3634,6 @@ ALTER TABLE ONLY public.attachment
 
 
 --
--- TOC entry 3294 (class 2606 OID 16501)
 -- Name: collaboration collaboration_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4174,7 +3642,6 @@ ALTER TABLE ONLY public.collaboration
 
 
 --
--- TOC entry 3344 (class 2606 OID 16619)
 -- Name: comment comment_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4183,7 +3650,6 @@ ALTER TABLE ONLY public.comment
 
 
 --
--- TOC entry 3472 (class 2606 OID 16961)
 -- Name: commit_status commit_status_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4192,7 +3658,6 @@ ALTER TABLE ONLY public.commit_status
 
 
 --
--- TOC entry 3486 (class 2606 OID 16999)
 -- Name: deleted_branch deleted_branch_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4201,7 +3666,6 @@ ALTER TABLE ONLY public.deleted_branch
 
 
 --
--- TOC entry 3289 (class 2606 OID 16489)
 -- Name: deploy_key deploy_key_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4210,7 +3674,6 @@ ALTER TABLE ONLY public.deploy_key
 
 
 --
--- TOC entry 3412 (class 2606 OID 16812)
 -- Name: email_address email_address_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4219,7 +3682,6 @@ ALTER TABLE ONLY public.email_address
 
 
 --
--- TOC entry 3453 (class 2606 OID 16914)
 -- Name: external_login_user external_login_user_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4228,7 +3690,6 @@ ALTER TABLE ONLY public.external_login_user
 
 
 --
--- TOC entry 3309 (class 2606 OID 16548)
 -- Name: follow follow_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4237,7 +3698,6 @@ ALTER TABLE ONLY public.follow
 
 
 --
--- TOC entry 3442 (class 2606 OID 16886)
 -- Name: gpg_key_import gpg_key_import_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4246,7 +3706,6 @@ ALTER TABLE ONLY public.gpg_key_import
 
 
 --
--- TOC entry 3440 (class 2606 OID 16876)
 -- Name: gpg_key gpg_key_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4255,7 +3714,6 @@ ALTER TABLE ONLY public.gpg_key
 
 
 --
--- TOC entry 3388 (class 2606 OID 16747)
 -- Name: hook_task hook_task_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4264,7 +3722,6 @@ ALTER TABLE ONLY public.hook_task
 
 
 --
--- TOC entry 3508 (class 2606 OID 17056)
 -- Name: issue_assignees issue_assignees_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4273,7 +3730,6 @@ ALTER TABLE ONLY public.issue_assignees
 
 
 --
--- TOC entry 3492 (class 2606 OID 17020)
 -- Name: issue_dependency issue_dependency_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4282,7 +3738,6 @@ ALTER TABLE ONLY public.issue_dependency
 
 
 --
--- TOC entry 3356 (class 2606 OID 16658)
 -- Name: issue_label issue_label_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4291,7 +3746,6 @@ ALTER TABLE ONLY public.issue_label
 
 
 --
--- TOC entry 3330 (class 2606 OID 16581)
 -- Name: issue issue_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4300,7 +3754,6 @@ ALTER TABLE ONLY public.issue
 
 
 --
--- TOC entry 3426 (class 2606 OID 16839)
 -- Name: issue_user issue_user_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4309,7 +3762,6 @@ ALTER TABLE ONLY public.issue_user
 
 
 --
--- TOC entry 3463 (class 2606 OID 16949)
 -- Name: issue_watch issue_watch_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4318,7 +3770,6 @@ ALTER TABLE ONLY public.issue_watch
 
 
 --
--- TOC entry 3353 (class 2606 OID 16649)
 -- Name: label label_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4327,7 +3778,6 @@ ALTER TABLE ONLY public.label
 
 
 --
--- TOC entry 3496 (class 2606 OID 17032)
 -- Name: lfs_lock lfs_lock_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4336,7 +3786,6 @@ ALTER TABLE ONLY public.lfs_lock
 
 
 --
--- TOC entry 3431 (class 2606 OID 16848)
 -- Name: lfs_meta_object lfs_meta_object_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4345,7 +3794,6 @@ ALTER TABLE ONLY public.lfs_meta_object
 
 
 --
--- TOC entry 3378 (class 2606 OID 16715)
 -- Name: login_source login_source_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4354,7 +3802,6 @@ ALTER TABLE ONLY public.login_source
 
 
 --
--- TOC entry 3359 (class 2606 OID 16670)
 -- Name: milestone milestone_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4363,7 +3810,6 @@ ALTER TABLE ONLY public.milestone
 
 
 --
--- TOC entry 3364 (class 2606 OID 16680)
 -- Name: mirror mirror_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4372,7 +3818,6 @@ ALTER TABLE ONLY public.mirror
 
 
 --
--- TOC entry 3408 (class 2606 OID 16803)
 -- Name: notice notice_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4381,7 +3826,6 @@ ALTER TABLE ONLY public.notice
 
 
 --
--- TOC entry 3423 (class 2606 OID 16822)
 -- Name: notification notification_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4390,7 +3834,6 @@ ALTER TABLE ONLY public.notification
 
 
 --
--- TOC entry 3529 (class 2606 OID 17105)
 -- Name: oauth2_application oauth2_application_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4399,7 +3842,6 @@ ALTER TABLE ONLY public.oauth2_application
 
 
 --
--- TOC entry 3533 (class 2606 OID 17120)
 -- Name: oauth2_authorization_code oauth2_authorization_code_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4408,7 +3850,6 @@ ALTER TABLE ONLY public.oauth2_authorization_code
 
 
 --
--- TOC entry 3538 (class 2606 OID 17131)
 -- Name: oauth2_grant oauth2_grant_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4417,7 +3858,6 @@ ALTER TABLE ONLY public.oauth2_grant
 
 
 --
--- TOC entry 3547 (class 2606 OID 17157)
 -- Name: oauth2_session oauth2_session_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4426,7 +3866,6 @@ ALTER TABLE ONLY public.oauth2_session
 
 
 --
--- TOC entry 3397 (class 2606 OID 16768)
 -- Name: org_user org_user_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4435,7 +3874,6 @@ ALTER TABLE ONLY public.org_user
 
 
 --
--- TOC entry 3456 (class 2606 OID 16929)
 -- Name: protected_branch protected_branch_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4444,7 +3882,6 @@ ALTER TABLE ONLY public.protected_branch
 
 
 --
--- TOC entry 3265 (class 2606 OID 16432)
 -- Name: public_key public_key_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4453,7 +3890,6 @@ ALTER TABLE ONLY public.public_key
 
 
 --
--- TOC entry 3338 (class 2606 OID 16602)
 -- Name: pull_request pull_request_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4462,7 +3898,6 @@ ALTER TABLE ONLY public.pull_request
 
 
 --
--- TOC entry 3504 (class 2606 OID 17042)
 -- Name: reaction reaction_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4471,7 +3906,6 @@ ALTER TABLE ONLY public.reaction
 
 
 --
--- TOC entry 3371 (class 2606 OID 16697)
 -- Name: release release_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4480,7 +3914,6 @@ ALTER TABLE ONLY public.release
 
 
 --
--- TOC entry 3489 (class 2606 OID 17011)
 -- Name: repo_indexer_status repo_indexer_status_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4489,7 +3922,6 @@ ALTER TABLE ONLY public.repo_indexer_status
 
 
 --
--- TOC entry 3450 (class 2606 OID 16907)
 -- Name: repo_redirect repo_redirect_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4498,7 +3930,6 @@ ALTER TABLE ONLY public.repo_redirect
 
 
 --
--- TOC entry 3446 (class 2606 OID 16897)
 -- Name: repo_unit repo_unit_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4507,7 +3938,6 @@ ALTER TABLE ONLY public.repo_unit
 
 
 --
--- TOC entry 3284 (class 2606 OID 16466)
 -- Name: repository repository_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4516,7 +3946,6 @@ ALTER TABLE ONLY public.repository
 
 
 --
--- TOC entry 3523 (class 2606 OID 17090)
 -- Name: review review_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4525,7 +3954,6 @@ ALTER TABLE ONLY public.review
 
 
 --
--- TOC entry 3306 (class 2606 OID 16539)
 -- Name: star star_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4534,7 +3962,6 @@ ALTER TABLE ONLY public.star
 
 
 --
--- TOC entry 3476 (class 2606 OID 16976)
 -- Name: stopwatch stopwatch_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4543,7 +3970,6 @@ ALTER TABLE ONLY public.stopwatch
 
 
 --
--- TOC entry 3391 (class 2606 OID 16759)
 -- Name: team team_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4552,7 +3978,6 @@ ALTER TABLE ONLY public.team
 
 
 --
--- TOC entry 3405 (class 2606 OID 16790)
 -- Name: team_repo team_repo_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4561,7 +3986,6 @@ ALTER TABLE ONLY public.team_repo
 
 
 --
--- TOC entry 3517 (class 2606 OID 17080)
 -- Name: team_unit team_unit_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4570,7 +3994,6 @@ ALTER TABLE ONLY public.team_unit
 
 
 --
--- TOC entry 3401 (class 2606 OID 16780)
 -- Name: team_user team_user_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4579,7 +4002,6 @@ ALTER TABLE ONLY public.team_user
 
 
 --
--- TOC entry 3543 (class 2606 OID 17142)
 -- Name: topic topic_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4588,7 +4010,6 @@ ALTER TABLE ONLY public.topic
 
 
 --
--- TOC entry 3480 (class 2606 OID 16986)
 -- Name: tracked_time tracked_time_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4597,7 +4018,6 @@ ALTER TABLE ONLY public.tracked_time
 
 
 --
--- TOC entry 3436 (class 2606 OID 16862)
 -- Name: two_factor two_factor_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4606,7 +4026,6 @@ ALTER TABLE ONLY public.two_factor
 
 
 --
--- TOC entry 3513 (class 2606 OID 17069)
 -- Name: u2f_registration u2f_registration_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4615,7 +4034,6 @@ ALTER TABLE ONLY public.u2f_registration
 
 
 --
--- TOC entry 3300 (class 2606 OID 16521)
 -- Name: upload upload_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4624,7 +4042,6 @@ ALTER TABLE ONLY public.upload
 
 
 --
--- TOC entry 3460 (class 2606 OID 16939)
 -- Name: user_open_id user_open_id_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4633,7 +4050,6 @@ ALTER TABLE ONLY public.user_open_id
 
 
 --
--- TOC entry 3261 (class 2606 OID 16412)
 -- Name: user user_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4642,7 +4058,6 @@ ALTER TABLE ONLY public."user"
 
 
 --
--- TOC entry 3253 (class 2606 OID 16392)
 -- Name: version version_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4651,7 +4066,6 @@ ALTER TABLE ONLY public.version
 
 
 --
--- TOC entry 3303 (class 2606 OID 16530)
 -- Name: watch watch_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4660,7 +4074,6 @@ ALTER TABLE ONLY public.watch
 
 
 --
--- TOC entry 3385 (class 2606 OID 16731)
 -- Name: webhook webhook_pkey; Type: CONSTRAINT; Schema: public; Owner: gitea
 --
 
@@ -4669,7 +4082,6 @@ ALTER TABLE ONLY public.webhook
 
 
 --
--- TOC entry 3266 (class 1259 OID 16448)
 -- Name: IDX_access_token_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4677,7 +4089,6 @@ CREATE INDEX "IDX_access_token_created_unix" ON public.access_token USING btree 
 
 
 --
--- TOC entry 3267 (class 1259 OID 16447)
 -- Name: IDX_access_token_uid; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4685,7 +4096,6 @@ CREATE INDEX "IDX_access_token_uid" ON public.access_token USING btree (uid);
 
 
 --
--- TOC entry 3268 (class 1259 OID 16449)
 -- Name: IDX_access_token_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4693,7 +4103,6 @@ CREATE INDEX "IDX_access_token_updated_unix" ON public.access_token USING btree 
 
 
 --
--- TOC entry 3310 (class 1259 OID 16565)
 -- Name: IDX_action_act_user_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4701,7 +4110,6 @@ CREATE INDEX "IDX_action_act_user_id" ON public.action USING btree (act_user_id)
 
 
 --
--- TOC entry 3311 (class 1259 OID 16567)
 -- Name: IDX_action_comment_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4709,7 +4117,6 @@ CREATE INDEX "IDX_action_comment_id" ON public.action USING btree (comment_id);
 
 
 --
--- TOC entry 3312 (class 1259 OID 16563)
 -- Name: IDX_action_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4717,7 +4124,6 @@ CREATE INDEX "IDX_action_created_unix" ON public.action USING btree (created_uni
 
 
 --
--- TOC entry 3313 (class 1259 OID 16568)
 -- Name: IDX_action_is_deleted; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4725,7 +4131,6 @@ CREATE INDEX "IDX_action_is_deleted" ON public.action USING btree (is_deleted);
 
 
 --
--- TOC entry 3314 (class 1259 OID 16569)
 -- Name: IDX_action_is_private; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4733,7 +4138,6 @@ CREATE INDEX "IDX_action_is_private" ON public.action USING btree (is_private);
 
 
 --
--- TOC entry 3315 (class 1259 OID 16566)
 -- Name: IDX_action_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4741,7 +4145,6 @@ CREATE INDEX "IDX_action_repo_id" ON public.action USING btree (repo_id);
 
 
 --
--- TOC entry 3316 (class 1259 OID 16564)
 -- Name: IDX_action_user_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4749,7 +4152,6 @@ CREATE INDEX "IDX_action_user_id" ON public.action USING btree (user_id);
 
 
 --
--- TOC entry 3345 (class 1259 OID 16636)
 -- Name: IDX_attachment_issue_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4757,7 +4159,6 @@ CREATE INDEX "IDX_attachment_issue_id" ON public.attachment USING btree (issue_i
 
 
 --
--- TOC entry 3346 (class 1259 OID 16637)
 -- Name: IDX_attachment_release_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4765,7 +4166,6 @@ CREATE INDEX "IDX_attachment_release_id" ON public.attachment USING btree (relea
 
 
 --
--- TOC entry 3347 (class 1259 OID 16638)
 -- Name: IDX_attachment_uploader_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4773,7 +4173,6 @@ CREATE INDEX "IDX_attachment_uploader_id" ON public.attachment USING btree (uplo
 
 
 --
--- TOC entry 3290 (class 1259 OID 16504)
 -- Name: IDX_collaboration_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4781,7 +4180,6 @@ CREATE INDEX "IDX_collaboration_repo_id" ON public.collaboration USING btree (re
 
 
 --
--- TOC entry 3291 (class 1259 OID 16503)
 -- Name: IDX_collaboration_user_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4789,7 +4187,6 @@ CREATE INDEX "IDX_collaboration_user_id" ON public.collaboration USING btree (us
 
 
 --
--- TOC entry 3339 (class 1259 OID 16622)
 -- Name: IDX_comment_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4797,7 +4194,6 @@ CREATE INDEX "IDX_comment_created_unix" ON public.comment USING btree (created_u
 
 
 --
--- TOC entry 3340 (class 1259 OID 16621)
 -- Name: IDX_comment_issue_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4805,7 +4201,6 @@ CREATE INDEX "IDX_comment_issue_id" ON public.comment USING btree (issue_id);
 
 
 --
--- TOC entry 3341 (class 1259 OID 16620)
 -- Name: IDX_comment_poster_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4813,7 +4208,6 @@ CREATE INDEX "IDX_comment_poster_id" ON public.comment USING btree (poster_id);
 
 
 --
--- TOC entry 3342 (class 1259 OID 16623)
 -- Name: IDX_comment_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4821,7 +4215,6 @@ CREATE INDEX "IDX_comment_updated_unix" ON public.comment USING btree (updated_u
 
 
 --
--- TOC entry 3464 (class 1259 OID 16967)
 -- Name: IDX_commit_status_context_hash; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4829,7 +4222,6 @@ CREATE INDEX "IDX_commit_status_context_hash" ON public.commit_status USING btre
 
 
 --
--- TOC entry 3465 (class 1259 OID 16968)
 -- Name: IDX_commit_status_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4837,7 +4229,6 @@ CREATE INDEX "IDX_commit_status_created_unix" ON public.commit_status USING btre
 
 
 --
--- TOC entry 3466 (class 1259 OID 16964)
 -- Name: IDX_commit_status_index; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4845,7 +4236,6 @@ CREATE INDEX "IDX_commit_status_index" ON public.commit_status USING btree (inde
 
 
 --
--- TOC entry 3467 (class 1259 OID 16965)
 -- Name: IDX_commit_status_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4853,7 +4243,6 @@ CREATE INDEX "IDX_commit_status_repo_id" ON public.commit_status USING btree (re
 
 
 --
--- TOC entry 3468 (class 1259 OID 16966)
 -- Name: IDX_commit_status_sha; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4861,7 +4250,6 @@ CREATE INDEX "IDX_commit_status_sha" ON public.commit_status USING btree (sha);
 
 
 --
--- TOC entry 3469 (class 1259 OID 16963)
 -- Name: IDX_commit_status_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4869,7 +4257,6 @@ CREATE INDEX "IDX_commit_status_updated_unix" ON public.commit_status USING btre
 
 
 --
--- TOC entry 3481 (class 1259 OID 17003)
 -- Name: IDX_deleted_branch_deleted_by_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4877,7 +4264,6 @@ CREATE INDEX "IDX_deleted_branch_deleted_by_id" ON public.deleted_branch USING b
 
 
 --
--- TOC entry 3482 (class 1259 OID 17001)
 -- Name: IDX_deleted_branch_deleted_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4885,7 +4271,6 @@ CREATE INDEX "IDX_deleted_branch_deleted_unix" ON public.deleted_branch USING bt
 
 
 --
--- TOC entry 3483 (class 1259 OID 17002)
 -- Name: IDX_deleted_branch_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4893,7 +4278,6 @@ CREATE INDEX "IDX_deleted_branch_repo_id" ON public.deleted_branch USING btree (
 
 
 --
--- TOC entry 3285 (class 1259 OID 16491)
 -- Name: IDX_deploy_key_key_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4901,7 +4285,6 @@ CREATE INDEX "IDX_deploy_key_key_id" ON public.deploy_key USING btree (key_id);
 
 
 --
--- TOC entry 3286 (class 1259 OID 16492)
 -- Name: IDX_deploy_key_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4909,7 +4292,6 @@ CREATE INDEX "IDX_deploy_key_repo_id" ON public.deploy_key USING btree (repo_id)
 
 
 --
--- TOC entry 3409 (class 1259 OID 16814)
 -- Name: IDX_email_address_uid; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4917,7 +4299,6 @@ CREATE INDEX "IDX_email_address_uid" ON public.email_address USING btree (uid);
 
 
 --
--- TOC entry 3451 (class 1259 OID 16915)
 -- Name: IDX_external_login_user_user_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4925,7 +4306,6 @@ CREATE INDEX "IDX_external_login_user_user_id" ON public.external_login_user USI
 
 
 --
--- TOC entry 3437 (class 1259 OID 16877)
 -- Name: IDX_gpg_key_key_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4933,7 +4313,6 @@ CREATE INDEX "IDX_gpg_key_key_id" ON public.gpg_key USING btree (key_id);
 
 
 --
--- TOC entry 3438 (class 1259 OID 16878)
 -- Name: IDX_gpg_key_owner_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4941,7 +4320,6 @@ CREATE INDEX "IDX_gpg_key_owner_id" ON public.gpg_key USING btree (owner_id);
 
 
 --
--- TOC entry 3386 (class 1259 OID 16748)
 -- Name: IDX_hook_task_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4949,7 +4327,6 @@ CREATE INDEX "IDX_hook_task_repo_id" ON public.hook_task USING btree (repo_id);
 
 
 --
--- TOC entry 3505 (class 1259 OID 17057)
 -- Name: IDX_issue_assignees_assignee_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4957,7 +4334,6 @@ CREATE INDEX "IDX_issue_assignees_assignee_id" ON public.issue_assignees USING b
 
 
 --
--- TOC entry 3506 (class 1259 OID 17058)
 -- Name: IDX_issue_assignees_issue_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4965,7 +4341,6 @@ CREATE INDEX "IDX_issue_assignees_issue_id" ON public.issue_assignees USING btre
 
 
 --
--- TOC entry 3319 (class 1259 OID 16591)
 -- Name: IDX_issue_closed_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4973,7 +4348,6 @@ CREATE INDEX "IDX_issue_closed_unix" ON public.issue USING btree (closed_unix);
 
 
 --
--- TOC entry 3320 (class 1259 OID 16590)
 -- Name: IDX_issue_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4981,7 +4355,6 @@ CREATE INDEX "IDX_issue_created_unix" ON public.issue USING btree (created_unix)
 
 
 --
--- TOC entry 3321 (class 1259 OID 16585)
 -- Name: IDX_issue_deadline_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4989,7 +4362,6 @@ CREATE INDEX "IDX_issue_deadline_unix" ON public.issue USING btree (deadline_uni
 
 
 --
--- TOC entry 3322 (class 1259 OID 16588)
 -- Name: IDX_issue_is_closed; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -4997,7 +4369,6 @@ CREATE INDEX "IDX_issue_is_closed" ON public.issue USING btree (is_closed);
 
 
 --
--- TOC entry 3323 (class 1259 OID 16589)
 -- Name: IDX_issue_is_pull; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5005,7 +4376,6 @@ CREATE INDEX "IDX_issue_is_pull" ON public.issue USING btree (is_pull);
 
 
 --
--- TOC entry 3324 (class 1259 OID 16587)
 -- Name: IDX_issue_milestone_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5013,7 +4383,6 @@ CREATE INDEX "IDX_issue_milestone_id" ON public.issue USING btree (milestone_id)
 
 
 --
--- TOC entry 3325 (class 1259 OID 16584)
 -- Name: IDX_issue_poster_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5021,7 +4390,6 @@ CREATE INDEX "IDX_issue_poster_id" ON public.issue USING btree (poster_id);
 
 
 --
--- TOC entry 3326 (class 1259 OID 16583)
 -- Name: IDX_issue_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5029,7 +4397,6 @@ CREATE INDEX "IDX_issue_repo_id" ON public.issue USING btree (repo_id);
 
 
 --
--- TOC entry 3327 (class 1259 OID 16586)
 -- Name: IDX_issue_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5037,7 +4404,6 @@ CREATE INDEX "IDX_issue_updated_unix" ON public.issue USING btree (updated_unix)
 
 
 --
--- TOC entry 3424 (class 1259 OID 16840)
 -- Name: IDX_issue_user_uid; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5045,7 +4411,6 @@ CREATE INDEX "IDX_issue_user_uid" ON public.issue_user USING btree (uid);
 
 
 --
--- TOC entry 3351 (class 1259 OID 16650)
 -- Name: IDX_label_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5053,7 +4418,6 @@ CREATE INDEX "IDX_label_repo_id" ON public.label USING btree (repo_id);
 
 
 --
--- TOC entry 3493 (class 1259 OID 17034)
 -- Name: IDX_lfs_lock_owner_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5061,7 +4425,6 @@ CREATE INDEX "IDX_lfs_lock_owner_id" ON public.lfs_lock USING btree (owner_id);
 
 
 --
--- TOC entry 3494 (class 1259 OID 17033)
 -- Name: IDX_lfs_lock_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5069,7 +4432,6 @@ CREATE INDEX "IDX_lfs_lock_repo_id" ON public.lfs_lock USING btree (repo_id);
 
 
 --
--- TOC entry 3427 (class 1259 OID 16850)
 -- Name: IDX_lfs_meta_object_oid; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5077,7 +4439,6 @@ CREATE INDEX "IDX_lfs_meta_object_oid" ON public.lfs_meta_object USING btree (oi
 
 
 --
--- TOC entry 3428 (class 1259 OID 16851)
 -- Name: IDX_lfs_meta_object_repository_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5085,7 +4446,6 @@ CREATE INDEX "IDX_lfs_meta_object_repository_id" ON public.lfs_meta_object USING
 
 
 --
--- TOC entry 3372 (class 1259 OID 16719)
 -- Name: IDX_login_source_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5093,7 +4453,6 @@ CREATE INDEX "IDX_login_source_created_unix" ON public.login_source USING btree 
 
 
 --
--- TOC entry 3373 (class 1259 OID 16717)
 -- Name: IDX_login_source_is_actived; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5101,7 +4460,6 @@ CREATE INDEX "IDX_login_source_is_actived" ON public.login_source USING btree (i
 
 
 --
--- TOC entry 3374 (class 1259 OID 16718)
 -- Name: IDX_login_source_is_sync_enabled; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5109,7 +4467,6 @@ CREATE INDEX "IDX_login_source_is_sync_enabled" ON public.login_source USING btr
 
 
 --
--- TOC entry 3375 (class 1259 OID 16720)
 -- Name: IDX_login_source_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5117,7 +4474,6 @@ CREATE INDEX "IDX_login_source_updated_unix" ON public.login_source USING btree 
 
 
 --
--- TOC entry 3357 (class 1259 OID 16671)
 -- Name: IDX_milestone_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5125,7 +4481,6 @@ CREATE INDEX "IDX_milestone_repo_id" ON public.milestone USING btree (repo_id);
 
 
 --
--- TOC entry 3360 (class 1259 OID 16683)
 -- Name: IDX_mirror_next_update_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5133,7 +4488,6 @@ CREATE INDEX "IDX_mirror_next_update_unix" ON public.mirror USING btree (next_up
 
 
 --
--- TOC entry 3361 (class 1259 OID 16681)
 -- Name: IDX_mirror_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5141,7 +4495,6 @@ CREATE INDEX "IDX_mirror_repo_id" ON public.mirror USING btree (repo_id);
 
 
 --
--- TOC entry 3362 (class 1259 OID 16682)
 -- Name: IDX_mirror_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5149,7 +4502,6 @@ CREATE INDEX "IDX_mirror_updated_unix" ON public.mirror USING btree (updated_uni
 
 
 --
--- TOC entry 3406 (class 1259 OID 16804)
 -- Name: IDX_notice_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5157,7 +4509,6 @@ CREATE INDEX "IDX_notice_created_unix" ON public.notice USING btree (created_uni
 
 
 --
--- TOC entry 3413 (class 1259 OID 16828)
 -- Name: IDX_notification_commit_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5165,7 +4516,6 @@ CREATE INDEX "IDX_notification_commit_id" ON public.notification USING btree (co
 
 
 --
--- TOC entry 3414 (class 1259 OID 16830)
 -- Name: IDX_notification_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5173,7 +4523,6 @@ CREATE INDEX "IDX_notification_created_unix" ON public.notification USING btree 
 
 
 --
--- TOC entry 3415 (class 1259 OID 16826)
 -- Name: IDX_notification_issue_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5181,7 +4530,6 @@ CREATE INDEX "IDX_notification_issue_id" ON public.notification USING btree (iss
 
 
 --
--- TOC entry 3416 (class 1259 OID 16827)
 -- Name: IDX_notification_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5189,7 +4537,6 @@ CREATE INDEX "IDX_notification_repo_id" ON public.notification USING btree (repo
 
 
 --
--- TOC entry 3417 (class 1259 OID 16825)
 -- Name: IDX_notification_source; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5197,7 +4544,6 @@ CREATE INDEX "IDX_notification_source" ON public.notification USING btree (sourc
 
 
 --
--- TOC entry 3418 (class 1259 OID 16824)
 -- Name: IDX_notification_status; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5205,7 +4551,6 @@ CREATE INDEX "IDX_notification_status" ON public.notification USING btree (statu
 
 
 --
--- TOC entry 3419 (class 1259 OID 16829)
 -- Name: IDX_notification_updated_by; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5213,7 +4558,6 @@ CREATE INDEX "IDX_notification_updated_by" ON public.notification USING btree (u
 
 
 --
--- TOC entry 3420 (class 1259 OID 16831)
 -- Name: IDX_notification_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5221,7 +4565,6 @@ CREATE INDEX "IDX_notification_updated_unix" ON public.notification USING btree 
 
 
 --
--- TOC entry 3421 (class 1259 OID 16823)
 -- Name: IDX_notification_user_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5229,7 +4572,6 @@ CREATE INDEX "IDX_notification_user_id" ON public.notification USING btree (user
 
 
 --
--- TOC entry 3524 (class 1259 OID 17108)
 -- Name: IDX_oauth2_application_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5237,7 +4579,6 @@ CREATE INDEX "IDX_oauth2_application_created_unix" ON public.oauth2_application 
 
 
 --
--- TOC entry 3525 (class 1259 OID 17107)
 -- Name: IDX_oauth2_application_uid; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5245,7 +4586,6 @@ CREATE INDEX "IDX_oauth2_application_uid" ON public.oauth2_application USING btr
 
 
 --
--- TOC entry 3526 (class 1259 OID 17109)
 -- Name: IDX_oauth2_application_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5253,7 +4593,6 @@ CREATE INDEX "IDX_oauth2_application_updated_unix" ON public.oauth2_application 
 
 
 --
--- TOC entry 3530 (class 1259 OID 17122)
 -- Name: IDX_oauth2_authorization_code_valid_until; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5261,7 +4600,6 @@ CREATE INDEX "IDX_oauth2_authorization_code_valid_until" ON public.oauth2_author
 
 
 --
--- TOC entry 3534 (class 1259 OID 17133)
 -- Name: IDX_oauth2_grant_application_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5269,7 +4607,6 @@ CREATE INDEX "IDX_oauth2_grant_application_id" ON public.oauth2_grant USING btre
 
 
 --
--- TOC entry 3535 (class 1259 OID 17134)
 -- Name: IDX_oauth2_grant_user_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5277,7 +4614,6 @@ CREATE INDEX "IDX_oauth2_grant_user_id" ON public.oauth2_grant USING btree (user
 
 
 --
--- TOC entry 3545 (class 1259 OID 17158)
 -- Name: IDX_oauth2_session_expires_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5285,7 +4621,6 @@ CREATE INDEX "IDX_oauth2_session_expires_unix" ON public.oauth2_session USING bt
 
 
 --
--- TOC entry 3392 (class 1259 OID 16770)
 -- Name: IDX_org_user_is_public; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5293,7 +4628,6 @@ CREATE INDEX "IDX_org_user_is_public" ON public.org_user USING btree (is_public)
 
 
 --
--- TOC entry 3393 (class 1259 OID 16772)
 -- Name: IDX_org_user_org_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5301,7 +4635,6 @@ CREATE INDEX "IDX_org_user_org_id" ON public.org_user USING btree (org_id);
 
 
 --
--- TOC entry 3394 (class 1259 OID 16771)
 -- Name: IDX_org_user_uid; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5309,7 +4642,6 @@ CREATE INDEX "IDX_org_user_uid" ON public.org_user USING btree (uid);
 
 
 --
--- TOC entry 3262 (class 1259 OID 16434)
 -- Name: IDX_public_key_fingerprint; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5317,7 +4649,6 @@ CREATE INDEX "IDX_public_key_fingerprint" ON public.public_key USING btree (fing
 
 
 --
--- TOC entry 3263 (class 1259 OID 16433)
 -- Name: IDX_public_key_owner_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5325,7 +4656,6 @@ CREATE INDEX "IDX_public_key_owner_id" ON public.public_key USING btree (owner_i
 
 
 --
--- TOC entry 3331 (class 1259 OID 16605)
 -- Name: IDX_pull_request_base_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5333,7 +4663,6 @@ CREATE INDEX "IDX_pull_request_base_repo_id" ON public.pull_request USING btree 
 
 
 --
--- TOC entry 3332 (class 1259 OID 16606)
 -- Name: IDX_pull_request_has_merged; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5341,7 +4670,6 @@ CREATE INDEX "IDX_pull_request_has_merged" ON public.pull_request USING btree (h
 
 
 --
--- TOC entry 3333 (class 1259 OID 16604)
 -- Name: IDX_pull_request_head_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5349,7 +4677,6 @@ CREATE INDEX "IDX_pull_request_head_repo_id" ON public.pull_request USING btree 
 
 
 --
--- TOC entry 3334 (class 1259 OID 16603)
 -- Name: IDX_pull_request_issue_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5357,7 +4684,6 @@ CREATE INDEX "IDX_pull_request_issue_id" ON public.pull_request USING btree (iss
 
 
 --
--- TOC entry 3335 (class 1259 OID 16608)
 -- Name: IDX_pull_request_merged_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5365,7 +4691,6 @@ CREATE INDEX "IDX_pull_request_merged_unix" ON public.pull_request USING btree (
 
 
 --
--- TOC entry 3336 (class 1259 OID 16607)
 -- Name: IDX_pull_request_merger_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5373,7 +4698,6 @@ CREATE INDEX "IDX_pull_request_merger_id" ON public.pull_request USING btree (me
 
 
 --
--- TOC entry 3497 (class 1259 OID 17045)
 -- Name: IDX_reaction_comment_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5381,7 +4705,6 @@ CREATE INDEX "IDX_reaction_comment_id" ON public.reaction USING btree (comment_i
 
 
 --
--- TOC entry 3498 (class 1259 OID 17047)
 -- Name: IDX_reaction_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5389,7 +4712,6 @@ CREATE INDEX "IDX_reaction_created_unix" ON public.reaction USING btree (created
 
 
 --
--- TOC entry 3499 (class 1259 OID 17044)
 -- Name: IDX_reaction_issue_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5397,7 +4719,6 @@ CREATE INDEX "IDX_reaction_issue_id" ON public.reaction USING btree (issue_id);
 
 
 --
--- TOC entry 3500 (class 1259 OID 17048)
 -- Name: IDX_reaction_type; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5405,7 +4726,6 @@ CREATE INDEX "IDX_reaction_type" ON public.reaction USING btree (type);
 
 
 --
--- TOC entry 3501 (class 1259 OID 17046)
 -- Name: IDX_reaction_user_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5413,7 +4733,6 @@ CREATE INDEX "IDX_reaction_user_id" ON public.reaction USING btree (user_id);
 
 
 --
--- TOC entry 3365 (class 1259 OID 16702)
 -- Name: IDX_release_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5421,7 +4740,6 @@ CREATE INDEX "IDX_release_created_unix" ON public.release USING btree (created_u
 
 
 --
--- TOC entry 3366 (class 1259 OID 16700)
 -- Name: IDX_release_publisher_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5429,7 +4747,6 @@ CREATE INDEX "IDX_release_publisher_id" ON public.release USING btree (publisher
 
 
 --
--- TOC entry 3367 (class 1259 OID 16699)
 -- Name: IDX_release_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5437,7 +4754,6 @@ CREATE INDEX "IDX_release_repo_id" ON public.release USING btree (repo_id);
 
 
 --
--- TOC entry 3368 (class 1259 OID 16701)
 -- Name: IDX_release_tag_name; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5445,7 +4761,6 @@ CREATE INDEX "IDX_release_tag_name" ON public.release USING btree (tag_name);
 
 
 --
--- TOC entry 3487 (class 1259 OID 17012)
 -- Name: IDX_repo_indexer_status_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5453,7 +4768,6 @@ CREATE INDEX "IDX_repo_indexer_status_repo_id" ON public.repo_indexer_status USI
 
 
 --
--- TOC entry 3447 (class 1259 OID 16909)
 -- Name: IDX_repo_redirect_lower_name; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5461,7 +4775,6 @@ CREATE INDEX "IDX_repo_redirect_lower_name" ON public.repo_redirect USING btree 
 
 
 --
--- TOC entry 3443 (class 1259 OID 16899)
 -- Name: IDX_repo_unit_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5469,7 +4782,6 @@ CREATE INDEX "IDX_repo_unit_created_unix" ON public.repo_unit USING btree (creat
 
 
 --
--- TOC entry 3444 (class 1259 OID 16898)
 -- Name: IDX_repo_unit_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5477,7 +4789,6 @@ CREATE INDEX "IDX_repo_unit_s" ON public.repo_unit USING btree (repo_id, type);
 
 
 --
--- TOC entry 3272 (class 1259 OID 16477)
 -- Name: IDX_repository_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5485,7 +4796,6 @@ CREATE INDEX "IDX_repository_created_unix" ON public.repository USING btree (cre
 
 
 --
--- TOC entry 3273 (class 1259 OID 16471)
 -- Name: IDX_repository_fork_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5493,7 +4803,6 @@ CREATE INDEX "IDX_repository_fork_id" ON public.repository USING btree (fork_id)
 
 
 --
--- TOC entry 3274 (class 1259 OID 16469)
 -- Name: IDX_repository_is_archived; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5501,7 +4810,6 @@ CREATE INDEX "IDX_repository_is_archived" ON public.repository USING btree (is_a
 
 
 --
--- TOC entry 3275 (class 1259 OID 16475)
 -- Name: IDX_repository_is_empty; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5509,7 +4817,6 @@ CREATE INDEX "IDX_repository_is_empty" ON public.repository USING btree (is_empt
 
 
 --
--- TOC entry 3276 (class 1259 OID 16470)
 -- Name: IDX_repository_is_fork; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5517,7 +4824,6 @@ CREATE INDEX "IDX_repository_is_fork" ON public.repository USING btree (is_fork)
 
 
 --
--- TOC entry 3277 (class 1259 OID 16476)
 -- Name: IDX_repository_is_mirror; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5525,7 +4831,6 @@ CREATE INDEX "IDX_repository_is_mirror" ON public.repository USING btree (is_mir
 
 
 --
--- TOC entry 3278 (class 1259 OID 16468)
 -- Name: IDX_repository_is_private; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5533,7 +4838,6 @@ CREATE INDEX "IDX_repository_is_private" ON public.repository USING btree (is_pr
 
 
 --
--- TOC entry 3279 (class 1259 OID 16473)
 -- Name: IDX_repository_lower_name; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5541,7 +4845,6 @@ CREATE INDEX "IDX_repository_lower_name" ON public.repository USING btree (lower
 
 
 --
--- TOC entry 3280 (class 1259 OID 16474)
 -- Name: IDX_repository_name; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5549,7 +4852,6 @@ CREATE INDEX "IDX_repository_name" ON public.repository USING btree (name);
 
 
 --
--- TOC entry 3281 (class 1259 OID 16472)
 -- Name: IDX_repository_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5557,7 +4859,6 @@ CREATE INDEX "IDX_repository_updated_unix" ON public.repository USING btree (upd
 
 
 --
--- TOC entry 3518 (class 1259 OID 17093)
 -- Name: IDX_review_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5565,7 +4866,6 @@ CREATE INDEX "IDX_review_created_unix" ON public.review USING btree (created_uni
 
 
 --
--- TOC entry 3519 (class 1259 OID 17092)
 -- Name: IDX_review_issue_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5573,7 +4873,6 @@ CREATE INDEX "IDX_review_issue_id" ON public.review USING btree (issue_id);
 
 
 --
--- TOC entry 3520 (class 1259 OID 17091)
 -- Name: IDX_review_reviewer_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5581,7 +4880,6 @@ CREATE INDEX "IDX_review_reviewer_id" ON public.review USING btree (reviewer_id)
 
 
 --
--- TOC entry 3521 (class 1259 OID 17094)
 -- Name: IDX_review_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5589,7 +4887,6 @@ CREATE INDEX "IDX_review_updated_unix" ON public.review USING btree (updated_uni
 
 
 --
--- TOC entry 3473 (class 1259 OID 16978)
 -- Name: IDX_stopwatch_issue_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5597,7 +4894,6 @@ CREATE INDEX "IDX_stopwatch_issue_id" ON public.stopwatch USING btree (issue_id)
 
 
 --
--- TOC entry 3474 (class 1259 OID 16977)
 -- Name: IDX_stopwatch_user_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5605,7 +4901,6 @@ CREATE INDEX "IDX_stopwatch_user_id" ON public.stopwatch USING btree (user_id);
 
 
 --
--- TOC entry 3389 (class 1259 OID 16760)
 -- Name: IDX_team_org_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5613,7 +4908,6 @@ CREATE INDEX "IDX_team_org_id" ON public.team USING btree (org_id);
 
 
 --
--- TOC entry 3402 (class 1259 OID 16792)
 -- Name: IDX_team_repo_org_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5621,7 +4915,6 @@ CREATE INDEX "IDX_team_repo_org_id" ON public.team_repo USING btree (org_id);
 
 
 --
--- TOC entry 3514 (class 1259 OID 17082)
 -- Name: IDX_team_unit_org_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5629,7 +4922,6 @@ CREATE INDEX "IDX_team_unit_org_id" ON public.team_unit USING btree (org_id);
 
 
 --
--- TOC entry 3398 (class 1259 OID 16782)
 -- Name: IDX_team_user_org_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5637,7 +4929,6 @@ CREATE INDEX "IDX_team_user_org_id" ON public.team_user USING btree (org_id);
 
 
 --
--- TOC entry 3539 (class 1259 OID 17144)
 -- Name: IDX_topic_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5645,7 +4936,6 @@ CREATE INDEX "IDX_topic_created_unix" ON public.topic USING btree (created_unix)
 
 
 --
--- TOC entry 3540 (class 1259 OID 17145)
 -- Name: IDX_topic_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5653,7 +4943,6 @@ CREATE INDEX "IDX_topic_updated_unix" ON public.topic USING btree (updated_unix)
 
 
 --
--- TOC entry 3477 (class 1259 OID 16987)
 -- Name: IDX_tracked_time_issue_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5661,7 +4950,6 @@ CREATE INDEX "IDX_tracked_time_issue_id" ON public.tracked_time USING btree (iss
 
 
 --
--- TOC entry 3478 (class 1259 OID 16988)
 -- Name: IDX_tracked_time_user_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5669,7 +4957,6 @@ CREATE INDEX "IDX_tracked_time_user_id" ON public.tracked_time USING btree (user
 
 
 --
--- TOC entry 3432 (class 1259 OID 16864)
 -- Name: IDX_two_factor_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5677,7 +4964,6 @@ CREATE INDEX "IDX_two_factor_created_unix" ON public.two_factor USING btree (cre
 
 
 --
--- TOC entry 3433 (class 1259 OID 16865)
 -- Name: IDX_two_factor_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5685,7 +4971,6 @@ CREATE INDEX "IDX_two_factor_updated_unix" ON public.two_factor USING btree (upd
 
 
 --
--- TOC entry 3509 (class 1259 OID 17072)
 -- Name: IDX_u2f_registration_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5693,7 +4978,6 @@ CREATE INDEX "IDX_u2f_registration_created_unix" ON public.u2f_registration USIN
 
 
 --
--- TOC entry 3510 (class 1259 OID 17070)
 -- Name: IDX_u2f_registration_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5701,7 +4985,6 @@ CREATE INDEX "IDX_u2f_registration_updated_unix" ON public.u2f_registration USIN
 
 
 --
--- TOC entry 3511 (class 1259 OID 17071)
 -- Name: IDX_u2f_registration_user_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5709,7 +4992,6 @@ CREATE INDEX "IDX_u2f_registration_user_id" ON public.u2f_registration USING btr
 
 
 --
--- TOC entry 3254 (class 1259 OID 16417)
 -- Name: IDX_user_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5717,7 +4999,6 @@ CREATE INDEX "IDX_user_created_unix" ON public."user" USING btree (created_unix)
 
 
 --
--- TOC entry 3255 (class 1259 OID 16416)
 -- Name: IDX_user_is_active; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5725,7 +5006,6 @@ CREATE INDEX "IDX_user_is_active" ON public."user" USING btree (is_active);
 
 
 --
--- TOC entry 3256 (class 1259 OID 16415)
 -- Name: IDX_user_last_login_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5733,7 +5013,6 @@ CREATE INDEX "IDX_user_last_login_unix" ON public."user" USING btree (last_login
 
 
 --
--- TOC entry 3457 (class 1259 OID 16941)
 -- Name: IDX_user_open_id_uid; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5741,7 +5020,6 @@ CREATE INDEX "IDX_user_open_id_uid" ON public.user_open_id USING btree (uid);
 
 
 --
--- TOC entry 3257 (class 1259 OID 16418)
 -- Name: IDX_user_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5749,7 +5027,6 @@ CREATE INDEX "IDX_user_updated_unix" ON public."user" USING btree (updated_unix)
 
 
 --
--- TOC entry 3379 (class 1259 OID 16734)
 -- Name: IDX_webhook_created_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5757,7 +5034,6 @@ CREATE INDEX "IDX_webhook_created_unix" ON public.webhook USING btree (created_u
 
 
 --
--- TOC entry 3380 (class 1259 OID 16733)
 -- Name: IDX_webhook_is_active; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5765,7 +5041,6 @@ CREATE INDEX "IDX_webhook_is_active" ON public.webhook USING btree (is_active);
 
 
 --
--- TOC entry 3381 (class 1259 OID 16732)
 -- Name: IDX_webhook_org_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5773,7 +5048,6 @@ CREATE INDEX "IDX_webhook_org_id" ON public.webhook USING btree (org_id);
 
 
 --
--- TOC entry 3382 (class 1259 OID 16736)
 -- Name: IDX_webhook_repo_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5781,7 +5055,6 @@ CREATE INDEX "IDX_webhook_repo_id" ON public.webhook USING btree (repo_id);
 
 
 --
--- TOC entry 3383 (class 1259 OID 16735)
 -- Name: IDX_webhook_updated_unix; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5789,7 +5062,6 @@ CREATE INDEX "IDX_webhook_updated_unix" ON public.webhook USING btree (updated_u
 
 
 --
--- TOC entry 3295 (class 1259 OID 16513)
 -- Name: UQE_access_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5797,7 +5069,6 @@ CREATE UNIQUE INDEX "UQE_access_s" ON public.access USING btree (user_id, repo_i
 
 
 --
--- TOC entry 3269 (class 1259 OID 16446)
 -- Name: UQE_access_token_token_hash; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5805,7 +5076,6 @@ CREATE UNIQUE INDEX "UQE_access_token_token_hash" ON public.access_token USING b
 
 
 --
--- TOC entry 3348 (class 1259 OID 16635)
 -- Name: UQE_attachment_uuid; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5813,7 +5083,6 @@ CREATE UNIQUE INDEX "UQE_attachment_uuid" ON public.attachment USING btree (uuid
 
 
 --
--- TOC entry 3292 (class 1259 OID 16502)
 -- Name: UQE_collaboration_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5821,7 +5090,6 @@ CREATE UNIQUE INDEX "UQE_collaboration_s" ON public.collaboration USING btree (r
 
 
 --
--- TOC entry 3470 (class 1259 OID 16962)
 -- Name: UQE_commit_status_repo_sha_index; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5829,7 +5097,6 @@ CREATE UNIQUE INDEX "UQE_commit_status_repo_sha_index" ON public.commit_status U
 
 
 --
--- TOC entry 3484 (class 1259 OID 17000)
 -- Name: UQE_deleted_branch_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5837,7 +5104,6 @@ CREATE UNIQUE INDEX "UQE_deleted_branch_s" ON public.deleted_branch USING btree 
 
 
 --
--- TOC entry 3287 (class 1259 OID 16490)
 -- Name: UQE_deploy_key_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5845,7 +5111,6 @@ CREATE UNIQUE INDEX "UQE_deploy_key_s" ON public.deploy_key USING btree (key_id,
 
 
 --
--- TOC entry 3410 (class 1259 OID 16813)
 -- Name: UQE_email_address_email; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5853,7 +5118,6 @@ CREATE UNIQUE INDEX "UQE_email_address_email" ON public.email_address USING btre
 
 
 --
--- TOC entry 3307 (class 1259 OID 16549)
 -- Name: UQE_follow_follow; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5861,7 +5125,6 @@ CREATE UNIQUE INDEX "UQE_follow_follow" ON public.follow USING btree (user_id, f
 
 
 --
--- TOC entry 3490 (class 1259 OID 17021)
 -- Name: UQE_issue_dependency_issue_dependency; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5869,7 +5132,6 @@ CREATE UNIQUE INDEX "UQE_issue_dependency_issue_dependency" ON public.issue_depe
 
 
 --
--- TOC entry 3354 (class 1259 OID 16659)
 -- Name: UQE_issue_label_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5877,7 +5139,6 @@ CREATE UNIQUE INDEX "UQE_issue_label_s" ON public.issue_label USING btree (issue
 
 
 --
--- TOC entry 3328 (class 1259 OID 16582)
 -- Name: UQE_issue_repo_index; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5885,7 +5146,6 @@ CREATE UNIQUE INDEX "UQE_issue_repo_index" ON public.issue USING btree (repo_id,
 
 
 --
--- TOC entry 3461 (class 1259 OID 16950)
 -- Name: UQE_issue_watch_watch; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5893,7 +5153,6 @@ CREATE UNIQUE INDEX "UQE_issue_watch_watch" ON public.issue_watch USING btree (u
 
 
 --
--- TOC entry 3429 (class 1259 OID 16849)
 -- Name: UQE_lfs_meta_object_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5901,7 +5160,6 @@ CREATE UNIQUE INDEX "UQE_lfs_meta_object_s" ON public.lfs_meta_object USING btre
 
 
 --
--- TOC entry 3376 (class 1259 OID 16716)
 -- Name: UQE_login_source_name; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5909,7 +5167,6 @@ CREATE UNIQUE INDEX "UQE_login_source_name" ON public.login_source USING btree (
 
 
 --
--- TOC entry 3527 (class 1259 OID 17106)
 -- Name: UQE_oauth2_application_client_id; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5917,7 +5174,6 @@ CREATE UNIQUE INDEX "UQE_oauth2_application_client_id" ON public.oauth2_applicat
 
 
 --
--- TOC entry 3531 (class 1259 OID 17121)
 -- Name: UQE_oauth2_authorization_code_code; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5925,7 +5181,6 @@ CREATE UNIQUE INDEX "UQE_oauth2_authorization_code_code" ON public.oauth2_author
 
 
 --
--- TOC entry 3536 (class 1259 OID 17132)
 -- Name: UQE_oauth2_grant_user_application; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5933,7 +5188,6 @@ CREATE UNIQUE INDEX "UQE_oauth2_grant_user_application" ON public.oauth2_grant U
 
 
 --
--- TOC entry 3395 (class 1259 OID 16769)
 -- Name: UQE_org_user_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5941,7 +5195,6 @@ CREATE UNIQUE INDEX "UQE_org_user_s" ON public.org_user USING btree (uid, org_id
 
 
 --
--- TOC entry 3454 (class 1259 OID 16930)
 -- Name: UQE_protected_branch_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5949,7 +5202,6 @@ CREATE UNIQUE INDEX "UQE_protected_branch_s" ON public.protected_branch USING bt
 
 
 --
--- TOC entry 3502 (class 1259 OID 17043)
 -- Name: UQE_reaction_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5957,7 +5209,6 @@ CREATE UNIQUE INDEX "UQE_reaction_s" ON public.reaction USING btree (type, issue
 
 
 --
--- TOC entry 3369 (class 1259 OID 16698)
 -- Name: UQE_release_n; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5965,7 +5216,6 @@ CREATE UNIQUE INDEX "UQE_release_n" ON public.release USING btree (repo_id, tag_
 
 
 --
--- TOC entry 3448 (class 1259 OID 16908)
 -- Name: UQE_repo_redirect_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5973,7 +5223,6 @@ CREATE UNIQUE INDEX "UQE_repo_redirect_s" ON public.repo_redirect USING btree (o
 
 
 --
--- TOC entry 3544 (class 1259 OID 17149)
 -- Name: UQE_repo_topic_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5981,7 +5230,6 @@ CREATE UNIQUE INDEX "UQE_repo_topic_s" ON public.repo_topic USING btree (repo_id
 
 
 --
--- TOC entry 3282 (class 1259 OID 16467)
 -- Name: UQE_repository_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5989,7 +5237,6 @@ CREATE UNIQUE INDEX "UQE_repository_s" ON public.repository USING btree (owner_i
 
 
 --
--- TOC entry 3304 (class 1259 OID 16540)
 -- Name: UQE_star_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -5997,7 +5244,6 @@ CREATE UNIQUE INDEX "UQE_star_s" ON public.star USING btree (uid, repo_id);
 
 
 --
--- TOC entry 3403 (class 1259 OID 16791)
 -- Name: UQE_team_repo_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -6005,7 +5251,6 @@ CREATE UNIQUE INDEX "UQE_team_repo_s" ON public.team_repo USING btree (team_id, 
 
 
 --
--- TOC entry 3515 (class 1259 OID 17081)
 -- Name: UQE_team_unit_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -6013,7 +5258,6 @@ CREATE UNIQUE INDEX "UQE_team_unit_s" ON public.team_unit USING btree (team_id, 
 
 
 --
--- TOC entry 3399 (class 1259 OID 16781)
 -- Name: UQE_team_user_s; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -6021,7 +5265,6 @@ CREATE UNIQUE INDEX "UQE_team_user_s" ON public.team_user USING btree (team_id, 
 
 
 --
--- TOC entry 3541 (class 1259 OID 17143)
 -- Name: UQE_topic_name; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -6029,7 +5272,6 @@ CREATE UNIQUE INDEX "UQE_topic_name" ON public.topic USING btree (name);
 
 
 --
--- TOC entry 3434 (class 1259 OID 16863)
 -- Name: UQE_two_factor_uid; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -6037,7 +5279,6 @@ CREATE UNIQUE INDEX "UQE_two_factor_uid" ON public.two_factor USING btree (uid);
 
 
 --
--- TOC entry 3298 (class 1259 OID 16522)
 -- Name: UQE_upload_uuid; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -6045,7 +5286,6 @@ CREATE UNIQUE INDEX "UQE_upload_uuid" ON public.upload USING btree (uuid);
 
 
 --
--- TOC entry 3258 (class 1259 OID 16413)
 -- Name: UQE_user_lower_name; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -6053,7 +5293,6 @@ CREATE UNIQUE INDEX "UQE_user_lower_name" ON public."user" USING btree (lower_na
 
 
 --
--- TOC entry 3259 (class 1259 OID 16414)
 -- Name: UQE_user_name; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -6061,7 +5300,6 @@ CREATE UNIQUE INDEX "UQE_user_name" ON public."user" USING btree (name);
 
 
 --
--- TOC entry 3458 (class 1259 OID 16940)
 -- Name: UQE_user_open_id_uri; Type: INDEX; Schema: public; Owner: gitea
 --
 
@@ -6069,14 +5307,11 @@ CREATE UNIQUE INDEX "UQE_user_open_id_uri" ON public.user_open_id USING btree (u
 
 
 --
--- TOC entry 3301 (class 1259 OID 16531)
 -- Name: UQE_watch_watch; Type: INDEX; Schema: public; Owner: gitea
 --
 
 CREATE UNIQUE INDEX "UQE_watch_watch" ON public.watch USING btree (user_id, repo_id);
 
-
--- Completed on 2019-12-07 16:41:55 UTC
 
 --
 -- PostgreSQL database dump complete

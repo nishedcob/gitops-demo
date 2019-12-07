@@ -20,6 +20,7 @@ services:
     env_file:
       - gitea.env
     volumes:
+      - ./giteadb_dumps.d/:/tmp/dumps
       - ./db.d/:/var/lib/postgresql/data
       - ./gitea.sql:/docker-entrypoint-initdb.d/gitea.sql
     ports:

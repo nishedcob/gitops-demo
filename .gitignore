@@ -132,4 +132,5 @@ dmypy.json
 ignore/
 data.d/
 db.d/
+giteadb_dumps.d/
 ########
