@@ -25,6 +25,12 @@ kubectl:
 		-o $@
 	chmod -v +x $@
 
+jq:
+	curl \
+		https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 \
+		-o $@
+	chmod -v +x $@
+
 minikube_delete: minikube
 	./minikube delete
 

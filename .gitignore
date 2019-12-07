@@ -135,4 +135,5 @@ db.d/
 giteadb_dumps.d/
 minikube
 kubectl
+jq
 ########
