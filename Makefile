@@ -54,6 +54,10 @@ minikube_create_dirs: minikube_start
 	./minikube ssh "sudo mkdir -pv /giteadb/data"
 	./minikube ssh "sudo mkdir -pv /giteadb/restore"
 
+minikube_provision_gitea: minikube_create_dirs k8s/gitea/namespace.yaml \
+		k8s/gitea/secret.yaml k8s/gitea/config.yaml k8s/gitea/gitea.sql.yaml
+	./kubectl apply -f k8s/gitea/.
+
 minikube_delete: minikube
 	./minikube delete
 

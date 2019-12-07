@@ -10,5 +10,6 @@ data:
   gitea_SSH_DOMAIN: '"0.0.0.0"'
 kind: ConfigMap
 metadata:
-  namespace: gitea
+  creationTimestamp: null
   name: gitea
+  namespace: gitea
