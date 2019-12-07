@@ -31,6 +31,23 @@ jq:
 		-o $@
 	chmod -v +x $@
 
+minikube_start: minikube
+	@if ./minikube config get memory | grep -vq '^2048$$'; then \
+		echo "minikube memory is not 2048"; \
+		./minikube config set memory 2048; \
+		./minikube delete; \
+	else \
+		echo "minikube memory is already 2048" ; \
+	fi
+	@if ./minikube config get vm-driver | grep -vq '^virtualbox$$'; then \
+		echo "minikube vm-driver is not virtualbox"; \
+		./minikube config set vm-driver virtualbox; \
+		./minikube delete; \
+	else \
+		echo "minikube vm-driver is already virtualbox" ; \
+	fi
+	./minikube status || ./minikube start
+
 minikube_delete: minikube
 	./minikube delete
 
