@@ -49,9 +49,15 @@ spec:
       containers:
       - env:
         - name: APP_NAME
-          value: '"Gitea: Git with a cup of tea"'
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_APP_NAME
         - name: DB_HOST
-          value: '"giteadb:5432"'
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_DB_HOST
         - name: DB_NAME
           valueFrom:
             secretKeyRef:
@@ -63,27 +69,45 @@ spec:
               name: gitea
               key: db_DB_PASSWD
         - name: DB_TYPE
-          value: '"postgres"'
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_DB_TYPE
         - name: DB_USER
           valueFrom:
             secretKeyRef:
               name: gitea
               key: db_DB_USER
         - name: DISABLE_REGISTRATION
-          value: '"false"'
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_DISABLE_REGISTRATION
         - name: DOMAIN
-          value: '"0.0.0.0"'
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_DOMAIN
         - name: REQUIRE_SIGNIN_VIEW
-          value: '"false"'
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_REQUIRE_SIGNIN_VIEW
         - name: RUN_MODE
-          value: '"prod"'
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_RUN_MODE
         - name: SECRET_KEY
           valueFrom:
             secretKeyRef:
               name: gitea
               key: gitea_SECRET_KEY
         - name: SSH_DOMAIN
-          value: '"0.0.0.0"'
+          valueFrom:
+            configMapKeyRef:
+              name: gitea
+              key: gitea_SSH_DOMAIN
         image: gitea/gitea:1.9.5
         name: gitea
         ports:
