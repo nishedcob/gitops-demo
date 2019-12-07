@@ -60,6 +60,9 @@ minikube_delete: minikube
 k8s/gitea/%.ini: k8s/gitea/%.json jq
 	./jq -r "to_entries|map(\"\(.key)=\(.value|tostring)\")|.[]" $< > $@
 
+k8s/gitea/namespace.yaml: kubectl
+	./kubectl create namespace gitea --dry-run=true --output=yaml > $@
+
 k8s/gitea/secret.yaml: k8s/gitea/secrets.ini kubectl jq
 	./kubectl create secret generic gitea --from-env-file $< \
 		--dry-run=true --output=yaml --namespace gitea > $@
