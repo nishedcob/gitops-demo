@@ -86,10 +86,11 @@ spec:
         resources: {}
         volumeMounts:
         - mountPath: /data
-          name: gitea-claim0
+          name: gitea-data
       restartPolicy: Always
       volumes:
-      - name: gitea-claim0
-        persistentVolumeClaim:
-          claimName: gitea-claim0
+      - name: gitea-data
+        hostPath:
+          path: /gitea-data
+          type: Directory
 status: {}

@@ -82,20 +82,23 @@ spec:
         resources: {}
         volumeMounts:
         - mountPath: /tmp/dumps
-          name: giteadb-claim0
+          name: giteadb-dumps
         - mountPath: /var/lib/postgresql/data
-          name: giteadb-claim1
+          name: giteadb-data
         - mountPath: /docker-entrypoint-initdb.d/gitea.sql
-          name: giteadb-claim2
+          name: giteadb-restore-dump
       restartPolicy: Always
       volumes:
-      - name: giteadb-claim0
-        persistentVolumeClaim:
-          claimName: giteadb-claim0
-      - name: giteadb-claim1
-        persistentVolumeClaim:
-          claimName: giteadb-claim1
-      - name: giteadb-claim2
-        persistentVolumeClaim:
-          claimName: giteadb-claim2
+      - name: giteadb-dumps
+        hostPath:
+          path: /giteadb/dumps
+          type: Directory
+      - name: giteadb-data
+        hostPath:
+          path: /giteadb/data
+          type: Directory
+      - name: giteadb-restore-dump
+        hostPath:
+          path: /giteadb/restore/gitea.sql
+          type: Directory
 status: {}

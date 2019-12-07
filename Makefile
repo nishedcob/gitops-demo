@@ -48,6 +48,12 @@ minikube_start: minikube
 	fi
 	./minikube status || ./minikube start
 
+minikube_create_dirs: minikube_start
+	./minikube ssh "sudo mkdir -pv /gitea-data"
+	./minikube ssh "sudo mkdir -pv /giteadb/dumps"
+	./minikube ssh "sudo mkdir -pv /giteadb/data"
+	./minikube ssh "sudo mkdir -pv /giteadb/restore"
+
 minikube_delete: minikube
 	./minikube delete
 
