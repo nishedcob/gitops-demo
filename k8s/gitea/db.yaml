@@ -54,7 +54,7 @@ spec:
           name: giteadb-dumps
         - mountPath: /var/lib/postgresql/data
           name: giteadb-data
-        - mountPath: /docker-entrypoint-initdb.d/gitea.sql
+        - mountPath: /docker-entrypoint-initdb.d
           name: giteadb-restore-dump
       restartPolicy: Always
       volumes:
@@ -67,6 +67,5 @@ spec:
           path: /giteadb/data
           type: Directory
       - name: giteadb-restore-dump
-        hostPath:
-          path: /giteadb/restore/gitea.sql
-          type: Directory
+        configMap:
+          name: gitea.sql
