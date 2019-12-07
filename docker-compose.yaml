@@ -25,3 +25,9 @@ services:
       - ./gitea.sql:/docker-entrypoint-initdb.d/gitea.sql
     ports:
       - "5432:5432"
+  dns:
+    build: dnsmasq/
+    restart: always
+    ports:
+      - "53:53"
+      - "53:53/udp"
