@@ -1,0 +1,27 @@
+version: '2'
+services:
+  gitea:
+    image: gitea/gitea:1.9.5
+    volumes:
+      - ./data.d:/data
+    ports:
+      - "3000:3000"
+      - "2222:22"
+    depends_on:
+      - "giteadb"
+    restart: always
+    env_file:
+      - gitea.env
+    links:
+      - "giteadb"
+  giteadb:
+    image: postgres:12
+    restart: always
+    env_file:
+      - gitea.env
+    volumes:
+      - ./giteadb_dumps.d/:/tmp/dumps
+      - ./db.d/:/var/lib/postgresql/data
+      - ./gitea.sql:/docker-entrypoint-initdb.d/gitea.sql
+    ports:
+      - "5432:5432"
