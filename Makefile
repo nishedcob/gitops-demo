@@ -58,6 +58,9 @@ minikube_provision_gitea: minikube_create_dirs k8s/gitea/namespace.yaml \
 		k8s/gitea/secret.yaml k8s/gitea/config.yaml k8s/gitea/gitea.sql.yaml
 	./kubectl apply -f k8s/gitea/.
 
+minikube_port_forward_gitea: minikube_provision_gitea
+	./kubectl port-forward -n gitea svc/gitea 3000:3000 2222:2222
+
 minikube_delete: minikube
 	./minikube delete
 
