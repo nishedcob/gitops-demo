@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.0 (Debian 12.0-2.pgdg100+1)
--- Dumped by pg_dump version 12.0 (Debian 12.0-2.pgdg100+1)
+-- Dumped from database version 12.1 (Debian 12.1-1.pgdg100+1)
+-- Dumped by pg_dump version 12.1 (Debian 12.1-1.pgdg100+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -3165,7 +3165,7 @@ COPY public.upload (id, uuid, name) FROM stdin;
 --
 
 COPY public."user" (id, lower_name, name, full_name, email, keep_email_private, passwd, must_change_password, login_type, login_source, login_name, type, location, website, rands, salt, language, description, created_unix, updated_unix, last_login_unix, last_repo_visibility, max_repo_creation, is_active, is_admin, allow_git_hook, allow_import_local, allow_create_organization, prohibit_login, avatar, avatar_email, use_custom_avatar, num_followers, num_following, num_stars, num_repos, num_teams, num_members, visibility, diff_view_style, theme) FROM stdin;
-1	gitops	gitops		noreply@gitops.org	f	a8e1b08490f98906194ea6da4bc3920e7dae18109f01be7c56fd23438124c0e31a140be7888cf8d5f251672b77068c5e8c6f	f	0	0		0			cg547bPLOn	kJRyNk81EK	en-US		1575735715	1575739992	1575739992	f	-1	t	t	f	f	t	f	0d81cad56acc117fe814b186a646b8b6	noreply@gitops.org	f	0	0	0	0	0	0	0		gitea
+1	gitops	gitops		noreply@gitops.org	f	a8e1b08490f98906194ea6da4bc3920e7dae18109f01be7c56fd23438124c0e31a140be7888cf8d5f251672b77068c5e8c6f	f	0	0		0			cg547bPLOn	kJRyNk81EK	en-US		1575735715	1575759696	1575759696	f	-1	t	t	f	f	t	f	0d81cad56acc117fe814b186a646b8b6	noreply@gitops.org	f	0	0	0	0	0	0	0		gitea
 \.
 
 
