@@ -26,13 +26,21 @@ kubectl:
 	chmod -v +x $@
 
 jq:
-	curl \
+	curl -L \
 		https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 \
 		-o $@
 	chmod -v +x $@
 
 minikube_delete: minikube
 	./minikube delete
+
+k8s/gitea/secrets.ini: k8s/gitea/secrets.json jq
+	./jq -r "to_entries|map(\"\(.key)=\(.value|tostring)\")|.[]" $< > $@
+
+k8s/gitea/secret.yaml: k8s/gitea/secrets.ini kubectl jq
+	./kubectl create secret generic gitea --from-env-file $< \
+		--dry-run=true --output=yaml > $@
+	rm -v $<
 
 up_dependencies: db.d data.d giteadb_dumps.d
 
