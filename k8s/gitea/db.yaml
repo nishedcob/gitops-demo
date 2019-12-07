@@ -45,36 +45,21 @@ spec:
     spec:
       containers:
       - env:
-        - name: APP_NAME
-          value: '"Gitea: Git with a cup of tea"'
-        - name: DB_HOST
-          value: '"giteadb:5432"'
-        - name: DB_NAME
-          value: '"gitea"'
-        - name: DB_PASSWD
-          value: '"gitea"'
-        - name: DB_TYPE
-          value: '"postgres"'
-        - name: DB_USER
-          value: '"gitea"'
-        - name: DISABLE_REGISTRATION
-          value: '"false"'
-        - name: DOMAIN
-          value: '"0.0.0.0"'
         - name: POSTGRES_DB
-          value: gitea
+          valueFrom:
+            secretKeyRef:
+              name: gitea
+              key: db_POSTGRES_DB
         - name: POSTGRES_PASSWORD
-          value: gitea
+          valueFrom:
+            secretKeyRef:
+              name: gitea
+              key: db_POSTGRES_PASSWORD
         - name: POSTGRES_USER
-          value: gitea
-        - name: REQUIRE_SIGNIN_VIEW
-          value: '"false"'
-        - name: RUN_MODE
-          value: '"prod"'
-        - name: SECRET_KEY
-          value: '"55356c9142ab77aefabebeca"'
-        - name: SSH_DOMAIN
-          value: '"0.0.0.0"'
+          valueFrom:
+            secretKeyRef:
+              name: gitea
+              key: db_POSTGRES_USER
         image: postgres:12
         name: giteadb
         ports:
