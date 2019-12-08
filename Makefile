@@ -100,11 +100,10 @@ minikube_bootstrap_gitea_ops_repo: minikube_provision_gitea
 			echo "" ; \
 		) ; \
 	done
-	./kubectl exec -n gitea deploy/gitea -- mkdir -pv /data/git/repositories/gitops
-	./kubectl exec -n gitea deploy/gitea -- git init --bare /data/git/repositories/gitops/ops-demo.git
-	./kubectl exec -n gitea deploy/gitea -- chown -Rc git:git /data/git
 	./kubectl port-forward -n gitea svc/gitea 3000:3000 &
 	sleep 5s
+	curl -X GET "http://localhost:3000/api/v1/repos/gitops/ops-demo" -H "accept: application/json"
+	curl -X POST "http://gitops:gitopsDemo@localhost:3000/api/v1/user/repos" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"auto_init\": false, \"description\": \"Operations Repo for GitOps Demo\", \"name\": \"ops-demo\", \"private\": false}"
 	git remote add gitea http://gitops:gitopsDemo@localhost:3000/gitops/ops-demo.git || true
 	git push gitea master
 	netstat -tupln | grep :3000
