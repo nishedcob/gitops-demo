@@ -77,6 +77,11 @@ minikube_create_dirs: minikube_start
 minikube_provision_gitea: minikube_create_dirs k8s/gitea/namespace.yaml \
 		k8s/gitea/secret.yaml k8s/gitea/config.yaml k8s/gitea/gitea.sql.yaml
 	./kubectl apply -f k8s/gitea/namespace.yaml
+	./kubectl apply -f k8s/gitea/config.yaml
+	./kubectl apply -f k8s/gitea/gitea.sql.yaml
+	./kubectl apply -f k8s/gitea/secret.yaml
+	./kubectl apply -f k8s/gitea/db.yaml
+	./kubectl apply -f k8s/gitea/gitea.yaml
 	./kubectl apply -f k8s/gitea/.
 
 minikube_port_forward_gitea: minikube_provision_gitea
@@ -95,11 +100,10 @@ minikube_bootstrap_gitea_ops_repo: minikube_provision_gitea
 			echo "" ; \
 		) ; \
 	done
-	./kubectl exec -n gitea deploy/gitea -- mkdir -pv /data/git/repositories/gitops
-	./kubectl exec -n gitea deploy/gitea -- git init --bare /data/git/repositories/gitops/ops-demo.git
-	./kubectl exec -n gitea deploy/gitea -- chown -Rc git:git /data/git
 	./kubectl port-forward -n gitea svc/gitea 3000:3000 &
 	sleep 5s
+	curl -X GET "http://localhost:3000/api/v1/repos/gitops/ops-demo" -H "accept: application/json"
+	curl -X POST "http://gitops:gitopsDemo@localhost:3000/api/v1/user/repos" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"auto_init\": false, \"description\": \"Operations Repo for GitOps Demo\", \"name\": \"ops-demo\", \"private\": false}"
 	git remote add gitea http://gitops:gitopsDemo@localhost:3000/gitops/ops-demo.git || true
 	git push gitea master
 	netstat -tupln | grep :3000
