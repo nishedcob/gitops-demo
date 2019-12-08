@@ -63,7 +63,7 @@ minikube_start: minikube
 	else \
 		echo "minikube vm-driver is already virtualbox" ; \
 	fi
-	./minikube status || ./minikube start
+	./minikube status || (./minikube start && ./minikube status)
 
 minikube_create_dirs: minikube_start
 	./minikube ssh "sudo mkdir -pv /gitea-data"
@@ -73,12 +73,28 @@ minikube_create_dirs: minikube_start
 
 minikube_provision_gitea: minikube_create_dirs k8s/gitea/namespace.yaml \
 		k8s/gitea/secret.yaml k8s/gitea/config.yaml k8s/gitea/gitea.sql.yaml
+	./kubectl apply -f k8s/gitea/namespace.yaml
 	./kubectl apply -f k8s/gitea/.
 
 minikube_port_forward_gitea: minikube_provision_gitea
 	./kubectl port-forward -n gitea svc/gitea 3000:3000 2222:2222
 
 minikube_bootstrap_gitea_ops_repo: minikube_provision_gitea
+	for i in `seq 1 7`; do \
+		export gitea_replicas=$$(./kubectl get deploy -n gitea gitea -o json | ./jq '.status.readyReplicas') ; \
+		( \
+			[ ! -z "$$gitea_replicas" ] && [ "$$gitea_replicas" != "null" ] && \
+			[ $$gitea_replicas -gt 0 ] \
+		) || ( \
+			printf "Waiting " && for i in `seq 1 10`; do \
+			 	sleep 1s && printf "." ; \
+			done ; \
+			echo "" ; \
+		) ; \
+	done
+	./kubectl exec -n gitea deploy/gitea -- mkdir -pv /data/git/repositories/gitops
+	./kubectl exec -n gitea deploy/gitea -- git init --bare /data/git/repositories/gitops/ops-demo.git
+	./kubectl exec -n gitea deploy/gitea -- chown -Rc git:git /data/git
 	./kubectl port-forward -n gitea svc/gitea 3000:3000 &
 	sleep 5s
 	git remote add gitea http://gitops:gitopsDemo@localhost:3000/gitops/ops-demo.git || true
