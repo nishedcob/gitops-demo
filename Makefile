@@ -77,6 +77,11 @@ minikube_create_dirs: minikube_start
 minikube_provision_gitea: minikube_create_dirs k8s/gitea/namespace.yaml \
 		k8s/gitea/secret.yaml k8s/gitea/config.yaml k8s/gitea/gitea.sql.yaml
 	./kubectl apply -f k8s/gitea/namespace.yaml
+	./kubectl apply -f k8s/gitea/config.yaml
+	./kubectl apply -f k8s/gitea/gitea.sql.yaml
+	./kubectl apply -f k8s/gitea/secret.yaml
+	./kubectl apply -f k8s/gitea/db.yaml
+	./kubectl apply -f k8s/gitea/gitea.yaml
 	./kubectl apply -f k8s/gitea/.
 
 minikube_port_forward_gitea: minikube_provision_gitea
