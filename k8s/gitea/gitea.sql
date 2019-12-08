@@ -2733,7 +2733,6 @@ COPY public.access_token (id, uid, name, token_hash, token_salt, token_last_eigh
 --
 
 COPY public.action (id, user_id, op_type, act_user_id, repo_id, comment_id, is_deleted, ref_name, is_private, content, created_unix) FROM stdin;
-1	1	1	1	1	0	f		f		1575766703
 \.
 
 
@@ -2934,7 +2933,6 @@ COPY public.mirror (id, repo_id, "interval", enable_prune, updated_unix, next_up
 --
 
 COPY public.notice (id, type, description, created_unix) FROM stdin;
-1	1	Error while getting .editorconfig file: reference not found	1575766703
 \.
 
 
@@ -3055,11 +3053,6 @@ COPY public.repo_topic (repo_id, topic_id) FROM stdin;
 --
 
 COPY public.repo_unit (id, repo_id, type, config, created_unix) FROM stdin;
-1	1	1	\N	1575766703
-2	1	2	{"EnableTimetracker":true,"AllowOnlyContributorsToTrackTime":true,"EnableDependencies":true}	1575766703
-3	1	3	{"IgnoreWhitespaceConflicts":false,"AllowMerge":true,"AllowRebase":true,"AllowRebaseMerge":true,"AllowSquash":true}	1575766703
-4	1	4	\N	1575766703
-5	1	5	\N	1575766703
 \.
 
 
@@ -3068,7 +3061,6 @@ COPY public.repo_unit (id, repo_id, type, config, created_unix) FROM stdin;
 --
 
 COPY public.repository (id, owner_id, lower_name, name, description, website, default_branch, num_watches, num_stars, num_forks, num_issues, num_closed_issues, num_pulls, num_closed_pulls, num_milestones, num_closed_milestones, is_private, is_empty, is_archived, is_mirror, is_fork, fork_id, size, is_fsck_enabled, close_issues_via_commit_in_any_branch, topics, avatar, created_unix, updated_unix) FROM stdin;
-1	1	ops-demo	ops-demo			master	1	0	0	0	0	0	0	0	0	f	t	f	f	f	0	0	t	f	null		1575766703	1575766703
 \.
 
 
@@ -3173,7 +3165,7 @@ COPY public.upload (id, uuid, name) FROM stdin;
 --
 
 COPY public."user" (id, lower_name, name, full_name, email, keep_email_private, passwd, must_change_password, login_type, login_source, login_name, type, location, website, rands, salt, language, description, created_unix, updated_unix, last_login_unix, last_repo_visibility, max_repo_creation, is_active, is_admin, allow_git_hook, allow_import_local, allow_create_organization, prohibit_login, avatar, avatar_email, use_custom_avatar, num_followers, num_following, num_stars, num_repos, num_teams, num_members, visibility, diff_view_style, theme) FROM stdin;
-1	gitops	gitops		noreply@gitops.org	f	a8e1b08490f98906194ea6da4bc3920e7dae18109f01be7c56fd23438124c0e31a140be7888cf8d5f251672b77068c5e8c6f	f	0	0		0			cg547bPLOn	kJRyNk81EK	en-US		1575735715	1575766703	1575766669	f	-1	t	t	f	f	t	f	0d81cad56acc117fe814b186a646b8b6	noreply@gitops.org	f	0	0	0	1	0	0	0		gitea
+1	gitops	gitops		noreply@gitops.org	f	a8e1b08490f98906194ea6da4bc3920e7dae18109f01be7c56fd23438124c0e31a140be7888cf8d5f251672b77068c5e8c6f	f	0	0		0			cg547bPLOn	kJRyNk81EK	en-US		1575735715	1575759696	1575759696	f	-1	t	t	f	f	t	f	0d81cad56acc117fe814b186a646b8b6	noreply@gitops.org	f	0	0	0	0	0	0	0		gitea
 \.
 
 
@@ -3199,7 +3191,6 @@ COPY public.version (id, version) FROM stdin;
 --
 
 COPY public.watch (id, user_id, repo_id) FROM stdin;
-1	1	1
 \.
 
 
@@ -3229,7 +3220,7 @@ SELECT pg_catalog.setval('public.access_token_id_seq', 1, false);
 -- Name: action_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
-SELECT pg_catalog.setval('public.action_id_seq', 1, true);
+SELECT pg_catalog.setval('public.action_id_seq', 1, false);
 
 
 --
@@ -3390,7 +3381,7 @@ SELECT pg_catalog.setval('public.mirror_id_seq', 1, false);
 -- Name: notice_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
-SELECT pg_catalog.setval('public.notice_id_seq', 1, true);
+SELECT pg_catalog.setval('public.notice_id_seq', 1, false);
 
 
 --
@@ -3481,14 +3472,14 @@ SELECT pg_catalog.setval('public.repo_redirect_id_seq', 1, false);
 -- Name: repo_unit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
-SELECT pg_catalog.setval('public.repo_unit_id_seq', 5, true);
+SELECT pg_catalog.setval('public.repo_unit_id_seq', 1, false);
 
 
 --
 -- Name: repository_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
-SELECT pg_catalog.setval('public.repository_id_seq', 1, true);
+SELECT pg_catalog.setval('public.repository_id_seq', 1, false);
 
 
 --
@@ -3600,7 +3591,7 @@ SELECT pg_catalog.setval('public.version_id_seq', 1, true);
 -- Name: watch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea
 --
 
-SELECT pg_catalog.setval('public.watch_id_seq', 1, true);
+SELECT pg_catalog.setval('public.watch_id_seq', 1, false);
 
 
 --
