@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
   gitea.sql: "--\n-- PostgreSQL database dump\n--\n\n-- Dumped from database version
-    12.0 (Debian 12.0-2.pgdg100+1)\n-- Dumped by pg_dump version 12.0 (Debian 12.0-2.pgdg100+1)\n\nSET
+    12.1 (Debian 12.1-1.pgdg100+1)\n-- Dumped by pg_dump version 12.1 (Debian 12.1-1.pgdg100+1)\n\nSET
     statement_timeout = 0;\nSET lock_timeout = 0;\nSET idle_in_transaction_session_timeout
     = 0;\nSET client_encoding = 'UTF8';\nSET standard_conforming_strings = on;\nSELECT
     pg_catalog.set_config('search_path', '', false);\nSET check_function_bodies =
@@ -711,32 +711,33 @@ data:
     created_unix, updated_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: action;
     Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.action (id,
     user_id, op_type, act_user_id, repo_id, comment_id, is_deleted, ref_name, is_private,
-    content, created_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: attachment;
-    Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.attachment (id,
-    uuid, issue_id, release_id, uploader_id, comment_id, name, download_count, size,
-    created_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: collaboration; Type:
-    TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.collaboration (id,
-    repo_id, user_id, mode) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: comment; Type:
-    TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.comment (id, type,
-    poster_id, issue_id, label_id, old_milestone_id, milestone_id, assignee_id, removed_assignee,
-    old_title, new_title, dependent_issue_id, commit_id, line, tree_path, content,
-    patch, created_unix, updated_unix, commit_sha, review_id, invalidated) FROM stdin;\n\\.\n\n\n--\n--
-    Data for Name: commit_status; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.commit_status (id, index, repo_id, state, sha, target_url, description,
-    context_hash, context, creator_id, created_unix, updated_unix) FROM stdin;\n\\.\n\n\n--\n--
-    Data for Name: deleted_branch; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.deleted_branch (id, repo_id, name, commit, deleted_by_id, deleted_unix)
-    FROM stdin;\n\\.\n\n\n--\n-- Data for Name: deploy_key; Type: TABLE DATA; Schema:
-    public; Owner: gitea\n--\n\nCOPY public.deploy_key (id, key_id, repo_id, name,
-    fingerprint, mode, created_unix, updated_unix) FROM stdin;\n\\.\n\n\n--\n-- Data
-    for Name: email_address; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.email_address (id, uid, email, is_activated) FROM stdin;\n\\.\n\n\n--\n--
-    Data for Name: external_login_user; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.external_login_user (external_id, user_id, login_source_id) FROM stdin;\n\\.\n\n\n--\n--
-    Data for Name: follow; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.follow (id, user_id, follow_id) FROM stdin;\n\\.\n\n\n--\n-- Data for Name:
-    gpg_key; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.gpg_key
-    (id, owner_id, key_id, primary_key_id, content, created_unix, expired_unix, added_unix,
+    content, created_unix) FROM stdin;\n1\t1\t1\t1\t1\t0\tf\t\tf\t\t1575766703\n\\.\n\n\n--\n--
+    Data for Name: attachment; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
+    public.attachment (id, uuid, issue_id, release_id, uploader_id, comment_id, name,
+    download_count, size, created_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name:
+    collaboration; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.collaboration
+    (id, repo_id, user_id, mode) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: comment;
+    Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.comment (id,
+    type, poster_id, issue_id, label_id, old_milestone_id, milestone_id, assignee_id,
+    removed_assignee, old_title, new_title, dependent_issue_id, commit_id, line, tree_path,
+    content, patch, created_unix, updated_unix, commit_sha, review_id, invalidated)
+    FROM stdin;\n\\.\n\n\n--\n-- Data for Name: commit_status; Type: TABLE DATA; Schema:
+    public; Owner: gitea\n--\n\nCOPY public.commit_status (id, index, repo_id, state,
+    sha, target_url, description, context_hash, context, creator_id, created_unix,
+    updated_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: deleted_branch; Type:
+    TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.deleted_branch (id,
+    repo_id, name, commit, deleted_by_id, deleted_unix) FROM stdin;\n\\.\n\n\n--\n--
+    Data for Name: deploy_key; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
+    public.deploy_key (id, key_id, repo_id, name, fingerprint, mode, created_unix,
+    updated_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: email_address; Type:
+    TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.email_address (id,
+    uid, email, is_activated) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: external_login_user;
+    Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.external_login_user
+    (external_id, user_id, login_source_id) FROM stdin;\n\\.\n\n\n--\n-- Data for
+    Name: follow; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.follow
+    (id, user_id, follow_id) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: gpg_key;
+    Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.gpg_key (id,
+    owner_id, key_id, primary_key_id, content, created_unix, expired_unix, added_unix,
     emails, can_sign, can_encrypt_comms, can_encrypt_storage, can_certify) FROM stdin;\n\\.\n\n\n--\n--
     Data for Name: gpg_key_import; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
     public.gpg_key_import (key_id, content) FROM stdin;\n\\.\n\n\n--\n-- Data for
@@ -774,7 +775,8 @@ data:
     public; Owner: gitea\n--\n\nCOPY public.mirror (id, repo_id, \"interval\", enable_prune,
     updated_unix, next_update_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: notice;
     Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.notice (id,
-    type, description, created_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: notification;
+    type, description, created_unix) FROM stdin;\n1\t1\tError while getting .editorconfig
+    file: reference not found\t1575766703\n\\.\n\n\n--\n-- Data for Name: notification;
     Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.notification
     (id, user_id, repo_id, status, source, issue_id, commit_id, updated_by, created_unix,
     updated_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: oauth2_application;
@@ -814,36 +816,37 @@ data:
     Data for Name: repo_topic; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
     public.repo_topic (repo_id, topic_id) FROM stdin;\n\\.\n\n\n--\n-- Data for Name:
     repo_unit; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.repo_unit
-    (id, repo_id, type, config, created_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for
-    Name: repository; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.repository
-    (id, owner_id, lower_name, name, description, website, default_branch, num_watches,
-    num_stars, num_forks, num_issues, num_closed_issues, num_pulls, num_closed_pulls,
+    (id, repo_id, type, config, created_unix) FROM stdin;\n1\t1\t1\t\\N\t1575766703\n2\t1\t2\t{\"EnableTimetracker\":true,\"AllowOnlyContributorsToTrackTime\":true,\"EnableDependencies\":true}\t1575766703\n3\t1\t3\t{\"IgnoreWhitespaceConflicts\":false,\"AllowMerge\":true,\"AllowRebase\":true,\"AllowRebaseMerge\":true,\"AllowSquash\":true}\t1575766703\n4\t1\t4\t\\N\t1575766703\n5\t1\t5\t\\N\t1575766703\n\\.\n\n\n--\n--
+    Data for Name: repository; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
+    public.repository (id, owner_id, lower_name, name, description, website, default_branch,
+    num_watches, num_stars, num_forks, num_issues, num_closed_issues, num_pulls, num_closed_pulls,
     num_milestones, num_closed_milestones, is_private, is_empty, is_archived, is_mirror,
     is_fork, fork_id, size, is_fsck_enabled, close_issues_via_commit_in_any_branch,
-    topics, avatar, created_unix, updated_unix) FROM stdin;\n\\.\n\n\n--\n-- Data
-    for Name: review; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.review
-    (id, type, reviewer_id, issue_id, content, created_unix, updated_unix) FROM stdin;\n\\.\n\n\n--\n--
-    Data for Name: star; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.star (id, uid, repo_id) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: stopwatch;
-    Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.stopwatch (id,
-    issue_id, user_id, created_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: team;
-    Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.team (id, org_id,
-    lower_name, name, description, authorize, num_repos, num_members) FROM stdin;\n\\.\n\n\n--\n--
-    Data for Name: team_repo; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.team_repo (id, org_id, team_id, repo_id) FROM stdin;\n\\.\n\n\n--\n-- Data
-    for Name: team_unit; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.team_unit (id, org_id, team_id, type) FROM stdin;\n\\.\n\n\n--\n-- Data
-    for Name: team_user; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.team_user (id, org_id, team_id, uid) FROM stdin;\n\\.\n\n\n--\n-- Data
-    for Name: topic; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.topic
-    (id, name, repo_count, created_unix, updated_unix) FROM stdin;\n\\.\n\n\n--\n--
-    Data for Name: tracked_time; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.tracked_time (id, issue_id, user_id, created_unix, \"time\") FROM stdin;\n\\.\n\n\n--\n--
-    Data for Name: two_factor; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
-    public.two_factor (id, uid, secret, scratch_salt, scratch_hash, last_used_passcode,
-    created_unix, updated_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: u2f_registration;
-    Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.u2f_registration
-    (id, name, user_id, raw, counter, created_unix, updated_unix) FROM stdin;\n\\.\n\n\n--\n--
+    topics, avatar, created_unix, updated_unix) FROM stdin;\n1\t1\tops-demo\tops-demo\t\t\tmaster\t1\t0\t0\t0\t0\t0\t0\t0\t0\tf\tt\tf\tf\tf\t0\t0\tt\tf\tnull\t\t1575766703\t1575766703\n\\.\n\n\n--\n--
+    Data for Name: review; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
+    public.review (id, type, reviewer_id, issue_id, content, created_unix, updated_unix)
+    FROM stdin;\n\\.\n\n\n--\n-- Data for Name: star; Type: TABLE DATA; Schema: public;
+    Owner: gitea\n--\n\nCOPY public.star (id, uid, repo_id) FROM stdin;\n\\.\n\n\n--\n--
+    Data for Name: stopwatch; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
+    public.stopwatch (id, issue_id, user_id, created_unix) FROM stdin;\n\\.\n\n\n--\n--
+    Data for Name: team; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
+    public.team (id, org_id, lower_name, name, description, authorize, num_repos,
+    num_members) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: team_repo; Type: TABLE
+    DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.team_repo (id, org_id, team_id,
+    repo_id) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: team_unit; Type: TABLE DATA;
+    Schema: public; Owner: gitea\n--\n\nCOPY public.team_unit (id, org_id, team_id,
+    type) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: team_user; Type: TABLE DATA;
+    Schema: public; Owner: gitea\n--\n\nCOPY public.team_user (id, org_id, team_id,
+    uid) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: topic; Type: TABLE DATA; Schema:
+    public; Owner: gitea\n--\n\nCOPY public.topic (id, name, repo_count, created_unix,
+    updated_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: tracked_time; Type:
+    TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.tracked_time (id,
+    issue_id, user_id, created_unix, \"time\") FROM stdin;\n\\.\n\n\n--\n-- Data for
+    Name: two_factor; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.two_factor
+    (id, uid, secret, scratch_salt, scratch_hash, last_used_passcode, created_unix,
+    updated_unix) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: u2f_registration; Type:
+    TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.u2f_registration (id,
+    name, user_id, raw, counter, created_unix, updated_unix) FROM stdin;\n\\.\n\n\n--\n--
     Data for Name: upload; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
     public.upload (id, uuid, name) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: user;
     Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.\"user\" (id,
@@ -853,21 +856,21 @@ data:
     max_repo_creation, is_active, is_admin, allow_git_hook, allow_import_local, allow_create_organization,
     prohibit_login, avatar, avatar_email, use_custom_avatar, num_followers, num_following,
     num_stars, num_repos, num_teams, num_members, visibility, diff_view_style, theme)
-    FROM stdin;\n1\tgitops\tgitops\t\tnoreply@gitops.org\tf\ta8e1b08490f98906194ea6da4bc3920e7dae18109f01be7c56fd23438124c0e31a140be7888cf8d5f251672b77068c5e8c6f\tf\t0\t0\t\t0\t\t\tcg547bPLOn\tkJRyNk81EK\ten-US\t\t1575735715\t1575739992\t1575739992\tf\t-1\tt\tt\tf\tf\tt\tf\t0d81cad56acc117fe814b186a646b8b6\tnoreply@gitops.org\tf\t0\t0\t0\t0\t0\t0\t0\t\tgitea\n\\.\n\n\n--\n--
+    FROM stdin;\n1\tgitops\tgitops\t\tnoreply@gitops.org\tf\ta8e1b08490f98906194ea6da4bc3920e7dae18109f01be7c56fd23438124c0e31a140be7888cf8d5f251672b77068c5e8c6f\tf\t0\t0\t\t0\t\t\tcg547bPLOn\tkJRyNk81EK\ten-US\t\t1575735715\t1575766703\t1575766669\tf\t-1\tt\tt\tf\tf\tt\tf\t0d81cad56acc117fe814b186a646b8b6\tnoreply@gitops.org\tf\t0\t0\t0\t1\t0\t0\t0\t\tgitea\n\\.\n\n\n--\n--
     Data for Name: user_open_id; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY
     public.user_open_id (id, uid, uri, show) FROM stdin;\n\\.\n\n\n--\n-- Data for
     Name: version; Type: TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.version
     (id, version) FROM stdin;\n1\t89\n\\.\n\n\n--\n-- Data for Name: watch; Type:
     TABLE DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.watch (id, user_id,
-    repo_id) FROM stdin;\n\\.\n\n\n--\n-- Data for Name: webhook; Type: TABLE DATA;
-    Schema: public; Owner: gitea\n--\n\nCOPY public.webhook (id, repo_id, org_id,
+    repo_id) FROM stdin;\n1\t1\t1\n\\.\n\n\n--\n-- Data for Name: webhook; Type: TABLE
+    DATA; Schema: public; Owner: gitea\n--\n\nCOPY public.webhook (id, repo_id, org_id,
     url, signature, http_method, content_type, secret, events, is_ssl, is_active,
     hook_task_type, meta, last_status, created_unix, updated_unix) FROM stdin;\n\\.\n\n\n--\n--
     Name: access_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea\n--\n\nSELECT
     pg_catalog.setval('public.access_id_seq', 1, false);\n\n\n--\n-- Name: access_token_id_seq;
     Type: SEQUENCE SET; Schema: public; Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.access_token_id_seq',
     1, false);\n\n\n--\n-- Name: action_id_seq; Type: SEQUENCE SET; Schema: public;
-    Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.action_id_seq', 1, false);\n\n\n--\n--
+    Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.action_id_seq', 1, true);\n\n\n--\n--
     Name: attachment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea\n--\n\nSELECT
     pg_catalog.setval('public.attachment_id_seq', 1, false);\n\n\n--\n-- Name: collaboration_id_seq;
     Type: SEQUENCE SET; Schema: public; Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.collaboration_id_seq',
@@ -908,9 +911,9 @@ data:
     Name: mirror_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea\n--\n\nSELECT
     pg_catalog.setval('public.mirror_id_seq', 1, false);\n\n\n--\n-- Name: notice_id_seq;
     Type: SEQUENCE SET; Schema: public; Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.notice_id_seq',
-    1, false);\n\n\n--\n-- Name: notification_id_seq; Type: SEQUENCE SET; Schema:
-    public; Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.notification_id_seq',
-    1, false);\n\n\n--\n-- Name: oauth2_application_id_seq; Type: SEQUENCE SET; Schema:
+    1, true);\n\n\n--\n-- Name: notification_id_seq; Type: SEQUENCE SET; Schema: public;
+    Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.notification_id_seq', 1,
+    false);\n\n\n--\n-- Name: oauth2_application_id_seq; Type: SEQUENCE SET; Schema:
     public; Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.oauth2_application_id_seq',
     1, false);\n\n\n--\n-- Name: oauth2_authorization_code_id_seq; Type: SEQUENCE
     SET; Schema: public; Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.oauth2_authorization_code_id_seq',
@@ -931,9 +934,9 @@ data:
     1, false);\n\n\n--\n-- Name: repo_redirect_id_seq; Type: SEQUENCE SET; Schema:
     public; Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.repo_redirect_id_seq',
     1, false);\n\n\n--\n-- Name: repo_unit_id_seq; Type: SEQUENCE SET; Schema: public;
-    Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.repo_unit_id_seq', 1, false);\n\n\n--\n--
+    Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.repo_unit_id_seq', 5, true);\n\n\n--\n--
     Name: repository_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea\n--\n\nSELECT
-    pg_catalog.setval('public.repository_id_seq', 1, false);\n\n\n--\n-- Name: review_id_seq;
+    pg_catalog.setval('public.repository_id_seq', 1, true);\n\n\n--\n-- Name: review_id_seq;
     Type: SEQUENCE SET; Schema: public; Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.review_id_seq',
     1, false);\n\n\n--\n-- Name: star_id_seq; Type: SEQUENCE SET; Schema: public;
     Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.star_id_seq', 1, false);\n\n\n--\n--
@@ -960,7 +963,7 @@ data:
     1, false);\n\n\n--\n-- Name: version_id_seq; Type: SEQUENCE SET; Schema: public;
     Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.version_id_seq', 1, true);\n\n\n--\n--
     Name: watch_id_seq; Type: SEQUENCE SET; Schema: public; Owner: gitea\n--\n\nSELECT
-    pg_catalog.setval('public.watch_id_seq', 1, false);\n\n\n--\n-- Name: webhook_id_seq;
+    pg_catalog.setval('public.watch_id_seq', 1, true);\n\n\n--\n-- Name: webhook_id_seq;
     Type: SEQUENCE SET; Schema: public; Owner: gitea\n--\n\nSELECT pg_catalog.setval('public.webhook_id_seq',
     1, false);\n\n\n--\n-- Name: access access_pkey; Type: CONSTRAINT; Schema: public;
     Owner: gitea\n--\n\nALTER TABLE ONLY public.access\n    ADD CONSTRAINT access_pkey

@@ -83,7 +83,9 @@ minikube_bootstrap_gitea_ops_repo: minikube_provision_gitea
 	sleep 5s
 	git remote add gitea http://gitops:gitopsDemo@localhost:3000/gitops/ops-demo.git || true
 	git push gitea master
-	fg
+	netstat -tupln | grep :3000
+	kill $$(netstat -tupln | grep :3000 | awk '{ print $$7 }' | awk -F/ '{ print $$1 }' | sort | uniq)
+	netstat -tupln | grep :3000 || true
 
 minikube_provision_demo_app: minikube_start kubectl
 	./kubectl apply -f k8s/app/.
