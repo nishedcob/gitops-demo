@@ -3,6 +3,7 @@ help:
 	@echo "%.d                            - ensure directory with name %.d exists"
 	@echo "minikube                       - download minikube cli tool"
 	@echo "kubectl                        - download kubectl cli tool"
+	@echo "fluxctl                        - download fluxctl cli tool"
 	@echo "jq                             - download jq cli tool"
 	@echo "minikube_start                 - ensure that minikube is running in the desired configuration"
 	@echo "minikube_create_dirs           - ensure that desired directories and paths exist within minikube"
@@ -32,6 +33,12 @@ kubectl:
 		https://storage.googleapis.com/kubernetes-release/release/`curl -s \
 			https://storage.googleapis.com/kubernetes-release/release/stable.txt \
 		`/bin/linux/amd64/kubectl \
+		-o $@
+	chmod -v +x $@
+
+fluxctl:
+	curl -L \
+		https://github.com/fluxcd/flux/releases/download/1.15.0/fluxctl_linux_amd64 \
 		-o $@
 	chmod -v +x $@
 

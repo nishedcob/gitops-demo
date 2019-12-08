@@ -135,6 +135,7 @@ db.d/
 giteadb_dumps.d/
 minikube
 kubectl
+fluxctl
 jq
 k8s/gitea/secrets.ini
 ########
