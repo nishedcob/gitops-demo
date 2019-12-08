@@ -12,3 +12,8 @@ Visit http://localhost:3000
 **User:** `gitops`
 
 **Password:** `gitopsDemo`
+
+### Flux GitOps Operator
+```bash
+make minikube_bootstrap_gitops
+```
