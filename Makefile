@@ -78,6 +78,13 @@ minikube_provision_gitea: minikube_create_dirs k8s/gitea/namespace.yaml \
 minikube_port_forward_gitea: minikube_provision_gitea
 	./kubectl port-forward -n gitea svc/gitea 3000:3000 2222:2222
 
+minikube_bootstrap_gitea_ops_repo: minikube_provision_gitea
+	./kubectl port-forward -n gitea svc/gitea 3000:3000 &
+	sleep 5s
+	git remote add gitea http://gitops:gitopsDemo@localhost:3000/gitops/ops-demo.git || true
+	git push gitea master
+	fg
+
 minikube_provision_demo_app: minikube_start kubectl
 	./kubectl apply -f k8s/app/.
 
