@@ -1,20 +1,22 @@
 
 help:
-	@echo "%.d                         - ensure directory with name %.d exists"
-	@echo "minikube                    - download minikube cli tool"
-	@echo "kubectl                     - download kubectl cli tool"
-	@echo "jq                          - download jq cli tool"
-	@echo "minikube_start              - ensure that minikube is running in the desired configuration"
-	@echo "minikube_create_dirs        - ensure that desired directories and paths exist within minikube"
-	@echo "minikube_provision_gitea    - ensure that Gitea is provisioned in Minikube"
-	@echo "minikube_port_forward_gitea - expose Gitea to localhost"
-	@echo "minikube_delete             - delete current minikube instance"
-	@echo "k8s/gitea/%.ini             - convert k8s/gitea/src/%.json into k8s/gitea/%.ini for further conversion later"
-	@echo "k8s/gitea/namespace.yaml    - create YAML definition for Kubernetes gitea namespace"
-	@echo "k8s/gitea/secret.yaml       - create YAML definition for Kubernetes gitea namespace secrets (from k8s/gitea/secrets.ini)"
-	@echo "k8s/gitea/config.yaml       - create YAML definition for Kubernetes gitea namespace configMap (from k8s/gitea/config.ini)"
-	@echo "k8s/gitea/gitea.sql.yaml    - create YAML definition for Kubernetes gitea namespace configMap for gitea.sql file (from k8s/gitea/gitea.sql)"
-	@echo "k8s/gitea/gitea.sql         - dump Gitea's database as k8s/gitea/gitea.sql"
+	@echo "%.d                            - ensure directory with name %.d exists"
+	@echo "minikube                       - download minikube cli tool"
+	@echo "kubectl                        - download kubectl cli tool"
+	@echo "jq                             - download jq cli tool"
+	@echo "minikube_start                 - ensure that minikube is running in the desired configuration"
+	@echo "minikube_create_dirs           - ensure that desired directories and paths exist within minikube"
+	@echo "minikube_provision_gitea       - ensure that Gitea is provisioned in Minikube"
+	@echo "minikube_port_forward_gitea    - expose Gitea to localhost"
+	@echo "minikube_provision_demo_app    - ensure that Demo App is provisioned in Minikube"
+	@echo "minikube_port_forward_demo_app - expose Gitea to localhost"
+	@echo "minikube_delete                - delete current minikube instance"
+	@echo "k8s/gitea/%.ini                - convert k8s/gitea/src/%.json into k8s/gitea/%.ini for further conversion later"
+	@echo "k8s/gitea/namespace.yaml       - create YAML definition for Kubernetes gitea namespace"
+	@echo "k8s/gitea/secret.yaml          - create YAML definition for Kubernetes gitea namespace secrets (from k8s/gitea/secrets.ini)"
+	@echo "k8s/gitea/config.yaml          - create YAML definition for Kubernetes gitea namespace configMap (from k8s/gitea/config.ini)"
+	@echo "k8s/gitea/gitea.sql.yaml       - create YAML definition for Kubernetes gitea namespace configMap for gitea.sql file (from k8s/gitea/gitea.sql)"
+	@echo "k8s/gitea/gitea.sql            - dump Gitea's database as k8s/gitea/gitea.sql"
 
 %.d:
 	mkdir -pv $@
@@ -68,6 +70,12 @@ minikube_provision_gitea: minikube_create_dirs k8s/gitea/namespace.yaml \
 
 minikube_port_forward_gitea: minikube_provision_gitea
 	./kubectl port-forward -n gitea svc/gitea 3000:3000 2222:2222
+
+minikube_provision_demo_app: minikube_start kubectl
+	./kubectl apply -f k8s/app/.
+
+minikube_port_forward_demo_app: minikube_provision_demo_app
+	./kubectl port-forward svc/demo-static-app 80:8080
 
 minikube_delete: minikube
 	./minikube delete
