@@ -1,22 +1,26 @@
 
 help:
-	@echo "%.d                            - ensure directory with name %.d exists"
-	@echo "minikube                       - download minikube cli tool"
-	@echo "kubectl                        - download kubectl cli tool"
-	@echo "jq                             - download jq cli tool"
-	@echo "minikube_start                 - ensure that minikube is running in the desired configuration"
-	@echo "minikube_create_dirs           - ensure that desired directories and paths exist within minikube"
-	@echo "minikube_provision_gitea       - ensure that Gitea is provisioned in Minikube"
-	@echo "minikube_port_forward_gitea    - expose Gitea to localhost"
-	@echo "minikube_provision_demo_app    - ensure that Demo App is provisioned in Minikube"
-	@echo "minikube_port_forward_demo_app - expose Gitea to localhost"
-	@echo "minikube_delete                - delete current minikube instance"
-	@echo "k8s/gitea/%.ini                - convert k8s/gitea/src/%.json into k8s/gitea/%.ini for further conversion later"
-	@echo "k8s/gitea/namespace.yaml       - create YAML definition for Kubernetes gitea namespace"
-	@echo "k8s/gitea/secret.yaml          - create YAML definition for Kubernetes gitea namespace secrets (from k8s/gitea/secrets.ini)"
-	@echo "k8s/gitea/config.yaml          - create YAML definition for Kubernetes gitea namespace configMap (from k8s/gitea/config.ini)"
-	@echo "k8s/gitea/gitea.sql.yaml       - create YAML definition for Kubernetes gitea namespace configMap for gitea.sql file (from k8s/gitea/gitea.sql)"
-	@echo "k8s/gitea/gitea.sql            - dump Gitea's database as k8s/gitea/gitea.sql"
+	@echo "%.d                               - ensure directory with name %.d exists"
+	@echo "minikube                          - download minikube cli tool"
+	@echo "kubectl                           - download kubectl cli tool"
+	@echo "fluxctl                           - download fluxctl cli tool"
+	@echo "jq                                - download jq cli tool"
+	@echo "minikube_start                    - ensure that minikube is running in the desired configuration"
+	@echo "minikube_create_dirs              - ensure that desired directories and paths exist within minikube"
+	@echo "minikube_provision_gitea          - ensure that Gitea is provisioned in Minikube"
+	@echo "minikube_port_forward_gitea       - expose Gitea to localhost"
+	@echo "minikube_bootstrap_gitea_ops_repo - bootstrap GitOps repo into Gitea"
+	@echo "minikube_bootstrap_gitops         - bootstrap GitOps onto minikube using k8s/gitops/flux.yaml"
+	@echo "minikube_provision_demo_app       - ensure that Demo App is provisioned in Minikube"
+	@echo "minikube_port_forward_demo_app    - expose Gitea to localhost"
+	@echo "minikube_delete                   - delete current minikube instance"
+	@echo "k8s/gitea/%.ini                   - convert k8s/gitea/src/%.json into k8s/gitea/%.ini for further conversion later"
+	@echo "k8s/gitea/namespace.yaml          - create YAML definition for Kubernetes gitea namespace"
+	@echo "k8s/gitea/secret.yaml             - create YAML definition for Kubernetes gitea namespace secrets (from k8s/gitea/secrets.ini)"
+	@echo "k8s/gitea/config.yaml             - create YAML definition for Kubernetes gitea namespace configMap (from k8s/gitea/config.ini)"
+	@echo "k8s/gitea/gitea.sql.yaml          - create YAML definition for Kubernetes gitea namespace configMap for gitea.sql file (from k8s/gitea/gitea.sql)"
+	@echo "k8s/gitea/gitea.sql               - dump Gitea's database as k8s/gitea/gitea.sql"
+	@echo "k8s/gitops/flux.yaml              - generate flux configuration using fluxctl and store it as k8s/gitops/flux.yaml"
 
 %.d:
 	mkdir -pv $@
@@ -32,6 +36,12 @@ kubectl:
 		https://storage.googleapis.com/kubernetes-release/release/`curl -s \
 			https://storage.googleapis.com/kubernetes-release/release/stable.txt \
 		`/bin/linux/amd64/kubectl \
+		-o $@
+	chmod -v +x $@
+
+fluxctl:
+	curl -L \
+		https://github.com/fluxcd/flux/releases/download/1.15.0/fluxctl_linux_amd64 \
 		-o $@
 	chmod -v +x $@
 
@@ -56,7 +66,7 @@ minikube_start: minikube
 	else \
 		echo "minikube vm-driver is already virtualbox" ; \
 	fi
-	./minikube status || ./minikube start
+	./minikube status || (./minikube start && ./minikube status)
 
 minikube_create_dirs: minikube_start
 	./minikube ssh "sudo mkdir -pv /gitea-data"
@@ -66,10 +76,38 @@ minikube_create_dirs: minikube_start
 
 minikube_provision_gitea: minikube_create_dirs k8s/gitea/namespace.yaml \
 		k8s/gitea/secret.yaml k8s/gitea/config.yaml k8s/gitea/gitea.sql.yaml
+	./kubectl apply -f k8s/gitea/namespace.yaml
 	./kubectl apply -f k8s/gitea/.
 
 minikube_port_forward_gitea: minikube_provision_gitea
 	./kubectl port-forward -n gitea svc/gitea 3000:3000 2222:2222
+
+minikube_bootstrap_gitea_ops_repo: minikube_provision_gitea
+	for i in `seq 1 7`; do \
+		export gitea_replicas=$$(./kubectl get deploy -n gitea gitea -o json | ./jq '.status.readyReplicas') ; \
+		( \
+			[ ! -z "$$gitea_replicas" ] && [ "$$gitea_replicas" != "null" ] && \
+			[ $$gitea_replicas -gt 0 ] \
+		) || ( \
+			printf "Waiting " && for i in `seq 1 10`; do \
+			 	sleep 1s && printf "." ; \
+			done ; \
+			echo "" ; \
+		) ; \
+	done
+	./kubectl exec -n gitea deploy/gitea -- mkdir -pv /data/git/repositories/gitops
+	./kubectl exec -n gitea deploy/gitea -- git init --bare /data/git/repositories/gitops/ops-demo.git
+	./kubectl exec -n gitea deploy/gitea -- chown -Rc git:git /data/git
+	./kubectl port-forward -n gitea svc/gitea 3000:3000 &
+	sleep 5s
+	git remote add gitea http://gitops:gitopsDemo@localhost:3000/gitops/ops-demo.git || true
+	git push gitea master
+	netstat -tupln | grep :3000
+	kill $$(netstat -tupln | grep :3000 | awk '{ print $$7 }' | awk -F/ '{ print $$1 }' | sort | uniq)
+	netstat -tupln | grep :3000 || true
+
+minikube_bootstrap_gitops: k8s/gitops/flux.yaml minikube_bootstrap_gitea_ops_repo
+	./kubectl apply -f $<
 
 minikube_provision_demo_app: minikube_start kubectl
 	./kubectl apply -f k8s/app/.
@@ -106,3 +144,9 @@ k8s/gitea/gitea.sql: minikube_provision_gitea giteadb_dumps.d
 	./kubectl exec -n gitea deploy/giteadb -- pg_dump --username gitea gitea --format=plain --file=/tmp/dumps/gitea.$$TIMESTAMP.sql ; \
 	./kubectl cp -n gitea $$( ./kubectl get pods -n gitea -o name | grep giteadb | sed 's!pod/!!' ):tmp/dumps/gitea.$$TIMESTAMP.sql giteadb_dumps.d/gitea.$$TIMESTAMP.sql ; \
 	cp -v giteadb_dumps.d/gitea.$$TIMESTAMP.sql $@
+
+k8s/gitops/flux.yaml: fluxctl
+	./fluxctl install --git-user=flux-user --git-email=noreply@fluxcd.org \
+		--git-branch=master \
+		--git-url=http://gitea.gitea.svc.cluster.local:3000/gitops/ops-demo.git \
+		--git-path=k8s/app > $@
