@@ -103,6 +103,9 @@ minikube_bootstrap_gitea_ops_repo: minikube_provision_gitea
 	kill $$(netstat -tupln | grep :3000 | awk '{ print $$7 }' | awk -F/ '{ print $$1 }' | sort | uniq)
 	netstat -tupln | grep :3000 || true
 
+minikube_bootstrap_gitops: k8s/gitops/flux.yaml minikube_bootstrap_gitea_ops_repo
+	./kubectl apply -f $<
+
 minikube_provision_demo_app: minikube_start kubectl
 	./kubectl apply -f k8s/app/.
 
@@ -138,3 +141,9 @@ k8s/gitea/gitea.sql: minikube_provision_gitea giteadb_dumps.d
 	./kubectl exec -n gitea deploy/giteadb -- pg_dump --username gitea gitea --format=plain --file=/tmp/dumps/gitea.$$TIMESTAMP.sql ; \
 	./kubectl cp -n gitea $$( ./kubectl get pods -n gitea -o name | grep giteadb | sed 's!pod/!!' ):tmp/dumps/gitea.$$TIMESTAMP.sql giteadb_dumps.d/gitea.$$TIMESTAMP.sql ; \
 	cp -v giteadb_dumps.d/gitea.$$TIMESTAMP.sql $@
+
+k8s/gitops/flux.yaml: fluxctl
+	./fluxctl install --git-user=flux-user --git-email=noreply@fluxcd.org \
+		--git-branch=master \
+		--git-url=http://gitea.gitea.svc.cluster.local:3000/gitops/ops-demo.git \
+		--git-path=k8s/app > $@
