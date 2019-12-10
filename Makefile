@@ -117,7 +117,7 @@ minikube_provision_demo_app: minikube_start kubectl
 	./kubectl apply -f k8s/app/.
 
 minikube_port_forward_demo_app: minikube_provision_demo_app
-	./kubectl port-forward svc/demo-static-app 80:8080
+	./kubectl port-forward svc/demo-static-app 8080:80
 
 minikube_delete: minikube
 	./minikube delete
