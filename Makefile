@@ -5,6 +5,8 @@ help:
 	@echo "kubectl                           - download kubectl cli tool"
 	@echo "fluxctl                           - download fluxctl cli tool"
 	@echo "jq                                - download jq cli tool"
+	@echo "versions                          - print to stdout CLI tools and their versions"
+	@echo "versions.txt                      - save the output of 'make versions' as versions.txt"
 	@echo "minikube_start                    - ensure that minikube is running in the desired configuration"
 	@echo "minikube_create_dirs              - ensure that desired directories and paths exist within minikube"
 	@echo "minikube_provision_gitea          - ensure that Gitea is provisioned in Minikube"
@@ -50,6 +52,15 @@ jq:
 		https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 \
 		-o $@
 	chmod -v +x $@
+
+versions: minikube kubectl fluxctl jq
+	./minikube version
+	./kubectl version
+	./fluxctl version
+	./jq --version
+
+versions.txt: minikube kubectl fluxctl jq
+	make versions | grep -v "make" > $@
 
 minikube_start: minikube
 	@if ./minikube config get memory | grep -vq '^2048$$'; then \
