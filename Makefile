@@ -134,7 +134,17 @@ minikube_port_forward_demo_app: minikube_provision_demo_app
 minikube_port_forward_demo:
 	( ./kubectl port-forward -n gitea svc/gitea 3000:3000 || true ) &
 	( ./kubectl port-forward -n gitea svc/gitea 2222:2222 || true ) &
-	./kubectl port-forward svc/demo-static-app 8080:80
+	./kubectl port-forward svc/demo-static-app 8080:80 | tee /tmp/demo-app-port-forward.log &
+
+minikube_port_forward_demo_stop:
+	sudo netstat -tupln
+	for port in ":3000" ":2222" ":8080"; do \
+		sudo netstat -tupln | grep $$port ; \
+		kill $$(sudo netstat -tupln | \
+			grep $$port | awk '{ print $$7 }' | \
+			awk -F/ '{ print $$1 }' | sort | uniq) ; \
+		sudo netstat -tupln | grep $$port || true ; \
+	done
 
 minikube_delete: minikube
 	./minikube delete
