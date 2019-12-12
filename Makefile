@@ -18,6 +18,7 @@ help:
 	@echo "minikube_port_forward_demo        - expose on localhost ports required in the Demo"
 	@echo "minikube_port_forward_demo_stop   - stop demo port forward"
 	@echo "minikube_flux_sync                - active fluxctl sync to speed up demo"
+	@echo "minikube_git_sync                 - active git sync with gitea during demo"
 	@echo "minikube_delete                   - delete current minikube instance"
 	@echo "k8s/gitea/%.ini                   - convert k8s/gitea/src/%.json into k8s/gitea/%.ini for further conversion later"
 	@echo "k8s/gitea/namespace.yaml          - create YAML definition for Kubernetes gitea namespace"
@@ -158,6 +159,9 @@ minikube_port_forward_demo_stop:
 
 minikube_flux_sync: minikube_bootstrap_gitops fluxctl
 	watch "./fluxctl sync"
+
+minikube_git_sync: minikube_bootstrap_gitea_ops_repo
+	watch "git fetch gitea && git fetch --tags gitea"
 
 minikube_delete: minikube
 	./minikube delete
