@@ -16,6 +16,7 @@ help:
 	@echo "minikube_provision_demo_app       - ensure that Demo App is provisioned in Minikube"
 	@echo "minikube_port_forward_demo_app    - expose Gitea to localhost"
 	@echo "minikube_port_forward_demo        - expose on localhost ports required in the Demo"
+	@echo "minikube_port_forward_demo_stop   - stop demo port forward"
 	@echo "minikube_delete                   - delete current minikube instance"
 	@echo "k8s/gitea/%.ini                   - convert k8s/gitea/src/%.json into k8s/gitea/%.ini for further conversion later"
 	@echo "k8s/gitea/namespace.yaml          - create YAML definition for Kubernetes gitea namespace"
@@ -134,7 +135,15 @@ minikube_port_forward_demo_app: minikube_provision_demo_app
 minikube_port_forward_demo:
 	( ./kubectl port-forward -n gitea svc/gitea 3000:3000 || true ) &
 	( ./kubectl port-forward -n gitea svc/gitea 2222:2222 || true ) &
-	./kubectl port-forward svc/demo-static-app 8080:80 | tee /tmp/demo-app-port-forward.log &
+	./kubectl port-forward svc/demo-static-app 8080:80 2>&1 | tee /tmp/demo-app-port-forward.log &
+	while true ; do \
+		if grep -q "an error occurred forwarding 8080" /tmp/demo-app-port-forward.log; then \
+			kill $$(netstat -tupln | \
+				grep ":8080" | awk '{ print $$7 }' | \
+				awk -F/ '{ print $$1 }' | sort | uniq) ; \
+				make minikube_port_forward_demo ; \
+		fi; \
+	done
 
 minikube_port_forward_demo_stop:
 	sudo netstat -tupln
