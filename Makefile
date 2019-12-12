@@ -15,6 +15,7 @@ help:
 	@echo "minikube_bootstrap_gitops         - bootstrap GitOps onto minikube using k8s/gitops/flux.yaml"
 	@echo "minikube_provision_demo_app       - ensure that Demo App is provisioned in Minikube"
 	@echo "minikube_port_forward_demo_app    - expose Gitea to localhost"
+	@echo "minikube_port_forward_demo        - expose on localhost ports required in the Demo"
 	@echo "minikube_delete                   - delete current minikube instance"
 	@echo "k8s/gitea/%.ini                   - convert k8s/gitea/src/%.json into k8s/gitea/%.ini for further conversion later"
 	@echo "k8s/gitea/namespace.yaml          - create YAML definition for Kubernetes gitea namespace"
@@ -128,6 +129,11 @@ minikube_provision_demo_app: minikube_start kubectl
 	./kubectl apply -f k8s/app/.
 
 minikube_port_forward_demo_app: minikube_provision_demo_app
+	./kubectl port-forward svc/demo-static-app 8080:80
+
+minikube_port_forward_demo:
+	( ./kubectl port-forward -n gitea svc/gitea 3000:3000 || true ) &
+	( ./kubectl port-forward -n gitea svc/gitea 2222:2222 || true ) &
 	./kubectl port-forward svc/demo-static-app 8080:80
 
 minikube_delete: minikube
